@@ -11,11 +11,6 @@ namespace Quem_Quer_Ser_Fixe
     {
         static void Main(string[] args)
         {
-            questoes[] VecNotas = new questoes[0];
-
-            Seed(VecNotas);
-            LerFicheiro(VecNotas);
-
             MainMenu();
         }
 
@@ -28,6 +23,7 @@ namespace Quem_Quer_Ser_Fixe
 
         struct respostas
         {
+            public string respostaUser;
             public string respostaCorrecta;
             public string resposta1;
             public string resposta2;
@@ -35,21 +31,21 @@ namespace Quem_Quer_Ser_Fixe
             public string resposta4;
         }
 
-        static void Pausa()
+        static void Pausa(string texto)
         {
             Console.WriteLine();
-            Console.Write("ENTER p/ terminar...");
+            Console.Write("ENTER p/ "+ texto + "...");
             Console.ReadKey();
-        }// Fim pausa
+        }
 
         static void Seed(questoes[] vetor)
         {
             string NomeFic = "perguntas.txt";
             StreamWriter FicheiroEscrita = new StreamWriter(NomeFic);
             FicheiroEscrita.WriteLine("Questao;respostaCorrecta;resposta1;resposta2;resposta3;resposta4");
-            FicheiroEscrita.WriteLine("Qual e a cor do cavalo branco de napoleao?;Branco;Verde;Branco;Azul;Roxo");
-            FicheiroEscrita.WriteLine("Quem e o aluno mais fixe do ISLA?;Daniel;Bruno;Hugo;Daniel;Joao");
-            FicheiroEscrita.WriteLine("Quem e o professor mais fixe do ISLA?;Jose Moreira;Jose Moreira;Manuel Teixeira;Cristina;Ana");
+            FicheiroEscrita.WriteLine("Qual e a cor do cavalo branco de napoleao?;2;Verde;Branco;Azul;Roxo");
+            FicheiroEscrita.WriteLine("Quem e o aluno mais fixe do ISLA?;3;Bruno;Hugo;Daniel;Joao");
+            FicheiroEscrita.WriteLine("Quem e o professor mais fixe do ISLA?;1;Jose Moreira;Manuel Teixeira;Cristina;Ana");
 
             for (int i = 0; i < vetor.Length; i++)
             {
@@ -61,30 +57,22 @@ namespace Quem_Quer_Ser_Fixe
                     vetor[i].resposta.resposta3 + ";" +
                     vetor[i].resposta.resposta4 + ";"
                     );
-                FicheiroEscrita.WriteLine();
             }
             FicheiroEscrita.Close();
-            Console.WriteLine("Questoes iniciais criadas!");
-            Pausa();
         }
 
-        static int LerFicheiro(questoes[] vetor)
+        static questoes[] LerFicheiro(questoes[] vetor)
         {
             string NomeFic = "perguntas.txt";
             StreamReader FicheiroLeitura = new StreamReader(NomeFic);
             string linha;
-            //ignora a 1ª linha
             linha = FicheiroLeitura.ReadLine();
             int i = 0;
             while (!FicheiroLeitura.EndOfStream)
             {
                 linha = FicheiroLeitura.ReadLine();
-                Console.WriteLine(linha);
-                string[] palavras = linha.Split(';'); //colocar em vetor cada "campo" separado por ;
-                                                      //foreach (string pal in palavras)
-                                                      //{
-                                                      //Console.Write(pal);
-                                                      //}
+                string[] palavras = linha.Split(';');
+
                 Array.Resize(ref vetor, i + 1);
                 vetor[i].questao = palavras[0];
                 vetor[i].resposta.respostaCorrecta = palavras[1];
@@ -95,15 +83,9 @@ namespace Quem_Quer_Ser_Fixe
                 i++;
             }
             FicheiroLeitura.Close();
-            Console.WriteLine("Ficheiro aberto com sucesso!");
-            Pausa();
-            return i;
+            return vetor;
         }//Fim lerFicheiro
 
-        static void jogo()
-        {
-
-        }
         static void MainMenu()
         {
             Header("           M E N U            ");
@@ -117,13 +99,16 @@ namespace Quem_Quer_Ser_Fixe
             switch (opcao)
             {
                 case 1:
-                    // menu jogo
+                    Console.Clear();
+                    Quiz();
                     break;
                 case 2:
                     // Gerir Perguntas
+                    Console.Clear();
                     break;
                 case 3:
                     // sair
+                    Console.Clear();
                     break;
                 default:
                     Console.WriteLine("Opcao seleccionada nao esta disponivel, prima enter para continuar...");
@@ -134,10 +119,46 @@ namespace Quem_Quer_Ser_Fixe
             }
 
         }
-        //static void Quiz()
-        //{
+        static void Quiz()
+        {
+            questoes[] allQuestoes = new questoes[0];
+            Seed(allQuestoes);
 
-        //}
+            allQuestoes = LerFicheiro(allQuestoes);
+            for (int i = 0; i < allQuestoes.Length; i++)
+            {
+                FazerPergunta(allQuestoes[i]);
+                string respostaUser = Console.ReadLine();
+                allQuestoes[i].resposta.respostaUser = respostaUser;
+                if(allQuestoes[i].resposta.respostaUser == allQuestoes[i].resposta.respostaCorrecta)
+                {
+                    Console.WriteLine("A resposta esta correcta!");
+                }
+                else
+                {
+                    Console.WriteLine("A resposta esta incorrecta!");
+                }
+                Pausa("continuar");
+                Console.Clear();
+            }
+
+
+
+            Pausa("terminar");
+        }
+
+        static void FazerPergunta(questoes questao)
+        {
+            Header(questao.questao);
+            //respostas
+            Console.WriteLine("    1. " + questao.resposta.resposta1);
+            Console.WriteLine("    2. " + questao.resposta.resposta2);
+            Console.WriteLine("    3. " + questao.resposta.resposta3);
+            Console.WriteLine("    4. " + questao.resposta.resposta4);
+            Console.WriteLine();
+            Console.Write("Selecione uma Opcao > ");
+
+        }
 
         static void Header(string titulo)
         {
