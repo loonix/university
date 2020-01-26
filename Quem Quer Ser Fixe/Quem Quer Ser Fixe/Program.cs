@@ -23,6 +23,7 @@ namespace Quem_Quer_Ser_Fixe
 
         public static void MainMenu()
         {
+            Console.Clear();
             Service.Header("           M E N U            ");
             Console.WriteLine("    1. Jogar                  ");
             Console.WriteLine("    2. Gerir Perguntas        ");
@@ -45,6 +46,8 @@ namespace Quem_Quer_Ser_Fixe
                     MainMenu();
                     break;
                 case 4:
+                    Console.Clear();
+                    MainMenu();
                     break;
                 default:
                     Console.WriteLine("Opcao seleccionada nao esta disponivel, prima enter para continuar...");
@@ -58,10 +61,11 @@ namespace Quem_Quer_Ser_Fixe
         private static void pontuacoes()
         {
             Console.Clear();
+            Service.Header("       P O N T U A C A O      ");
 
-            for (int i = 0; i < pontuacao.Length; i++)
+            for (int i = 1; i < pontuacao.Length; i++)
             {
-                Console.WriteLine(pontuacao[i].userName + " - " + pontuacao[i].pontos);
+                Console.WriteLine("    " + pontuacao[i].userName + " - " + pontuacao[i].pontos.PadLeft(5));
             }
 
             Service.Pausa("voltar ao menu anterior...");
@@ -123,7 +127,7 @@ namespace Quem_Quer_Ser_Fixe
         {
             string NomeFic = nomeFicheiro;
             StreamReader FicheiroLeitura = new StreamReader(NomeFic);
-            string linha = FicheiroLeitura.ReadLine();
+            string linha;
             int i = 0;
 
             if(nomeFicheiro == ficheiroPerguntas)
@@ -133,14 +137,15 @@ namespace Quem_Quer_Ser_Fixe
                     linha = FicheiroLeitura.ReadLine();
                     string[] palavras = linha.Split(';');
 
-                    Array.Resize(ref quiz, i + 1);
-                    quiz[i].questao = palavras[0];
-                    quiz[i].resposta.respostaCorrectaId = palavras[1];
-                    quiz[i].resposta.respostaCorrectaNome = palavras[2];
-                    quiz[i].resposta.resposta1 = palavras[3];
-                    quiz[i].resposta.resposta2 = palavras[4];
-                    quiz[i].resposta.resposta3 = palavras[5];
-                    quiz[i].resposta.resposta4 = palavras[6];
+                    Array.Resize(ref Program.quiz, i + 1);
+                    Program.quiz[i].id = int.Parse(palavras[0]);
+                    Program.quiz[i].questao = palavras[1];
+                    Program.quiz[i].resposta.respostaCorrectaId = palavras[2];
+                    Program.quiz[i].resposta.respostaCorrectaNome = palavras[3];
+                    Program.quiz[i].resposta.resposta1 = palavras[4];
+                    Program.quiz[i].resposta.resposta2 = palavras[5];
+                    Program.quiz[i].resposta.resposta3 = palavras[6];
+                    Program.quiz[i].resposta.resposta4 = palavras[7];
                     i++;
                 }
             }

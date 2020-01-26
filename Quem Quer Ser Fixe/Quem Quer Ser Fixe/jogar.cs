@@ -11,7 +11,7 @@ namespace Quem_Quer_Ser_Fixe.jogar
             Console.Clear();
             Service.Header("           M E N U            \n      P E R G U N T A S       ");
             Console.WriteLine("    1. Criar                  ");
-            Console.WriteLine("    2. Editar                 ");
+            Console.WriteLine("    2. Listar/Editar          ");
             Console.WriteLine("    3. Eliminar               ");
             Console.WriteLine("    4. Sair                   ");
             Console.WriteLine("______________________________");
@@ -23,14 +23,25 @@ namespace Quem_Quer_Ser_Fixe.jogar
                 case 1:
                     Console.Clear();
                     Crud.CriarPergunta();
+                    Service.Pausa("continuar");
+                    Console.Clear();
+                    Program.MainMenu();
                     break;
                 case 2:
-                    // Gerir Perguntas
+                    Crud.VerPerguntas();
+                    Crud.EditarPerguntas();
+                    Service.Pausa("continuar");
                     Console.Clear();
+                    Program.MainMenu();
                     break;
                 case 3:
-                    // sair
                     Console.Clear();
+                    eliminar();
+                    Console.Clear();
+                    break;
+                case 4:
+                    Console.Clear();
+                    Program.MainMenu();
                     break;
                 default:
                     Console.WriteLine("Opcao seleccionada nao esta disponivel, prima enter para continuar...");
@@ -41,6 +52,40 @@ namespace Quem_Quer_Ser_Fixe.jogar
             }
         }
 
+        private static questoes[] RemoverDoArray(questoes[] IndicesArray, int IndiceARemover)
+        {
+            questoes[] novoArrayIndices = new questoes[IndicesArray.Length - 1];
+
+            int i = 0;
+            int a = 0;
+            while (i < IndicesArray.Length)
+            {
+                if (i != IndiceARemover)
+                {
+                    novoArrayIndices[a] = IndicesArray[i];
+                    a++;
+                }
+
+                i++;
+            }
+
+            return novoArrayIndices;
+        }
+
+        private static void eliminar()
+        {
+            Crud.VerPerguntas();
+            Console.Write("Selecione um id para remover > ");
+            int idQuestao = int.Parse(Console.ReadLine());
+            for (int i = 0; i < Program.quiz.Length; i++)
+            {
+                if(Program.quiz[i].id == idQuestao)
+                {
+                    Program.quiz = RemoverDoArray(Program.quiz, i);
+                }
+            }
+            Crud.Guardar();
+        }
 
         public static void Quiz()
         {
@@ -61,7 +106,6 @@ namespace Quem_Quer_Ser_Fixe.jogar
                 Service.Pausa("continuar");
                 Console.Clear();
             }
-            Service.Pausa("terminar");
         }
 
     public static void mostrarResultados()
