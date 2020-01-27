@@ -7,6 +7,10 @@ namespace Quem_Quer_Ser_Fixe
 {
     public static class Crud
     {
+
+        /// <summary>
+        /// Função que lista todas as perguntas do array quiz
+        /// </summary>
         public static void VerPerguntas()
         {
             var space = "";
@@ -17,13 +21,17 @@ namespace Quem_Quer_Ser_Fixe
                 Console.WriteLine("|" + space.PadRight(7) + "| Pergunta   > " + Program.quiz[i].questao);
                 Console.WriteLine("|" + space.PadRight(3) + Program.quiz[i].id + space.PadRight(3) + "|            > " + "[1] - " + Program.quiz[i].resposta.resposta1.PadRight(10) + "[2] - " + Program.quiz[i].resposta.resposta2);
                 Console.WriteLine("|" + space.PadRight(7) + "|            > " + "[3] - " + Program.quiz[i].resposta.resposta3.PadRight(10) + "[4] - " + Program.quiz[i].resposta.resposta4);
-                if(Program.quiz.Length == i + 1)
+                if (Program.quiz.Length == i + 1)
                 {
                     Console.WriteLine("+-------+---------------------------------------------------------------------------------------------------------+");
                 }
 
             }
         }
+
+        /// <summary>
+        /// Função que adiciona o menu e dá opção para editar uma pergunta
+        /// </summary>
         public static void EditarPerguntas()
         {
             Console.WriteLine("| MENU  |   1. Editar    |   2. Voltar ao Menu Principal   |                                                      +");
@@ -49,6 +57,9 @@ namespace Quem_Quer_Ser_Fixe
             }
         }
 
+        /// <summary>
+        /// Função que edita uma pergunta por quiz.questaoId
+        /// </summary>
         private static void Editar()
         {
             Console.Write("Selecione um id para editar > ");
@@ -57,7 +68,7 @@ namespace Quem_Quer_Ser_Fixe
             Boolean encontrado;
             for (int i = 0; i < Program.quiz.Length; i++)
             {
-                if(Program.quiz[i].id == questaoId)
+                if (Program.quiz[i].id == questaoId)
                 {
                     encontrado = true;
 
@@ -115,7 +126,7 @@ namespace Quem_Quer_Ser_Fixe
                         return;
                     }
 
-                    Guardar();
+                    ler_guardar_service.Guardar();
 
                 }
             }
@@ -123,27 +134,9 @@ namespace Quem_Quer_Ser_Fixe
             ;
         }
 
-
-        public static void Guardar()
-        {
-                StreamWriter FicheiroEscrita = new StreamWriter(Program.ficheiroPerguntas);
-                for (int i = 0; i < Program.quiz.Length; i++)
-                {
-                    FicheiroEscrita.Write(
-                        Program.quiz[i].id + ";" +
-                        Program.quiz[i].questao + ";" +
-                        Program.quiz[i].resposta.respostaCorrectaId + ";" +
-                        Program.quiz[i].resposta.respostaCorrectaNome + ";" +
-                        Program.quiz[i].resposta.resposta1 + ";" +
-                        Program.quiz[i].resposta.resposta2 + ";" +
-                        Program.quiz[i].resposta.resposta3 + ";" +
-                        Program.quiz[i].resposta.resposta4 + ";" + "\n"
-                        );
-                }
-
-                FicheiroEscrita.Close();
-        }
-
+        /// <summary>
+        /// Função que cria uma pergunta e guarda a mesma num ficheiro txt
+        /// </summary>
         public static void CriarPergunta()
         {
             Service.Header("          C R I A R          \n       P E R G U N T A       ");
@@ -206,16 +199,17 @@ namespace Quem_Quer_Ser_Fixe
 
             guardarPergunta(novaQuestao);
 
-
             Console.WriteLine("Pergunta criada!");
-            // adicionar opcao para voltar ao menu das perguntas
-            // adicionar opcao para continuar a adicionar perguntas
             Console.WriteLine();
             Service.Pausa("voltar ao menu principal...");
             Console.Clear();
             Program.MainMenu();
         }
 
+        /// <summary>
+        /// Recebe a nova pergunta e adiciona ao array, depois guarda no ficheiro txt
+        /// </summary>
+        /// <param name="novaQuestao"></param>
         public static void guardarPergunta(questoes[] novaQuestao)
         {
             int index = novaQuestao[0].id;
@@ -232,8 +226,6 @@ namespace Quem_Quer_Ser_Fixe
             Program.quiz[index].resposta.respostaCorrectaId = novaQuestao[0].resposta.respostaCorrectaId;
             Program.quiz[index].resposta.respostaCorrectaNome = novaQuestao[0].resposta.respostaCorrectaNome;
 
-            //FicheiroEscrita.WriteLine("id;Questao;respostaCorrectaId;respostaCorretaNome;resposta1;resposta2;resposta3;resposta4");
-
             for (int i = 0; i < Program.quiz.Length; i++)
             {
                 FicheiroEscrita.Write(
@@ -249,6 +241,43 @@ namespace Quem_Quer_Ser_Fixe
             }
 
             FicheiroEscrita.Close();
+        }
+
+
+
+        /// <summary>
+        /// Adiciona o menu de opções para remover a pergunta e guarda o array no ficheiro txt
+        /// </summary>
+        public static void eliminar()
+        {
+            Crud.VerPerguntas();
+            Console.WriteLine("| MENU  |   1. Eliminar    |   2. Voltar ao Menu Principal   |                                                    +");
+            Console.WriteLine("+-------+---------------------------------------------------------------------------------------------------------+");
+            Console.WriteLine("");
+            Console.Write("Selecione uma Opcao > ");
+            int opcao = int.Parse(Console.ReadLine());
+            switch (opcao)
+            {
+                case 1:
+                    Console.Write("Selecione um id para remover > ");
+                    int idQuestao = int.Parse(Console.ReadLine());
+                    for (int i = 0; i < Program.quiz.Length; i++)
+                    {
+                        if (Program.quiz[i].id == idQuestao)
+                        {
+                            Program.quiz = Service.RemoverDoArray(Program.quiz, i);
+                        }
+                    }
+                    ler_guardar_service.Guardar();
+                    Program.MainMenu();
+                    break;
+                case 2:
+                    Program.MainMenu();
+                    break;
+                default:
+                    Program.MainMenu();
+                    break;
+            }
         }
     }
 }

@@ -14,13 +14,20 @@ namespace Quem_Quer_Ser_Fixe
         public static questoes[] quiz = new questoes[0];
         public static pontuacoes[] pontuacao = new pontuacoes[0];
 
+        /// <summary>
+        /// Função principal do projecto
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
-            LerFicheiro(ficheiroPerguntas);
-            LerFicheiro(ficheiroPontuacoes);
+            ler_guardar_service.LerFicheiro(ficheiroPerguntas);
+            ler_guardar_service.LerFicheiro(ficheiroPontuacoes);
             MainMenu();
         }
 
+        /// <summary>
+        /// Função que mostra o menu principal do projecto
+        /// </summary>
         public static void MainMenu()
         {
             Console.Clear();
@@ -58,6 +65,9 @@ namespace Quem_Quer_Ser_Fixe
             }
         }
 
+        /// <summary>
+        /// Mostra todas as pontuações dos users
+        /// </summary>
         private static void pontuacoes()
         {
             Console.Clear();
@@ -72,6 +82,9 @@ namespace Quem_Quer_Ser_Fixe
             Console.Clear();
         }
 
+        /// <summary>
+        /// Mostra o menu das perguntas
+        /// </summary>
         private static void gerirPerguntas()
         {
             questoes[] questoes = new questoes[0];
@@ -79,92 +92,17 @@ namespace Quem_Quer_Ser_Fixe
             Console.Clear();
         }
 
+        /// <summary>
+        /// Função que mostra o quiz e depois os resultados
+        /// </summary>
         private static void jogar()
         {
             Console.Clear();
-            Jogar.Quiz();
+            Service.Quiz();
             Jogar.mostrarResultados();
             Service.Pausa("continuar");
             MainMenu();
         }
-
-        public static void guardarPontuacao(int pontos, string userName)
-        {
-            pontuacao = new pontuacoes[0];
-            StreamReader FicheiroLeitura = new StreamReader(ficheiroPontuacoes);
-            string linha = FicheiroLeitura.ReadLine();
-            int i = 0;
-            while (!FicheiroLeitura.EndOfStream)
-            {
-                linha = FicheiroLeitura.ReadLine();
-                string[] palavras = linha.Split(';');
-
-                Array.Resize(ref pontuacao, i + 1);
-                pontuacao[i].userName = palavras[0];
-                pontuacao[i].pontos = palavras[1];
-                i++;
-            }
-            FicheiroLeitura.Close();
-
-            int index = pontuacao.Length + 1;
-            StreamWriter FicheiroEscrita = new StreamWriter(ficheiroPontuacoes);
-            Array.Resize(ref pontuacao, index);
-
-            pontuacao[index - 1].userName = userName;
-            pontuacao[index - 1].pontos = "" + pontos + "";
-
-            FicheiroEscrita.WriteLine("nome;pontos");
-            for (int a = 0; a < pontuacao.Length; a++)
-            {
-                FicheiroEscrita.WriteLine(pontuacao[a].userName + ";" + pontuacao[a].pontos);
-            }
-
-            FicheiroEscrita.Close();
-
-        }
-
-        public static void LerFicheiro(string nomeFicheiro)
-        {
-            string NomeFic = nomeFicheiro;
-            StreamReader FicheiroLeitura = new StreamReader(NomeFic);
-            string linha;
-            int i = 0;
-
-            if(nomeFicheiro == ficheiroPerguntas)
-            {
-                while (!FicheiroLeitura.EndOfStream)
-                {
-                    linha = FicheiroLeitura.ReadLine();
-                    string[] palavras = linha.Split(';');
-
-                    Array.Resize(ref Program.quiz, i + 1);
-                    Program.quiz[i].id = int.Parse(palavras[0]);
-                    Program.quiz[i].questao = palavras[1];
-                    Program.quiz[i].resposta.respostaCorrectaId = palavras[2];
-                    Program.quiz[i].resposta.respostaCorrectaNome = palavras[3];
-                    Program.quiz[i].resposta.resposta1 = palavras[4];
-                    Program.quiz[i].resposta.resposta2 = palavras[5];
-                    Program.quiz[i].resposta.resposta3 = palavras[6];
-                    Program.quiz[i].resposta.resposta4 = palavras[7];
-                    i++;
-                }
-            }
-            if(nomeFicheiro == ficheiroPontuacoes)
-            {
-                while (!FicheiroLeitura.EndOfStream)
-                {
-                    linha = FicheiroLeitura.ReadLine();
-                    string[] palavras = linha.Split(';');
-
-                    Array.Resize(ref pontuacao, i + 1);
-                    pontuacao[i].userName = palavras[0];
-                    pontuacao[i].pontos = palavras[1];
-                    i++;
-                }
-            }
-           
-            FicheiroLeitura.Close();
-           
-        }
+     
     }
 }
