@@ -1,5 +1,4 @@
-﻿using Quem_Quer_Ser_Fixe.jogar;
-using Quem_Quer_Ser_Fixe.service;
+﻿using Quem_Quer_Ser_Fixe.service;
 using System;
 using System.IO;
 using static Quem_Quer_Ser_Fixe.structs.structs;
@@ -138,7 +137,7 @@ namespace Quem_Quer_Ser_Fixe
                         Program.quiz[i].resposta.resposta1 + ";" +
                         Program.quiz[i].resposta.resposta2 + ";" +
                         Program.quiz[i].resposta.resposta3 + ";" +
-                        Program.quiz[i].resposta.resposta4 + ";"
+                        Program.quiz[i].resposta.resposta4 + ";" + "\n"
                         );
                 }
 

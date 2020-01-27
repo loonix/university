@@ -12,3 +12,5 @@ daniel;15
 helena;15
 daniel;15
 helena;20
+Daniel;15
+Daniel;10

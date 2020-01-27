@@ -1,7 +1,6 @@
 ﻿using Quem_Quer_Ser_Fixe.service;
 using System;
 using static Quem_Quer_Ser_Fixe.structs.structs;
-using Quem_Quer_Ser_Fixe;
 namespace Quem_Quer_Ser_Fixe.jogar
 {
     public static class Jogar
@@ -75,16 +74,34 @@ namespace Quem_Quer_Ser_Fixe.jogar
         private static void eliminar()
         {
             Crud.VerPerguntas();
-            Console.Write("Selecione um id para remover > ");
-            int idQuestao = int.Parse(Console.ReadLine());
-            for (int i = 0; i < Program.quiz.Length; i++)
+            Console.WriteLine("| MENU  |   1. Eliminar    |   2. Voltar ao Menu Principal   |                                                    +");
+            Console.WriteLine("+-------+---------------------------------------------------------------------------------------------------------+");
+            Console.WriteLine("");
+            Console.Write("Selecione uma Opcao > ");
+            int opcao = int.Parse(Console.ReadLine());
+            switch (opcao)
             {
-                if(Program.quiz[i].id == idQuestao)
-                {
-                    Program.quiz = RemoverDoArray(Program.quiz, i);
-                }
+                case 1:
+                    Console.Write("Selecione um id para remover > ");
+                    int idQuestao = int.Parse(Console.ReadLine());
+                    for (int i = 0; i < Program.quiz.Length; i++)
+                    {
+                        if (Program.quiz[i].id == idQuestao)
+                        {
+                            Program.quiz = RemoverDoArray(Program.quiz, i);
+                        }
+                    }
+                    Crud.Guardar();
+                    Program.MainMenu();
+                    break;
+                case 2:
+                    Program.MainMenu();
+                    break;
+                default:
+                    Program.MainMenu();
+                    break;
             }
-            Crud.Guardar();
+
         }
 
         public static void Quiz()
@@ -108,38 +125,38 @@ namespace Quem_Quer_Ser_Fixe.jogar
             }
         }
 
-    public static void mostrarResultados()
-    {
-        int pontos = 0;
-        Service.Header("     R E S U L T A D O S      ");
-        for (int i = 0; i < Program.quiz.Length; i++)
+        public static void mostrarResultados()
         {
-            string respostaUser = obterResposta(Program.quiz[i]);
-            if (Program.quiz[i].resposta.respostaUser == Program.quiz[i].resposta.respostaCorrectaId)
+            int pontos = 0;
+            Service.Header("     R E S U L T A D O S      ");
+            for (int i = 0; i < Program.quiz.Length; i++)
             {
-                Console.WriteLine(" _____________________________");
-                Console.WriteLine("|     |                       | ");
-                Console.WriteLine("|   / | QUESTAO             > | " + Program.quiz[i].questao);
-                Console.WriteLine("|  /  | RESPOSTA CORRECTA   > | " + Program.quiz[i].resposta.respostaCorrectaNome);
-                Console.WriteLine("| V   | RESPOSTA UTILIZADOR > | " + respostaUser);
-                Console.WriteLine("|_____|_______________________| ");
-                pontos = pontos + 1;
+                string respostaUser = obterResposta(Program.quiz[i]);
+                if (Program.quiz[i].resposta.respostaUser == Program.quiz[i].resposta.respostaCorrectaId)
+                {
+                    Console.WriteLine(" _____________________________");
+                    Console.WriteLine("|     |                       | ");
+                    Console.WriteLine("|   / | QUESTAO             > | " + Program.quiz[i].questao);
+                    Console.WriteLine("|  /  | RESPOSTA CORRECTA   > | " + Program.quiz[i].resposta.respostaCorrectaNome);
+                    Console.WriteLine("| V   | RESPOSTA UTILIZADOR > | " + respostaUser);
+                    Console.WriteLine("|_____|_______________________| ");
+                    pontos = pontos + 1;
+                }
+                else
+                {
+                    Console.WriteLine(" _____________________________");
+                    Console.WriteLine("|     |                       | ");
+                    Console.WriteLine("| \\ / | QUESTAO             > | " + Program.quiz[i].questao);
+                    Console.WriteLine("|  X  | RESPOSTA CORRECTA   > | " + Program.quiz[i].resposta.respostaCorrectaNome);
+                    Console.WriteLine("| / \\ | RESPOSTA UTILIZADOR > | " + respostaUser);
+                    Console.WriteLine("|_____|_______________________| ");
+                }
             }
-            else
-            {
-                Console.WriteLine(" _____________________________");
-                Console.WriteLine("|     |                       | ");
-                Console.WriteLine("| \\ / | QUESTAO             > | " + Program.quiz[i].questao);
-                Console.WriteLine("|  X  | RESPOSTA CORRECTA   > | " + Program.quiz[i].resposta.respostaCorrectaNome);
-                Console.WriteLine("| / \\ | RESPOSTA UTILIZADOR > | " + respostaUser);
-                Console.WriteLine("|_____|_______________________| ");
-            }
-        }
             Console.Write("Introduza o seu nome > ");
             string userName = Console.ReadLine();
             Console.WriteLine("PONTOS: " + (pontos * Program.quiz.Length));
             Program.guardarPontuacao(pontos * Program.quiz.Length, userName);
-    }
+        }
 
         public static string obterResposta(questoes questoes)
         {
