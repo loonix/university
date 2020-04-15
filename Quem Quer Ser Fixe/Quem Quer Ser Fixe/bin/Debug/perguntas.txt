@@ -1,6 +1,0 @@
-0;De quem é a famosa frase “Penso, logo existo”?;3;Descartes;Platão;Galileu Galilei;Descartes;Sócrates
-1;Quantas casas decimais tem o número pi?;1;Trilhares;Trilhares;Duas;Centenas;Milhares
-2;Quem e o aluno mais fixe do ISLA;1;Daniel;Daniel;Bruno;Hugo;Joao
-3;Quem e a melhor disciplina do ISLA;2;Algoritmia;Metodos Quantitativos;Algoritmia;Sistemas de Informacao;Bases de Dados
-4;Qual e a traducao de Ingles para portugues da palavra "cool";4;Fixe;Altamente;Porreiro;Mau;Fixe
-5;Quem e o atual primeiro ministro de Portugal;1;Antonio Costa;Antonio Costa;Jose Socrates;Antonio Guterres;Marcelo Caetano

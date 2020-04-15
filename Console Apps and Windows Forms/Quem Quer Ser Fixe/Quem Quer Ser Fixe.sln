@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quem Quer Ser Fixe", "Quem Quer Ser Fixe\Quem Quer Ser Fixe.csproj", "{D3DC32F1-0594-41CA-8517-9A7A42CCD8AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3DC32F1-0594-41CA-8517-9A7A42CCD8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DC32F1-0594-41CA-8517-9A7A42CCD8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DC32F1-0594-41CA-8517-9A7A42CCD8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DC32F1-0594-41CA-8517-9A7A42CCD8AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCF94B9A-4057-4D9D-B08C-6B1FBE354CAB}
+	EndGlobalSection
+EndGlobal
