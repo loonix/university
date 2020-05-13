@@ -1,0 +1,24 @@
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\bin\Debug\05-Euro2020.exe.config
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\bin\Debug\05-Euro2020.exe
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\bin\Debug\05-Euro2020.pdb
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.csprojAssemblyReference.cache
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.FormMenu.resources
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.FormSobre.resources
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.Properties.Resources.resources
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.csproj.GenerateResource.cache
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.csproj.CoreCompileInputs.cache
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.exe
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.pdb
+C:\Users\bruno\source\repos\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.FormEuro2020.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\bin\Debug\05-Euro2020.exe.config
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\bin\Debug\05-Euro2020.exe
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\bin\Debug\05-Euro2020.pdb
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.csprojAssemblyReference.cache
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.FormEuro2020.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.FormMenu.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.FormSobre.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\_05_Euro2020.Properties.Resources.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.csproj.GenerateResource.cache
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.csproj.CoreCompileInputs.cache
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.exe
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\05-Euro2020\05-Euro2020\obj\Debug\05-Euro2020.pdb

@@ -1,0 +1,13 @@
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\Presidenciais.exe.config
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\Presidenciais.exe
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\Presidenciais.pdb
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.csprojAssemblyReference.cache
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.Form1.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.FormResultados.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.Properties.Resources.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.csproj.GenerateResource.cache
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.csproj.CoreCompileInputs.cache
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.exe
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.pdb
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.FormTotais.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.FormVisualiza.resources
