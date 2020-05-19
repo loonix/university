@@ -54,7 +54,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -272,14 +272,15 @@
             this.label13.TabIndex = 25;
             this.label13.Text = "Distrito / Regiao";
             // 
-            // button1
+            // buttonGuardar
             // 
-            this.button1.Location = new System.Drawing.Point(182, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 30);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Location = new System.Drawing.Point(182, 384);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(182, 30);
+            this.buttonGuardar.TabIndex = 26;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // button2
             // 
@@ -326,7 +327,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
@@ -390,7 +391,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
