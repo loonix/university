@@ -11,3 +11,10 @@ C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\
 C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.pdb
 C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.FormTotais.resources
 C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.FormVisualiza.resources
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\ControlzEx.dll
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\ControlzEx.pdb
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\ControlzEx.xml
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\danie\Documents\Universidade\university\Console Apps and Windows Forms\Presidenciais\Presidenciais\obj\Debug\Presidenciais.csproj.CopyComplete

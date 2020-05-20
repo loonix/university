@@ -9,17 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Presidenciais.registo;
+using static Presidenciais.Service;
 
 namespace Presidenciais
 {
     public partial class FormResultados : Form
     {
 
-        public FormResultados()
-        {
-            InitializeComponent();
-        }
-
+        public FormResultados() { InitializeComponent(); }
+        
         /// <summary>
         /// loads all regioes and resultados when the app starts
         /// </summary>
@@ -43,55 +41,10 @@ namespace Presidenciais
                 while (!FicheiroLer.EndOfStream)
                 {
                     comboBoxRegioes.Items.Add(FicheiroLer.ReadLine());
-                    //    ListaRegioes.Add(FicheiroLer.ReadLine());
-
                 }
                 FicheiroLer.Close();
             }
-            else
-            {
-                MessageBox.Show("O ficheiro regioes.txt nao existe", "Abrir Ficheiro", MessageBoxButtons.OK);
-            }
-        }
-
-        /// <summary>
-        /// Loads all resultados and displays a message box in case there is no file
-        /// </summary>
-        private void loadResultados()
-        {
-            string NomeFic = "resultados.txt";
-            if (File.Exists(NomeFic))
-            {
-                StreamReader FicheiroLer = new StreamReader(NomeFic);
-                RegistoResultado resultado = new RegistoResultado();
-                string linha;
-
-                while (!FicheiroLer.EndOfStream)
-                {
-                    linha = FicheiroLer.ReadLine();
-                    //separar a linha atraves da virgula e colocar cada campo num vetor
-                    string[] campos = linha.Split(',');
-                    resultado.Distrito = campos[0];
-                    resultado.votacaoMRS = int.Parse(campos[1]);
-                    resultado.votacaoSN = int.Parse(campos[2]);
-                    resultado.votacaoMM = int.Parse(campos[3]);
-                    resultado.votacaoVS = int.Parse(campos[4]);
-                    resultado.votacaoMB = int.Parse(campos[5]);
-                    resultado.votacaoPM = int.Parse(campos[6]);
-                    resultado.votacaoES = int.Parse(campos[7]);
-                    resultado.votacaoHN = int.Parse(campos[8]);
-                    resultado.votacaoJS = int.Parse(campos[9]);
-                    resultado.votacaoCF = int.Parse(campos[10]);
-                    resultado.votacaoBranco = int.Parse(campos[11]);
-                    resultado.votacaoNulos = int.Parse(campos[12]);
-                    ListaResultados.Add(resultado);
-                }
-                FicheiroLer.Close();
-            }
-            else
-            {
-                MessageBox.Show("O ficheiro resultados.txt nao existe", "Abrir Ficheiro", MessageBoxButtons.OK);
-            }
+            else MessageBox.Show("O ficheiro regioes.txt nao existe", "Abrir Ficheiro", MessageBoxButtons.OK);
         }
 
         /// <summary>
@@ -159,14 +112,15 @@ namespace Presidenciais
         {
             foreach (Control x in this.Controls)
             {
-                if (x is TextBox)
-                {
-                    ((TextBox)x).Text = "";
-
-                }
+                if (x is TextBox) ((TextBox)x).Text = "";
             }
         }
 
+        /// <summary>
+        /// saves the edited or the new on the resultados.txt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
             if (CamposValidos())
@@ -190,24 +144,23 @@ namespace Presidenciais
                 resultToSave.votacaoBranco = int.Parse(textBox11.Text);
                 resultToSave.votacaoNulos = int.Parse(textBox12.Text);
 
-                if (index >= 0)
-                {
-                    ListaResultados[index] = resultToSave;
-                }
-                else
-                {
-                    ListaResultados.Add(resultToSave);
-                }
+                if (index >= 0) ListaResultados[index] = resultToSave;
+                else ListaResultados.Add(resultToSave);
+                
                 saveToTextFile();
-
             }
         }
 
+        /// <summary>
+        /// clears resultados and saves the results to resultados.txt
+        /// </summary>
         private void saveToTextFile()
         {
             string NomeFic = "resultados.txt";
             if (File.Exists(NomeFic))
             {
+                clearTextFile(NomeFic);
+
                 StreamWriter writeFile = new StreamWriter(NomeFic);
                 foreach (var resultado in ListaResultados)
                 {
@@ -227,13 +180,16 @@ namespace Presidenciais
                         resultado.votacaoNulos
                     );
                 }
-
                 writeFile.Close();
             }
-            else
-            {
-                MessageBox.Show("O ficheiro regioes.txt nao existe", "Abrir Ficheiro", MessageBoxButtons.OK);
-            }
+            else MessageBox.Show("O ficheiro regioes.txt nao existe", "Abrir Ficheiro", MessageBoxButtons.OK);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormVisualiza novoForm = new FormVisualiza();
+            novoForm.MdiParent = this.MdiParent;
+            novoForm.ShowDialog();
         }
     }
 }

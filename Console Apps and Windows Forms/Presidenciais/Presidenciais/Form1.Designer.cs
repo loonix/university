@@ -35,6 +35,7 @@
             this.estatisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.totaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,9 +50,11 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ficheiroToolStripMenuItem,
-            this.estatisticasToolStripMenuItem});
+            this.estatisticasToolStripMenuItem,
+            this.totaisToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -60,28 +63,35 @@
             // 
             // ficheiroToolStripMenuItem
             // 
+            this.ficheiroToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.ficheiroToolStripMenuItem.Name = "ficheiroToolStripMenuItem";
             this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.ficheiroToolStripMenuItem.Text = "Ficheiro";
             // 
             // estatisticasToolStripMenuItem
             // 
+            this.estatisticasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.estatisticasToolStripMenuItem.Name = "estatisticasToolStripMenuItem";
             this.estatisticasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.estatisticasToolStripMenuItem.Text = "Estatisticas";
+            this.estatisticasToolStripMenuItem.Click += new System.EventHandler(this.estatisticasToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
+            this.toolStripButton1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
@@ -89,11 +99,19 @@
             this.toolStripButton1.Text = "Gestao Resultados";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // totaisToolStripMenuItem
+            // 
+            this.totaisToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.totaisToolStripMenuItem.Name = "totaisToolStripMenuItem";
+            this.totaisToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.totaisToolStripMenuItem.Text = "Totais";
+            this.totaisToolStripMenuItem.Click += new System.EventHandler(this.totaisToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::Presidenciais.Properties.Resources.logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -101,10 +119,12 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Presidenciais 2016";
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -123,6 +143,7 @@
         private System.Windows.Forms.ToolStripMenuItem estatisticasToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem totaisToolStripMenuItem;
     }
 }
 

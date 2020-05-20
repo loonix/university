@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Presidenciais.Service;
 
 namespace Presidenciais
 {
@@ -21,12 +22,26 @@ namespace Presidenciais
         {
             FormResultados novoForm = new FormResultados();
             novoForm.MdiParent = this.MdiParent;
-            novoForm.Show();
+            novoForm.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            loadResultados();
+        }
 
+        private void estatisticasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVisualiza novoForm = new FormVisualiza();
+            novoForm.MdiParent = this.MdiParent;
+            novoForm.ShowDialog();
+        }
+
+        private void totaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTotais novoForm = new FormTotais();
+            novoForm.MdiParent = this.MdiParent;
+            novoForm.Show();
         }
     }
 }
