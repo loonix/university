@@ -1,14 +1,9 @@
-﻿using CodrApp;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Codr.Core.ClassBD;
+using static Codr.Core.Classes.ClassBD;
 
-namespace Codr.Core.BD
+namespace Codr.Core.Classes
 {
     class ClassSnippets
     {
@@ -16,7 +11,7 @@ namespace Codr.Core.BD
         {
             try
             {
-                SqlConnection sqlConnection = ClassBD.AbreBD();
+                SqlConnection sqlConnection = ClassBD.OpenDatabase();
                 string comandoSQL = "INSERT INTO codigos (titulo, descricao, id_categoria, path) VALUES " +
                     "(@titulo, @descricao, @idCat, @path)";
 
@@ -50,7 +45,7 @@ namespace Codr.Core.BD
         {
 
             //1. Abrir BD
-            SqlConnection sqlConnection = ClassBD.AbreBD();
+            SqlConnection sqlConnection = ClassBD.OpenDatabase();
             //verificar sucesso da abertura
             if (sqlConnection == null)
             {
