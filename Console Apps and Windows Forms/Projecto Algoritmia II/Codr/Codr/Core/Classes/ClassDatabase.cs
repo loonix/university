@@ -1,13 +1,8 @@
-﻿using CodrApp;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Codr.Core
+namespace Codr.Core.Classes
 {
     public class ClassBD
     {
@@ -21,7 +16,7 @@ namespace Codr.Core
             public string path { get; set; }
         }
 
-        public static SqlConnection AbreBD()
+        public static SqlConnection OpenDatabase()
         {
             // Le a connection string a partir das settings do projecto
             string StringConn = Properties.Settings.Default.DB_CodrConnectionString;
@@ -42,7 +37,7 @@ namespace Codr.Core
         public static DataTable ObterDados(string sql)
         {
             // Abre conexao
-            SqlConnection conexao = AbreBD();
+            SqlConnection conexao = OpenDatabase();
 
             // criacao do comandoSQL
             string comandoSQL = sql;
