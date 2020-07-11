@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Codr {
+namespace Codr.Core.DB {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace Codr {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("_DB_CodrDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DB_AllSnippets")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _DB_CodrDataSet : global::System.Data.DataSet {
+    public partial class DB_AllSnippets : global::System.Data.DataSet {
         
-        private codigosDataTable tablecodigos;
+        private snippetsDataTable tablesnippets;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public _DB_CodrDataSet() {
+        public DB_AllSnippets() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Codr {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected _DB_CodrDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DB_AllSnippets(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Codr {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["codigos"] != null)) {
-                    base.Tables.Add(new codigosDataTable(ds.Tables["codigos"]));
+                if ((ds.Tables["snippets"] != null)) {
+                    base.Tables.Add(new snippetsDataTable(ds.Tables["snippets"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Codr {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public codigosDataTable codigos {
+        public snippetsDataTable snippets {
             get {
-                return this.tablecodigos;
+                return this.tablesnippets;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Codr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _DB_CodrDataSet cln = ((_DB_CodrDataSet)(base.Clone()));
+            DB_AllSnippets cln = ((DB_AllSnippets)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Codr {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["codigos"] != null)) {
-                    base.Tables.Add(new codigosDataTable(ds.Tables["codigos"]));
+                if ((ds.Tables["snippets"] != null)) {
+                    base.Tables.Add(new snippetsDataTable(ds.Tables["snippets"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Codr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablecodigos = ((codigosDataTable)(base.Tables["codigos"]));
+            this.tablesnippets = ((snippetsDataTable)(base.Tables["snippets"]));
             if ((initTable == true)) {
-                if ((this.tablecodigos != null)) {
-                    this.tablecodigos.InitVars();
+                if ((this.tablesnippets != null)) {
+                    this.tablesnippets.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Codr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "_DB_CodrDataSet";
+            this.DataSetName = "DB_AllSnippets";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/_DB_CodrDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DB_AllSnippets.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablecodigos = new codigosDataTable();
-            base.Tables.Add(this.tablecodigos);
+            this.tablesnippets = new snippetsDataTable();
+            base.Tables.Add(this.tablesnippets);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializecodigos() {
+        private bool ShouldSerializesnippets() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Codr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _DB_CodrDataSet ds = new _DB_CodrDataSet();
+            DB_AllSnippets ds = new DB_AllSnippets();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,23 @@ namespace Codr {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void codigosRowChangeEventHandler(object sender, codigosRowChangeEvent e);
+        public delegate void snippetsRowChangeEventHandler(object sender, snippetsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class codigosDataTable : global::System.Data.TypedTableBase<codigosRow> {
+        public partial class snippetsDataTable : global::System.Data.TypedTableBase<snippetsRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntitulo;
+            private global::System.Data.DataColumn columntitle;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public codigosDataTable() {
-                this.TableName = "codigos";
+            public snippetsDataTable() {
+                this.TableName = "snippets";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace Codr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal codigosDataTable(global::System.Data.DataTable table) {
+            internal snippetsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +311,24 @@ namespace Codr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected codigosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected snippetsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnId;
+                    return this.columnid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn tituloColumn {
+            public global::System.Data.DataColumn titleColumn {
                 get {
-                    return this.columntitulo;
+                    return this.columntitle;
                 }
             }
             
@@ -343,53 +343,53 @@ namespace Codr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public codigosRow this[int index] {
+            public snippetsRow this[int index] {
                 get {
-                    return ((codigosRow)(this.Rows[index]));
+                    return ((snippetsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event codigosRowChangeEventHandler codigosRowChanging;
+            public event snippetsRowChangeEventHandler snippetsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event codigosRowChangeEventHandler codigosRowChanged;
+            public event snippetsRowChangeEventHandler snippetsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event codigosRowChangeEventHandler codigosRowDeleting;
+            public event snippetsRowChangeEventHandler snippetsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event codigosRowChangeEventHandler codigosRowDeleted;
+            public event snippetsRowChangeEventHandler snippetsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddcodigosRow(codigosRow row) {
+            public void AddsnippetsRow(snippetsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public codigosRow AddcodigosRow(string titulo) {
-                codigosRow rowcodigosRow = ((codigosRow)(this.NewRow()));
+            public snippetsRow AddsnippetsRow(string title) {
+                snippetsRow rowsnippetsRow = ((snippetsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        titulo};
-                rowcodigosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowcodigosRow);
-                return rowcodigosRow;
+                        title};
+                rowsnippetsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsnippetsRow);
+                return rowsnippetsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public codigosRow FindById(int Id) {
-                return ((codigosRow)(this.Rows.Find(new object[] {
-                            Id})));
+            public snippetsRow FindByid(int id) {
+                return ((snippetsRow)(this.Rows.Find(new object[] {
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                codigosDataTable cln = ((codigosDataTable)(base.Clone()));
+                snippetsDataTable cln = ((snippetsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,59 +397,59 @@ namespace Codr {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new codigosDataTable();
+                return new snippetsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columntitulo = base.Columns["titulo"];
+                this.columnid = base.Columns["id"];
+                this.columntitle = base.Columns["title"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columntitulo = new global::System.Data.DataColumn("titulo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntitulo);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columntitle = new global::System.Data.DataColumn("title", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntitle);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columntitulo.AllowDBNull = false;
-                this.columntitulo.MaxLength = 2147483647;
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
+                this.columntitle.AllowDBNull = false;
+                this.columntitle.MaxLength = 500;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public codigosRow NewcodigosRow() {
-                return ((codigosRow)(this.NewRow()));
+            public snippetsRow NewsnippetsRow() {
+                return ((snippetsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new codigosRow(builder);
+                return new snippetsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(codigosRow);
+                return typeof(snippetsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.codigosRowChanged != null)) {
-                    this.codigosRowChanged(this, new codigosRowChangeEvent(((codigosRow)(e.Row)), e.Action));
+                if ((this.snippetsRowChanged != null)) {
+                    this.snippetsRowChanged(this, new snippetsRowChangeEvent(((snippetsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -457,8 +457,8 @@ namespace Codr {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.codigosRowChanging != null)) {
-                    this.codigosRowChanging(this, new codigosRowChangeEvent(((codigosRow)(e.Row)), e.Action));
+                if ((this.snippetsRowChanging != null)) {
+                    this.snippetsRowChanging(this, new snippetsRowChangeEvent(((snippetsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -466,8 +466,8 @@ namespace Codr {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.codigosRowDeleted != null)) {
-                    this.codigosRowDeleted(this, new codigosRowChangeEvent(((codigosRow)(e.Row)), e.Action));
+                if ((this.snippetsRowDeleted != null)) {
+                    this.snippetsRowDeleted(this, new snippetsRowChangeEvent(((snippetsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -475,14 +475,14 @@ namespace Codr {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.codigosRowDeleting != null)) {
-                    this.codigosRowDeleting(this, new codigosRowChangeEvent(((codigosRow)(e.Row)), e.Action));
+                if ((this.snippetsRowDeleting != null)) {
+                    this.snippetsRowDeleting(this, new snippetsRowChangeEvent(((snippetsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovecodigosRow(codigosRow row) {
+            public void RemovesnippetsRow(snippetsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -491,7 +491,7 @@ namespace Codr {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _DB_CodrDataSet ds = new _DB_CodrDataSet();
+                DB_AllSnippets ds = new DB_AllSnippets();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -509,7 +509,7 @@ namespace Codr {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "codigosDataTable";
+                attribute2.FixedValue = "snippetsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -553,36 +553,36 @@ namespace Codr {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class codigosRow : global::System.Data.DataRow {
+        public partial class snippetsRow : global::System.Data.DataRow {
             
-            private codigosDataTable tablecodigos;
+            private snippetsDataTable tablesnippets;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal codigosRow(global::System.Data.DataRowBuilder rb) : 
+            internal snippetsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablecodigos = ((codigosDataTable)(this.Table));
+                this.tablesnippets = ((snippetsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id {
+            public int id {
                 get {
-                    return ((int)(this[this.tablecodigos.IdColumn]));
+                    return ((int)(this[this.tablesnippets.idColumn]));
                 }
                 set {
-                    this[this.tablecodigos.IdColumn] = value;
+                    this[this.tablesnippets.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string titulo {
+            public string title {
                 get {
-                    return ((string)(this[this.tablecodigos.tituloColumn]));
+                    return ((string)(this[this.tablesnippets.titleColumn]));
                 }
                 set {
-                    this[this.tablecodigos.tituloColumn] = value;
+                    this[this.tablesnippets.titleColumn] = value;
                 }
             }
         }
@@ -591,22 +591,22 @@ namespace Codr {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class codigosRowChangeEvent : global::System.EventArgs {
+        public class snippetsRowChangeEvent : global::System.EventArgs {
             
-            private codigosRow eventRow;
+            private snippetsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public codigosRowChangeEvent(codigosRow row, global::System.Data.DataRowAction action) {
+            public snippetsRowChangeEvent(snippetsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public codigosRow Row {
+            public snippetsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -622,7 +622,7 @@ namespace Codr {
         }
     }
 }
-namespace Codr._DB_CodrDataSetTableAdapters {
+namespace Codr.Core.DB.DB_AllSnippetsTableAdapters {
     
     
     /// <summary>
@@ -634,7 +634,7 @@ namespace Codr._DB_CodrDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class codigosTableAdapter : global::System.ComponentModel.Component {
+    public partial class snippetsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -648,7 +648,7 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public codigosTableAdapter() {
+        public snippetsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -745,29 +745,32 @@ namespace Codr._DB_CodrDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "codigos";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("titulo", "titulo");
+            tableMapping.DataSetTable = "snippets";
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("title", "title");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[codigos] WHERE (([Id] = @Original_Id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[snippets] WHERE (([id] = @Original_id) AND ([title] = @Origina" +
+                "l_title))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[codigos] ([titulo]) VALUES (@titulo);\r\nSELECT Id, titulo FROM " +
-                "codigos WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[snippets] ([title]) VALUES (@title);\r\nSELECT id, title FROM sn" +
+                "ippets WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@titulo", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[codigos] SET [titulo] = @titulo WHERE (([Id] = @Original_Id));\r\nSEL" +
-                "ECT Id, titulo FROM codigos WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[snippets] SET [title] = @title WHERE (([id] = @Original_id) AND ([t" +
+                "itle] = @Original_title));\r\nSELECT id, title FROM snippets WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@titulo", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -783,7 +786,7 @@ namespace Codr._DB_CodrDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, titulo FROM dbo.codigos";
+            this._commandCollection[0].CommandText = "SELECT id, title FROM dbo.snippets";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -791,7 +794,7 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_DB_CodrDataSet.codigosDataTable dataTable) {
+        public virtual int Fill(DB_AllSnippets.snippetsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -804,9 +807,9 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _DB_CodrDataSet.codigosDataTable GetData() {
+        public virtual DB_AllSnippets.snippetsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _DB_CodrDataSet.codigosDataTable dataTable = new _DB_CodrDataSet.codigosDataTable();
+            DB_AllSnippets.snippetsDataTable dataTable = new DB_AllSnippets.snippetsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -814,15 +817,15 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_DB_CodrDataSet.codigosDataTable dataTable) {
+        public virtual int Update(DB_AllSnippets.snippetsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_DB_CodrDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "codigos");
+        public virtual int Update(DB_AllSnippets dataSet) {
+            return this.Adapter.Update(dataSet, "snippets");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -844,8 +847,14 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+        public virtual int Delete(int Original_id, string Original_title) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            if ((Original_title == null)) {
+                throw new global::System.ArgumentNullException("Original_title");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_title));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -866,12 +875,12 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string titulo) {
-            if ((titulo == null)) {
-                throw new global::System.ArgumentNullException("titulo");
+        public virtual int Insert(string title) {
+            if ((title == null)) {
+                throw new global::System.ArgumentNullException("title");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(titulo));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(title));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -893,15 +902,21 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string titulo, int Original_Id, int Id) {
-            if ((titulo == null)) {
-                throw new global::System.ArgumentNullException("titulo");
+        public virtual int Update(string title, int Original_id, string Original_title, int id) {
+            if ((title == null)) {
+                throw new global::System.ArgumentNullException("title");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(titulo));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(title));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_id));
+            if ((Original_title == null)) {
+                throw new global::System.ArgumentNullException("Original_title");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_title));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -922,8 +937,8 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string titulo, int Original_Id) {
-            return this.Update(titulo, Original_Id, Original_Id);
+        public virtual int Update(string title, int Original_id, string Original_title) {
+            return this.Update(title, Original_id, Original_title, Original_id);
         }
     }
     
@@ -939,7 +954,7 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private codigosTableAdapter _codigosTableAdapter;
+        private snippetsTableAdapter _snippetsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -961,12 +976,12 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public codigosTableAdapter codigosTableAdapter {
+        public snippetsTableAdapter snippetsTableAdapter {
             get {
-                return this._codigosTableAdapter;
+                return this._snippetsTableAdapter;
             }
             set {
-                this._codigosTableAdapter = value;
+                this._snippetsTableAdapter = value;
             }
         }
         
@@ -989,9 +1004,9 @@ namespace Codr._DB_CodrDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._codigosTableAdapter != null) 
-                            && (this._codigosTableAdapter.Connection != null))) {
-                    return this._codigosTableAdapter.Connection;
+                if (((this._snippetsTableAdapter != null) 
+                            && (this._snippetsTableAdapter.Connection != null))) {
+                    return this._snippetsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1006,7 +1021,7 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._codigosTableAdapter != null)) {
+                if ((this._snippetsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1018,14 +1033,14 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(_DB_CodrDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DB_AllSnippets dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._codigosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.codigos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._snippetsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.snippets.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._codigosTableAdapter.Update(updatedRows));
+                    result = (result + this._snippetsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1037,13 +1052,13 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(_DB_CodrDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DB_AllSnippets dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._codigosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.codigos.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._snippetsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.snippets.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._codigosTableAdapter.Update(addedRows));
+                    result = (result + this._snippetsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1055,13 +1070,13 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(_DB_CodrDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DB_AllSnippets dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._codigosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.codigos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._snippetsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.snippets.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._codigosTableAdapter.Update(deletedRows));
+                    result = (result + this._snippetsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1097,15 +1112,15 @@ namespace Codr._DB_CodrDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(_DB_CodrDataSet dataSet) {
+        public virtual int UpdateAll(DB_AllSnippets dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._codigosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._codigosTableAdapter.Connection) == false))) {
+            if (((this._snippetsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._snippetsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1141,13 +1156,13 @@ namespace Codr._DB_CodrDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._codigosTableAdapter != null)) {
-                    revertConnections.Add(this._codigosTableAdapter, this._codigosTableAdapter.Connection);
-                    this._codigosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._codigosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._codigosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._codigosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._codigosTableAdapter.Adapter);
+                if ((this._snippetsTableAdapter != null)) {
+                    revertConnections.Add(this._snippetsTableAdapter, this._snippetsTableAdapter.Connection);
+                    this._snippetsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._snippetsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._snippetsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._snippetsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._snippetsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1208,9 +1223,9 @@ namespace Codr._DB_CodrDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._codigosTableAdapter != null)) {
-                    this._codigosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._codigosTableAdapter]));
-                    this._codigosTableAdapter.Transaction = null;
+                if ((this._snippetsTableAdapter != null)) {
+                    this._snippetsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._snippetsTableAdapter]));
+                    this._snippetsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
