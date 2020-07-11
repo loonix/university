@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO-Objectos-Classes", "POO-Objectos-Classes\POO-Objectos-Classes.csproj", "{7F33CBFD-409F-4029-B2EB-326C31D6665F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F33CBFD-409F-4029-B2EB-326C31D6665F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F33CBFD-409F-4029-B2EB-326C31D6665F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F33CBFD-409F-4029-B2EB-326C31D6665F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F33CBFD-409F-4029-B2EB-326C31D6665F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C47A16D2-7E67-41CE-BA8C-A5EDA695769D}
+	EndGlobalSection
+EndGlobal
