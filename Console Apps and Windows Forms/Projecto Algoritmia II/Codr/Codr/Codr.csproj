@@ -67,8 +67,61 @@
     <Compile Include="Core\Classes\ClassCategories.cs" />
     <Compile Include="Core\Classes\ClassDatabase.cs" />
     <Compile Include="Core\Classes\ClassSnippets.cs" />
+    <Compile Include="Core\CodeEditor\CodeEditorHotKeys.cs" />
+    <Compile Include="Core\CodeEditor\CodeEditorSearchManager.cs" />
+    <Compile Include="Core\DB\_DB_CodrDataSet.Designer.cs" />
+    <Compile Include="Core\DB\_DB_CodrDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DB_CodrDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Core\Program.cs" />
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\AllSnippets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\AllSnippets.designer.cs">
+      <DependentUpon>AllSnippets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\Categories.designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\NewSnippet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panels\NewSnippet.designer.cs">
+      <DependentUpon>NewSnippet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\AllSnippets.resx">
+      <DependentUpon>AllSnippets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\NewSnippet.resx">
+      <DependentUpon>NewSnippet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +131,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Core\DB\_DB_CodrDataSet.xsc">
+      <DependentUpon>_DB_CodrDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Core\DB\_DB_CodrDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DB_CodrDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Core\DB\_DB_CodrDataSet.xss">
+      <DependentUpon>_DB_CodrDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,10 +156,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\" />
-    <Folder Include="Panels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
