@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Codr.Core.BD
+namespace Codr.Core.Classes
 {
     public class ClassCategories
     {
 
-        public static string ProcuraCategoria(string NomeCategoria)
+        public static string SearchCategory(string NomeCategoria)
         {
 
             //1. Abrir BD
-            SqlConnection sqlConnection = ClassBD.AbreBD();
+            SqlConnection sqlConnection = ClassBD.OpenDatabase();
             //verificar sucesso da abertura
             if (sqlConnection == null)
             {
@@ -46,19 +42,19 @@ namespace Codr.Core.BD
             return "";
         }
 
-        public static string InserirCategoria(string NomeCategoria)
+        public static string AddCategory(string NomeCategoria)
         {
             try
             {
                 // verifica se ja existe uma categoria com o mesmo nome
-                string catId = ProcuraCategoria(NomeCategoria);
+                string catId = SearchCategory(NomeCategoria);
 
                 if (catId != "")
                 {
                     return catId;
                 }
 
-                SqlConnection sqlConnection = ClassBD.AbreBD();
+                SqlConnection sqlConnection = ClassBD.OpenDatabase();
                 string comandoSQL = "INSERT INTO categorias (nome_categoria) VALUES (@nome)";
 
                 if (sqlConnection == null)
@@ -72,7 +68,7 @@ namespace Codr.Core.BD
                 comando.Parameters.AddWithValue("nome", NomeCategoria);
                 comando.ExecuteNonQuery();
                 sqlConnection.Close();
-                return ProcuraCategoria(NomeCategoria);
+                return SearchCategory(NomeCategoria);
             }
             catch (Exception err)
             {
