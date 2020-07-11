@@ -7,25 +7,25 @@ namespace Codr.Core.Classes
 {
     class ClassSnippets
     {
-        public static void InserirCodigo(string titulo, string descricao, string idCat, string path)
+        public static void InserirCodigo(string title, string description, string id_extension, string path)
         {
             try
             {
                 SqlConnection sqlConnection = ClassBD.OpenDatabase();
-                string comandoSQL = "INSERT INTO codigos (titulo, descricao, id_categoria, path) VALUES " +
-                    "(@titulo, @descricao, @idCat, @path)";
+                string comandoSQL = "INSERT INTO snippets (title, description, id_extension, path) VALUES " +
+                    "(@title, @description, @id_extension, @path)";
 
                 if (sqlConnection == null)
                 {
-                    MessageBox.Show("Nao foi possivel abrir a tabela codigos",
+                    MessageBox.Show("Nao foi possivel abrir a tabela snippets",
                        "CODr", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 SqlCommand comando = new SqlCommand(comandoSQL, sqlConnection);
-                comando.Parameters.AddWithValue("titulo", titulo.Trim());
-                comando.Parameters.AddWithValue("descricao", descricao.Trim());
-                comando.Parameters.AddWithValue("idCat", idCat);
+                comando.Parameters.AddWithValue("title", title.Trim());
+                comando.Parameters.AddWithValue("description", description.Trim());
+                comando.Parameters.AddWithValue("id_extension", id_extension);
                 comando.Parameters.AddWithValue("path", path);
 
                 comando.ExecuteNonQuery();
@@ -34,14 +34,14 @@ namespace Codr.Core.Classes
             }
             catch (Exception err)
             {
-                MessageBox.Show("Nao foi possivel adicionar a categoria \n" + err,
+                MessageBox.Show("Nao foi possivel adicionar a extension \n" + err,
                         "CODr", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
         }
 
-        public static ClassSnippet AbreNota(string id)
+        public static ClassSnippet OpenSnippet(string id)
         {
 
             //1. Abrir BD
@@ -54,7 +54,7 @@ namespace Codr.Core.Classes
 
             //2. Criar comando SQL SELECT para submeter à BD
             string SQL;
-            SQL = "SELECT * FROM codigos WHERE codigos.Id = @id";
+            SQL = "SELECT * FROM snippets WHERE snippets.id = @id";
 
             SqlCommand sqlCommand = new SqlCommand(SQL, sqlConnection);
             sqlCommand.Parameters.AddWithValue("id", id.Trim());
@@ -66,13 +66,13 @@ namespace Codr.Core.Classes
             {
                 //exite estudante
                 //criar um objto mdo tipo ClassNotas
-                ClassSnippet nota = new ClassSnippet();
-                nota.id = id;
-                nota.titulo = sqlDataReader["titulo"].ToString();
-                nota.descricao = sqlDataReader["descricao"].ToString();
-                nota.id_categoria = int.Parse(sqlDataReader["id_categoria"].ToString());
-                nota.path = sqlDataReader["path"].ToString();
-                return nota;
+                ClassSnippet snippet = new ClassSnippet();
+                snippet.id = id;
+                snippet.title = sqlDataReader["title"].ToString();
+                snippet.description = sqlDataReader["description"].ToString();
+                snippet.id_extension = int.Parse(sqlDataReader["id_extension"].ToString());
+                snippet.path = sqlDataReader["path"].ToString();
+                return snippet;
             }
             else
             {

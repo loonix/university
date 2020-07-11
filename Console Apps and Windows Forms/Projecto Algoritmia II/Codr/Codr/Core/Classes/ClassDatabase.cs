@@ -10,9 +10,9 @@ namespace Codr.Core.Classes
         public class ClassSnippet
         {
             public string id { get; set; }
-            public string titulo { get; set; }
-            public string descricao { get; set; }
-            public int id_categoria { get; set; }
+            public string title { get; set; }
+            public string description { get; set; }
+            public int id_extension { get; set; }
             public string path { get; set; }
         }
 

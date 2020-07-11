@@ -22,8 +22,9 @@ namespace CodrApp
         #region FormLoad
         private void Main_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_DB_CodrDataSet.codigos' table. You can move, or remove it, as needed.
-            this.codigosTableAdapter.Fill(this._DB_CodrDataSet.codigos);
+            // TODO: This line of code loads data into the 'dB_AllSnippets.snippets' table. You can move, or remove it, as needed.
+            this.snippetsTableAdapter.Fill(this.dB_AllSnippets.snippets);
+
             // CREATE CONTROL
             TextArea = new ScintillaNET.Scintilla();
             TextPanel.Controls.Add(TextArea);
@@ -56,7 +57,7 @@ namespace CodrApp
             InitHotkeys();
 
 
-            loadAllCategories();
+            loadAllExtensions();
             listOfSnippets.ClearSelected(); // Clears the list of snippets
         }
         #endregion
@@ -85,9 +86,9 @@ namespace CodrApp
         /// <summary>
         /// Loads all categories into the comboBox
         /// </summary>
-        void loadAllCategories()
+        void loadAllExtensions()
         {
-            string comandoSQL = "SELECT * from categorias";
+            string comandoSQL = "SELECT * from extensions";
 
             DataTable table = ClassBD.ObterDados(comandoSQL); // recebe os dados
             comboBoxCategoria.Items.Add(table); // TODO
@@ -97,7 +98,7 @@ namespace CodrApp
         {
             try
             {
-                string Idcategoria = ClassCategories.AddCategory(comboBoxCategoria.Text);
+                string Idcategoria = ClassCategories.AddExtension(comboBoxCategoria.Text);
 
                 if (Idcategoria != "")
                 {
@@ -122,9 +123,9 @@ namespace CodrApp
             object id = listOfSnippets.SelectedValue;
             if (id != null)
             {
-                var nota = ClassSnippets.AbreNota(id.ToString());
-                textBoxTitulo.Text = nota.titulo;
-                textBoxDescricao.Text = nota.descricao;
+                var nota = ClassSnippets.OpenSnippet(id.ToString());
+                textBoxTitulo.Text = nota.title;
+                textBoxDescricao.Text = nota.description;
                 //comboBoxCategoria.Text = nota.id_categoria; // TODO: get category name from id
 
                 //TextArea.Text = nota.path;

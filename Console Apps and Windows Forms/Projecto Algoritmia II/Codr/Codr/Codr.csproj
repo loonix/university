@@ -65,17 +65,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Classes\ClassCategories.cs" />
+    <Compile Include="Core\Classes\ClassCryptography.cs" />
     <Compile Include="Core\Classes\ClassDatabase.cs" />
     <Compile Include="Core\Classes\ClassSnippets.cs" />
+    <Compile Include="Core\Classes\ClassLogin.cs" />
     <Compile Include="Core\CodeEditor\CodeEditorHotKeys.cs" />
     <Compile Include="Core\CodeEditor\CodeEditorSearchManager.cs" />
-    <Compile Include="Core\DB\_DB_CodrDataSet.Designer.cs" />
-    <Compile Include="Core\DB\_DB_CodrDataSet1.Designer.cs">
+    <Compile Include="Core\Program.cs" />
+    <Compile Include="Core\DB\DB_AllSnippets.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_DB_CodrDataSet.xsd</DependentUpon>
+      <DependentUpon>DB_AllSnippets.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Core\Program.cs" />
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +114,9 @@
       <DependentUpon>NewSnippet.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,16 +141,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Core\DB\_DB_CodrDataSet.xsc">
-      <DependentUpon>_DB_CodrDataSet.xsd</DependentUpon>
+    <None Include="Core\DB\DB_AllSnippets.xsc">
+      <DependentUpon>DB_AllSnippets.xsd</DependentUpon>
     </None>
-    <None Include="Core\DB\_DB_CodrDataSet.xsd">
+    <None Include="Core\DB\DB_AllSnippets.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_DB_CodrDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DB_AllSnippets.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Core\DB\_DB_CodrDataSet.xss">
-      <DependentUpon>_DB_CodrDataSet.xsd</DependentUpon>
+    <None Include="Core\DB\DB_AllSnippets.xss">
+      <DependentUpon>DB_AllSnippets.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

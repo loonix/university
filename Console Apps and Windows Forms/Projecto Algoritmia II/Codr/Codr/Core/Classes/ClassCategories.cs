@@ -8,7 +8,7 @@ namespace Codr.Core.Classes
     public class ClassCategories
     {
 
-        public static string SearchCategory(string NomeCategoria)
+        public static string SearchExtensions(string extension)
         {
 
             //1. Abrir BD
@@ -21,10 +21,10 @@ namespace Codr.Core.Classes
 
             //2. Criar comando SQL SELECT para submeter à BD
             string SQL;
-            SQL = "SELECT * FROM categorias WHERE categorias.nome_categoria = @NomeCat";
+            SQL = "SELECT * FROM extensions WHERE extensions.name = @extension";
 
             SqlCommand sqlCommand = new SqlCommand(SQL, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("NomeCat", NomeCategoria.Trim());
+            sqlCommand.Parameters.AddWithValue("extension", extension.Trim());
             //ojeto para armazenar o que o resultado do comando (SQL, SELECT....)
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
@@ -35,19 +35,19 @@ namespace Codr.Core.Classes
                 //se quisermos ler o primeiro registo temos que fazer
                 DataTable table = new DataTable();
                 table.Load(sqlDataReader); // Carrega os dados para a datatable
-                var id_cat = table.Rows[0].ItemArray[0].ToString();
+                var id_extension = table.Rows[0].ItemArray[0].ToString();
                 //var nome_cat = table.Rows[0].ItemArray[1];
-                return id_cat;
+                return id_extension;
             }
             return "";
         }
 
-        public static string AddCategory(string NomeCategoria)
+        public static string AddExtension(string extension)
         {
             try
             {
                 // verifica se ja existe uma categoria com o mesmo nome
-                string catId = SearchCategory(NomeCategoria);
+                string catId = SearchExtensions(extension);
 
                 if (catId != "")
                 {
@@ -55,24 +55,24 @@ namespace Codr.Core.Classes
                 }
 
                 SqlConnection sqlConnection = ClassBD.OpenDatabase();
-                string comandoSQL = "INSERT INTO categorias (nome_categoria) VALUES (@nome)";
+                string comandoSQL = "INSERT INTO extensions (name) VALUES (@name)";
 
                 if (sqlConnection == null)
                 {
-                    MessageBox.Show("Nao foi possivel abrir a tabela categorias",
+                    MessageBox.Show("Nao foi possivel abrir a tabela extensions",
                        "CODr", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return "";
                 }
 
                 SqlCommand comando = new SqlCommand(comandoSQL, sqlConnection);
-                comando.Parameters.AddWithValue("nome", NomeCategoria);
+                comando.Parameters.AddWithValue("name", extension);
                 comando.ExecuteNonQuery();
                 sqlConnection.Close();
-                return SearchCategory(NomeCategoria);
+                return SearchExtensions(extension);
             }
             catch (Exception err)
             {
-                MessageBox.Show("Nao foi possivel adicionar a categoria \n" + err,
+                MessageBox.Show("Nao foi possivel adicionar a extension \n" + err,
                         "CODr", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }

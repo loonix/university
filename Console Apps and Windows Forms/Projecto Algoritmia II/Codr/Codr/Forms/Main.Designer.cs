@@ -39,8 +39,6 @@
             this.buttonNotas = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -48,6 +46,8 @@
             this.buttonMaximizar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,7 +97,7 @@
             this.buttonSobre.Name = "buttonSobre";
             this.buttonSobre.Size = new System.Drawing.Size(200, 87);
             this.buttonSobre.TabIndex = 5;
-            this.buttonSobre.Text = "SOBRE";
+            this.buttonSobre.Text = "ABOUT";
             this.buttonSobre.UseVisualStyleBackColor = true;
             this.buttonSobre.Click += new System.EventHandler(this.buttonSobre_Click);
             // 
@@ -109,7 +109,7 @@
             this.buttonCategorias.Name = "buttonCategorias";
             this.buttonCategorias.Size = new System.Drawing.Size(200, 87);
             this.buttonCategorias.TabIndex = 7;
-            this.buttonCategorias.Text = "CATEGORIAS";
+            this.buttonCategorias.Text = "EXTENSIONS";
             this.buttonCategorias.UseVisualStyleBackColor = true;
             this.buttonCategorias.Click += new System.EventHandler(this.buttonCategorias_Click);
             // 
@@ -122,7 +122,7 @@
             this.buttonNovaTarefa.Name = "buttonNovaTarefa";
             this.buttonNovaTarefa.Size = new System.Drawing.Size(200, 87);
             this.buttonNovaTarefa.TabIndex = 3;
-            this.buttonNovaTarefa.Text = "NOVA NOTA";
+            this.buttonNovaTarefa.Text = "NEW SNIPPET";
             this.buttonNovaTarefa.UseVisualStyleBackColor = false;
             this.buttonNovaTarefa.Click += new System.EventHandler(this.buttonNovaTarefa_Click);
             // 
@@ -134,7 +134,7 @@
             this.buttonExportar.Name = "buttonExportar";
             this.buttonExportar.Size = new System.Drawing.Size(200, 87);
             this.buttonExportar.TabIndex = 6;
-            this.buttonExportar.Text = "EXPORTAR";
+            this.buttonExportar.Text = "EXPORT";
             this.buttonExportar.UseVisualStyleBackColor = true;
             this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
             // 
@@ -147,7 +147,7 @@
             this.buttonNotas.Name = "buttonNotas";
             this.buttonNotas.Size = new System.Drawing.Size(200, 87);
             this.buttonNotas.TabIndex = 4;
-            this.buttonNotas.Text = "NOTAS";
+            this.buttonNotas.Text = "SNIPPETS";
             this.buttonNotas.UseVisualStyleBackColor = false;
             this.buttonNotas.Click += new System.EventHandler(this.buttonTarefas_Click);
             // 
@@ -173,30 +173,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 100);
             this.panel3.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "DEVELOPER NOTES";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CODr";
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // pictureBox1
             // 
@@ -284,6 +260,30 @@
             this.panelMain.Size = new System.Drawing.Size(728, 555);
             this.panelMain.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(69, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 47);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CODr";
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(74, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "DEVELOPER NOTES";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -317,8 +317,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -334,5 +332,7 @@
         public System.Windows.Forms.Panel panelMain;
         public System.Windows.Forms.Button buttonNovaTarefa;
         public System.Windows.Forms.Button buttonCategorias;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

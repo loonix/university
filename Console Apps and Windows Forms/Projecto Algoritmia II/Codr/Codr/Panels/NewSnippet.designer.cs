@@ -45,11 +45,11 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.listOfSnippets = new System.Windows.Forms.ListBox();
-            this.codigosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._DB_CodrDataSet = new Codr._DB_CodrDataSet();
             this.pesquisa = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.codigosTableAdapter = new Codr._DB_CodrDataSetTableAdapters.codigosTableAdapter();
+            this.dB_AllSnippets = new Codr.Core.DB.DB_AllSnippets();
+            this.snippetsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.snippetsTableAdapter = new Codr.Core.DB.DB_AllSnippetsTableAdapters.snippetsTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.TextPanel.SuspendLayout();
@@ -60,9 +60,9 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.codigosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DB_CodrDataSet)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AllSnippets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.snippetsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -73,7 +73,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.17887F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.15311F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.51491F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.comboBoxCategoria, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBoxTitulo, 1, 0);
@@ -95,9 +95,9 @@
             this.comboBoxCategoria.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.comboBoxCategoria.ForeColor = System.Drawing.Color.White;
             this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Location = new System.Drawing.Point(339, 9);
+            this.comboBoxCategoria.Location = new System.Drawing.Point(333, 9);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(196, 35);
+            this.comboBoxCategoria.Size = new System.Drawing.Size(192, 35);
             this.comboBoxCategoria.TabIndex = 0;
             this.comboBoxCategoria.Text = "Extensao";
             this.comboBoxCategoria.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBoxCategoria_DrawItem);
@@ -112,7 +112,7 @@
             this.textBoxTitulo.ForeColor = System.Drawing.Color.White;
             this.textBoxTitulo.Location = new System.Drawing.Point(14, 13);
             this.textBoxTitulo.Name = "textBoxTitulo";
-            this.textBoxTitulo.Size = new System.Drawing.Size(308, 27);
+            this.textBoxTitulo.Size = new System.Drawing.Size(302, 27);
             this.textBoxTitulo.TabIndex = 0;
             this.textBoxTitulo.Text = "Titulo";
             // 
@@ -123,10 +123,10 @@
             this.buttonNota.FlatAppearance.BorderSize = 0;
             this.buttonNota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNota.ForeColor = System.Drawing.Color.White;
-            this.buttonNota.Location = new System.Drawing.Point(541, 3);
+            this.buttonNota.Location = new System.Drawing.Point(531, 3);
             this.buttonNota.MaximumSize = new System.Drawing.Size(150, 150);
             this.buttonNota.Name = "buttonNota";
-            this.buttonNota.Size = new System.Drawing.Size(144, 48);
+            this.buttonNota.Size = new System.Drawing.Size(150, 48);
             this.buttonNota.TabIndex = 4;
             this.buttonNota.Text = "SALVAR";
             this.buttonNota.UseVisualStyleBackColor = false;
@@ -303,9 +303,9 @@
             // 
             this.listOfSnippets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.listOfSnippets.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listOfSnippets.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.codigosBindingSource, "Id", true));
-            this.listOfSnippets.DataSource = this.codigosBindingSource;
-            this.listOfSnippets.DisplayMember = "titulo";
+            this.listOfSnippets.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.snippetsBindingSource, "id", true));
+            this.listOfSnippets.DataSource = this.snippetsBindingSource;
+            this.listOfSnippets.DisplayMember = "title";
             this.listOfSnippets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listOfSnippets.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listOfSnippets.ForeColor = System.Drawing.Color.White;
@@ -317,16 +317,6 @@
             this.listOfSnippets.TabIndex = 0;
             this.listOfSnippets.ValueMember = "Id";
             this.listOfSnippets.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // codigosBindingSource
-            // 
-            this.codigosBindingSource.DataMember = "codigos";
-            this.codigosBindingSource.DataSource = this._DB_CodrDataSet;
-            // 
-            // _DB_CodrDataSet
-            // 
-            this._DB_CodrDataSet.DataSetName = "_DB_CodrDataSet";
-            this._DB_CodrDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pesquisa
             // 
@@ -360,9 +350,19 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(694, 555);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // codigosTableAdapter
+            // dB_AllSnippets
             // 
-            this.codigosTableAdapter.ClearBeforeFill = true;
+            this.dB_AllSnippets.DataSetName = "DB_AllSnippets";
+            this.dB_AllSnippets.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // snippetsBindingSource
+            // 
+            this.snippetsBindingSource.DataMember = "snippets";
+            this.snippetsBindingSource.DataSource = this.dB_AllSnippets;
+            // 
+            // snippetsTableAdapter
+            // 
+            this.snippetsTableAdapter.ClearBeforeFill = true;
             // 
             // Snippets
             // 
@@ -389,9 +389,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.codigosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DB_CodrDataSet)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AllSnippets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.snippetsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -413,10 +413,10 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ListBox listOfSnippets;
-        private Codr._DB_CodrDataSet _DB_CodrDataSet;
-        private System.Windows.Forms.BindingSource codigosBindingSource;
-        private Codr._DB_CodrDataSetTableAdapters.codigosTableAdapter codigosTableAdapter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TextBox pesquisa;
+        private Codr.Core.DB.DB_AllSnippets dB_AllSnippets;
+        private System.Windows.Forms.BindingSource snippetsBindingSource;
+        private Codr.Core.DB.DB_AllSnippetsTableAdapters.snippetsTableAdapter snippetsTableAdapter;
     }
 }

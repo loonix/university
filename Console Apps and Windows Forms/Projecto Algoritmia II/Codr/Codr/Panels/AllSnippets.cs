@@ -33,9 +33,9 @@ namespace CodrApp
 
         private void Notas_Load(object sender, EventArgs e)
         {
-            string comandoSQL = "SELECT codigos.Id, codigos.titulo, codigos.descricao, codigos.path, categorias.nome_categoria AS Categoria " +
-                                "FROM codigos INNER JOIN " +
-                                "categorias ON codigos.id_categoria = categorias.Id";
+            string comandoSQL = "SELECT snippets.id, snippets.title, snippets.description, snippets.path, extensions.name AS Extension " +
+                                "FROM snippets INNER JOIN " +
+                                "extensions ON snippets.id_extension = extensions.id";
 
             DataTable table = ClassBD.ObterDados(comandoSQL); // recebe os dados
             dataGridView1.DataSource = table; // Mostra valores na grid
