@@ -64,9 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Classes\ClassCategories.cs" />
+    <Compile Include="Core\Classes\ClassExtensions.cs" />
     <Compile Include="Core\Classes\ClassCryptography.cs" />
     <Compile Include="Core\Classes\ClassDatabase.cs" />
+    <Compile Include="Core\Classes\ClassFile.cs" />
     <Compile Include="Core\Classes\ClassSnippets.cs" />
     <Compile Include="Core\Classes\ClassLogin.cs" />
     <Compile Include="Core\CodeEditor\CodeEditorHotKeys.cs" />
@@ -101,11 +102,11 @@
     <Compile Include="Panels\AllSnippets.designer.cs">
       <DependentUpon>AllSnippets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panels\Categories.cs">
+    <Compile Include="Panels\Extensions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Panels\Categories.designer.cs">
-      <DependentUpon>Categories.cs</DependentUpon>
+    <Compile Include="Panels\Extensions.designer.cs">
+      <DependentUpon>Extensions.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\NewSnippet.cs">
       <SubType>Form</SubType>
@@ -126,8 +127,8 @@
     <EmbeddedResource Include="Panels\AllSnippets.resx">
       <DependentUpon>AllSnippets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panels\Categories.resx">
-      <DependentUpon>Categories.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\Extensions.resx">
+      <DependentUpon>Extensions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\NewSnippet.resx">
       <DependentUpon>NewSnippet.cs</DependentUpon>

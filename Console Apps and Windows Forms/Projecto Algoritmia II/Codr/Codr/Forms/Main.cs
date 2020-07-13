@@ -1,6 +1,10 @@
-﻿using CodrApp;
+﻿using Codr.Core.Classes;
+using CodrApp;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -24,6 +28,38 @@ namespace Codr.Forms
         private void Main_Load(object sender, EventArgs e)
         {
             buttonNotas.PerformClick();
+            createFolders();
+        }
+
+        /// <summary>
+        /// Creates all folders in Bin/Debug/Core/Files
+        /// </summary>
+        private void createFolders()
+        {
+            SqlConnection sqlConnection = ClassBD.OpenDatabase();
+
+            //2. Criar comando SQL SELECT para submeter à BD
+            string SQL;
+            SQL = "SELECT name FROM extensions";
+
+            SqlCommand sqlCommand = new SqlCommand(SQL, sqlConnection);
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            List<string> folderNames = new List<string>();
+
+            while (sqlDataReader.Read())
+            {
+                folderNames.Add(sqlDataReader["name"].ToString());
+            }
+
+            foreach (var folder in folderNames)
+            {
+                var path = ClassFile.filesFolder + folder;
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+            }
         }
 
         private void buttonTarefas_Click(object sender, EventArgs e)
@@ -32,7 +68,6 @@ namespace Codr.Forms
             panelActivo.Height = buttonNotas.Height;
             panelActivo.Top = buttonNotas.Top;
             buttonNotas.BackColor = Color.MediumSlateBlue;
-            buttonExportar.BackColor = Color.FromArgb(51, 51, 51);
             buttonNovaTarefa.BackColor = Color.FromArgb(51, 51, 51);
             buttonSobre.BackColor = Color.FromArgb(51, 51, 51);
             buttonCategorias.BackColor = Color.FromArgb(51, 51, 51);
@@ -45,26 +80,12 @@ namespace Codr.Forms
             panelMain.Controls.Add(objForm);
         }
 
-        private void buttonExportar_Click(object sender, EventArgs e)
-        {
-            panelMain.Controls.Clear();
-            panelActivo.Height = buttonExportar.Height;
-            panelActivo.Top = buttonExportar.Top;
-            buttonNotas.BackColor = Color.FromArgb(51, 51, 51);
-            buttonExportar.BackColor = Color.MediumSlateBlue;
-            buttonNovaTarefa.BackColor = Color.FromArgb(51, 51, 51);
-            buttonSobre.BackColor = Color.FromArgb(51, 51, 51);
-            buttonCategorias.BackColor = Color.FromArgb(51, 51, 51);
-
-        }
-
         private void buttonSobre_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
             panelActivo.Height = buttonSobre.Height;
             panelActivo.Top = buttonSobre.Top;
             buttonNotas.BackColor = Color.FromArgb(51, 51, 51);
-            buttonExportar.BackColor = Color.FromArgb(51, 51, 51);
             buttonNovaTarefa.BackColor = Color.FromArgb(51, 51, 51);
             buttonSobre.BackColor = Color.MediumSlateBlue;
             buttonCategorias.BackColor = Color.FromArgb(51, 51, 51);
@@ -83,7 +104,6 @@ namespace Codr.Forms
             panelActivo.Height = buttonNovaTarefa.Height;
             panelActivo.Top = buttonNovaTarefa.Top;
             buttonNotas.BackColor = Color.FromArgb(51, 51, 51);
-            buttonExportar.BackColor = Color.FromArgb(51, 51, 51);
             buttonNovaTarefa.BackColor = Color.MediumSlateBlue;
             buttonSobre.BackColor = Color.FromArgb(51, 51, 51);
             buttonCategorias.BackColor = Color.FromArgb(51, 51, 51);
@@ -102,12 +122,11 @@ namespace Codr.Forms
             panelActivo.Height = buttonCategorias.Height;
             panelActivo.Top = buttonCategorias.Top;
             buttonNotas.BackColor = Color.FromArgb(51, 51, 51);
-            buttonExportar.BackColor = Color.FromArgb(51, 51, 51);
             buttonNovaTarefa.BackColor = Color.FromArgb(51, 51, 51);
             buttonSobre.BackColor = Color.FromArgb(51, 51, 51);
             buttonCategorias.BackColor = Color.MediumSlateBlue;
 
-            Categories objForm = new Categories();
+            Extensions objForm = new Extensions();
             objForm.TopLevel = false;
             objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             objForm.Dock = DockStyle.Fill;

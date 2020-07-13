@@ -16,13 +16,17 @@ namespace Codr.Core.Classes
             public string path { get; set; }
         }
 
+        /// <summary>
+        /// Open the sql database connection
+        /// </summary>
+        /// <returns></returns>
         public static SqlConnection OpenDatabase()
         {
-            // Le a connection string a partir das settings do projecto
+            // reads the projects saved connection string
             string StringConn = Properties.Settings.Default.DB_CodrConnectionString;
-            // define objeto para ligar à BD
+            // defines the sql connection
             SqlConnection sqlConnection = new SqlConnection(StringConn);
-            // abre bd com os parametros
+            // opens db with params
             try
             {
                 sqlConnection.Open();
@@ -34,24 +38,28 @@ namespace Codr.Core.Classes
             return sqlConnection;
         }
 
-        public static DataTable ObterDados(string sql)
+        /// <summary>
+        /// Dynamic function that requires the sql command to be passed into
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public static DataTable GetData(string sql)
         {
-            // Abre conexao
-            SqlConnection conexao = OpenDatabase();
+            // opens connection
+            SqlConnection sqlConnection = OpenDatabase();
 
-            // criacao do comandoSQL
-            string comandoSQL = sql;
+            // creates the sql command from params
+            string sqlCmd = sql;
 
-            // preparar commando
-            SqlCommand comando = new SqlCommand();
-            comando = new SqlCommand(comandoSQL, conexao);
+            // sets the command
+            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand(sqlCmd, sqlConnection);
 
             DataTable table = new DataTable();
-            table.Load(comando.ExecuteReader()); // Carrega os dados para a datatable
+            table.Load(cmd.ExecuteReader()); // loads data to datatable
 
             return table;
         }
 
-       
     }
 }

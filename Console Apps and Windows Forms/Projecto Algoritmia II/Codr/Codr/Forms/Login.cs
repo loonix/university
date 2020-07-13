@@ -55,9 +55,17 @@ namespace Codr.Forms
                 return;
             }
 
+            bool userLogin = ClassLogin.Register(textBoxRegName.Text, textBoxRegUsername.Text, TextBoxRegPassw.Text);
+            if (userLogin)
+            {
+                tabControl1.SelectedTab = loginTab; // redirects user to login with new credentials
+            }
+            else
+            {
+                MessageBox.Show("Unable to create an account!", "CODr | Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             ClearRegisterFields(); // clears fields
-            tabControl1.SelectedTab = loginTab; // redirects user to login with new credentials
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

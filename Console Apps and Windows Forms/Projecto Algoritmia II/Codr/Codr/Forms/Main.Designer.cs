@@ -35,10 +35,11 @@
             this.buttonSobre = new System.Windows.Forms.Button();
             this.buttonCategorias = new System.Windows.Forms.Button();
             this.buttonNovaTarefa = new System.Windows.Forms.Button();
-            this.buttonExportar = new System.Windows.Forms.Button();
             this.buttonNotas = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -46,8 +47,6 @@
             this.buttonMaximizar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +62,6 @@
             this.panel1.Controls.Add(this.buttonSobre);
             this.panel1.Controls.Add(this.buttonCategorias);
             this.panel1.Controls.Add(this.buttonNovaTarefa);
-            this.panel1.Controls.Add(this.buttonExportar);
             this.panel1.Controls.Add(this.buttonNotas);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -93,7 +91,7 @@
             // 
             this.buttonSobre.FlatAppearance.BorderSize = 0;
             this.buttonSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSobre.Location = new System.Drawing.Point(0, 457);
+            this.buttonSobre.Location = new System.Drawing.Point(0, 367);
             this.buttonSobre.Name = "buttonSobre";
             this.buttonSobre.Size = new System.Drawing.Size(200, 87);
             this.buttonSobre.TabIndex = 5;
@@ -105,7 +103,7 @@
             // 
             this.buttonCategorias.FlatAppearance.BorderSize = 0;
             this.buttonCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCategorias.Location = new System.Drawing.Point(0, 368);
+            this.buttonCategorias.Location = new System.Drawing.Point(0, 278);
             this.buttonCategorias.Name = "buttonCategorias";
             this.buttonCategorias.Size = new System.Drawing.Size(200, 87);
             this.buttonCategorias.TabIndex = 7;
@@ -125,18 +123,6 @@
             this.buttonNovaTarefa.Text = "NEW SNIPPET";
             this.buttonNovaTarefa.UseVisualStyleBackColor = false;
             this.buttonNovaTarefa.Click += new System.EventHandler(this.buttonNovaTarefa_Click);
-            // 
-            // buttonExportar
-            // 
-            this.buttonExportar.FlatAppearance.BorderSize = 0;
-            this.buttonExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExportar.Location = new System.Drawing.Point(0, 278);
-            this.buttonExportar.Name = "buttonExportar";
-            this.buttonExportar.Size = new System.Drawing.Size(200, 87);
-            this.buttonExportar.TabIndex = 6;
-            this.buttonExportar.Text = "EXPORT";
-            this.buttonExportar.UseVisualStyleBackColor = true;
-            this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
             // 
             // buttonNotas
             // 
@@ -174,10 +160,35 @@
             this.panel3.Size = new System.Drawing.Size(5, 100);
             this.panel3.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(74, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "DEVELOPER NOTES";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(69, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 47);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CODr";
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(12, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -188,7 +199,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(200, 0);
@@ -260,30 +271,6 @@
             this.panelMain.Size = new System.Drawing.Size(728, 555);
             this.panelMain.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CODr";
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "DEVELOPER NOTES";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -326,7 +313,6 @@
         private System.Windows.Forms.Button buttonMaximizar;
         private System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.Panel panelActivo;
-        public System.Windows.Forms.Button buttonExportar;
         public System.Windows.Forms.Button buttonSobre;
         public System.Windows.Forms.Button buttonNotas;
         public System.Windows.Forms.Panel panelMain;

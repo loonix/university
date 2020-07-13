@@ -1,9 +1,4 @@
 ﻿using ScintillaNET;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Codr.Core.CodeEditor
@@ -18,6 +13,11 @@ namespace Codr.Core.CodeEditor
 
 		public static int LastSearchIndex;
 
+		/// <summary>
+		/// Function that deals with code search
+		/// </summary>
+		/// <param name="next"></param>
+		/// <param name="incremental"></param>
 		public static void Find(bool next, bool incremental)
 		{
 			bool first = LastSearch != SearchBox.Text;
@@ -64,11 +64,9 @@ namespace Codr.Core.CodeEditor
 						}
 
 					}
-
 				}
 				else
 				{
-
 					// SEARCH FOR THE PREVIOUS OCCURANCE
 
 					// Search the document from the beginning to the caret
@@ -102,7 +100,6 @@ namespace Codr.Core.CodeEditor
 				TextArea.ScrollCaret();
 
 			}
-
 			SearchBox.Focus();
 		}
 	}

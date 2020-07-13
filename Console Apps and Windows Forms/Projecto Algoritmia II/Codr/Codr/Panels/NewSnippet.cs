@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -17,14 +18,11 @@ namespace CodrApp
             InitializeComponent();
         }
 
-        ScintillaNET.Scintilla TextArea;
-
         #region FormLoad
+
+        ScintillaNET.Scintilla TextArea;
         private void Main_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_AllSnippets.snippets' table. You can move, or remove it, as needed.
-            this.snippetsTableAdapter.Fill(this.dB_AllSnippets.snippets);
-
             // CREATE CONTROL
             TextArea = new ScintillaNET.Scintilla();
             TextPanel.Controls.Add(TextArea);
@@ -41,16 +39,16 @@ namespace CodrApp
             InitColors();
             InitSyntaxColoring();
 
-            //// NUMBER MARGIN
+            // NUMBER MARGIN
             InitNumberMargin();
 
-            //// BOOKMARK MARGIN
+            // BOOKMARK MARGIN
             InitBookmarkMargin();
 
-            //// CODE FOLDING MARGIN
+            // CODE FOLDING MARGIN
             InitCodeFolding();
 
-            //// DRAG DROP
+            // DRAG DROP
             InitDragDropFile();
 
             // INIT HOTKEYS
@@ -58,115 +56,117 @@ namespace CodrApp
 
 
             loadAllExtensions();
-            listOfSnippets.ClearSelected(); // Clears the list of snippets
-        }
-        #endregion
-
-        private void comboBoxCategoria_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            if (e.Index < 0) return;
-            Font f = comboBoxCategoria.Font;
-            int yOffset = 10;
-
-            if ((e.State & DrawItemState.Focus) == 0)
-            {
-                e.Graphics.FillRectangle(Brushes.White, e.Bounds);
-                e.Graphics.DrawString(comboBoxCategoria.Items[e.Index].ToString(), f, Brushes.Black,
-                                      new Point(e.Bounds.X, e.Bounds.Y + yOffset));
-            }
-            else
-            {
-                e.Graphics.FillRectangle(Brushes.Blue, e.Bounds);
-                e.Graphics.DrawString(comboBoxCategoria.Items[e.Index].ToString(), f, Brushes.White,
-                                      new Point(e.Bounds.X, e.Bounds.Y + yOffset));
-            }
+            loadAllSnippets();
+            ClearFields();
+            textBoxId.Visible = false;
         }
 
-     
         /// <summary>
-        /// Loads all categories into the comboBox
+        /// Loads all extensions into the comboBox
         /// </summary>
         void loadAllExtensions()
         {
             string comandoSQL = "SELECT * from extensions";
-
-            DataTable table = ClassBD.ObterDados(comandoSQL); // recebe os dados
-            comboBoxCategoria.Items.Add(table); // TODO
+            DataTable table = ClassBD.GetData(comandoSQL); // recebe os dados
+            comboboxExtensions.ValueMember = "id";
+            comboboxExtensions.DisplayMember = "name";
+            comboboxExtensions.DataSource = table;
+            comboboxExtensions.SelectedItem = null;
         }
 
-        private void buttonNota_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Loads all snippets into the comboBox
+        /// </summary>
+        void loadAllSnippets()
+        {
+            string comandoSQL = "SELECT * from snippets";
+            DataTable table = ClassBD.GetData(comandoSQL); // recebe os dados
+
+            listOfSnippets.ValueMember = "id";
+            listOfSnippets.DisplayMember = "title";
+            listOfSnippets.DataSource = table;
+            listOfSnippets.SelectedItem = null;
+        }
+
+        #endregion
+
+        private void listOfSnippets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            object id = listOfSnippets.SelectedValue;
+            if (id != null)
+            {
+                var snippet = ClassSnippets.OpenSnippet(id.ToString());
+                textBoxId.Text = snippet.id;
+                textBoxTitulo.Text = snippet.title;
+                textBoxDescricao.Text = snippet.description;
+                comboboxExtensions.SelectedItem = snippet.id_extension;
+                comboboxExtensions.Text = ClassExtensions.GetExtensionName(snippet.id_extension);
+                LoadDataFromFile(ClassFile.filesFolder + snippet.path, true);
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
         {
             try
             {
-                string Idcategoria = ClassCategories.AddExtension(comboBoxCategoria.Text);
-
-                if (Idcategoria != "")
+                if(textBoxTitulo.Text == "" || textBoxDescricao.Text == "" || TextArea.Text == "" || comboboxExtensions.Text == "")
                 {
-                    ClassSnippets.InserirCodigo(textBoxTitulo.Text, textBoxDescricao.Text, Idcategoria, TextArea.Text);
+                    MessageBox.Show("All Fields are required", "CODr", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string idExt = ClassExtensions.AddExtension(comboboxExtensions.Text);
+
+                if (idExt != "")
+                {
+                    string filePath;
+                    if (listOfSnippets.SelectedIndex == -1)
+                    {
+                        filePath = ClassSnippets.AddSnippet(textBoxTitulo.Text, textBoxDescricao.Text, idExt);
+                    }
+                    else
+                    {
+                        filePath = ClassSnippets.EditSnippet(int.Parse(textBoxId.Text), textBoxTitulo.Text, textBoxDescricao.Text, idExt);
+                    }
+                    filePath = ClassFile.filesFolder + filePath;
+                    if (filePath != "")
+                    {
+                        if(!Directory.Exists(ClassFile.filesFolder + comboboxExtensions.Text))
+                        {
+                            Directory.CreateDirectory(ClassFile.filesFolder + comboboxExtensions.Text);
+                        }
+                        File.WriteAllText(filePath, "");
+                        using (StreamWriter strwriter = System.IO.File.AppendText(filePath))
+                        {
+                            strwriter.Write(this.TextArea.Text);
+                        }
+                        loadAllExtensions();
+                        loadAllSnippets();
+                    }
                 }
             }
             catch (Exception err)
             {
-                MessageBox.Show("Nao foi criar a nota, \n" + err,
+                MessageBox.Show("Unable to create the snippet, \n" + err,
                      "CODr", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        private void buttonNew_Click(object sender, EventArgs e)
         {
-
+            ClearFields();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ClearFields()
         {
-            object id = listOfSnippets.SelectedValue;
-            if (id != null)
-            {
-                var nota = ClassSnippets.OpenSnippet(id.ToString());
-                textBoxTitulo.Text = nota.title;
-                textBoxDescricao.Text = nota.description;
-                //comboBoxCategoria.Text = nota.id_categoria; // TODO: get category name from id
+            textBoxId.Text = "";
+            textBoxTitulo.Text = "Title";
+            textBoxDescricao.Text = "Description";
+            TextArea.Text = "";
 
-                //TextArea.Text = nota.path;
-                // TODO: add here the path
-                LoadDataFromFile(nota.path);
-            }
-
+            comboboxExtensions.SelectedIndex = -1;
+            listOfSnippets.SelectedIndex = -1;
         }
-
-        private void pesquisa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //List<string> list = new List<string>();
-        //private void pesquisa_TextChanged(object sender, EventArgs e)
-        //{
-        //    if (String.IsNullOrEmpty(pesquisa.Text.Trim()) == false)
-        //    {
-        //        listBox1.Items.Clear();
-        //        foreach (string str in listBox1)
-        //        {
-        //            if (str.StartsWith(pesquisa.Text.Trim()))
-
-        //            {
-        //                listBox1.Items.Add(str);
-        //            }
-        //        }
-        //    }
-
-        //    else if (pesquisa.Text.Trim() == "")
-        //    {
-        //        listBox1.Items.Clear();
-
-        //        foreach (string str in list)
-        //        {
-        //            listBox1.Items.Add(str);
-        //        }
-        //    }
-
-        //}
 
         #region Numbers, Bookmarks, Code Folding
 
@@ -324,29 +324,25 @@ namespace CodrApp
                 action.Invoke();
             }
         }
+        private void ZoomIn()
+        {
+            TextArea.ZoomIn();
+        }
 
-
+        private void ZoomOut()
+        {
+            TextArea.ZoomOut();
+        }
 
         private void InitHotkeys()
         {
             // register the hotkeys with the form
             CodeEditorHotKeys.AddHotKey(this, OpenSearch, Keys.F, true);
-            //GestorDeHotKeys.AddHotKey(this, OpenFindDialog, Keys.F, true, false, true);
-            //GestorDeHotKeys.AddHotKey(this, OpenReplaceDialog, Keys.R, true);
-            //GestorDeHotKeys.AddHotKey(this, OpenReplaceDialog, Keys.H, true);
-            //GestorDeHotKeys.AddHotKey(this, Uppercase, Keys.U, true);
-            //GestorDeHotKeys.AddHotKey(this, Lowercase, Keys.L, true);
-            //GestorDeHotKeys.AddHotKey(this, ZoomIn, Keys.Oemplus, true);
-            //GestorDeHotKeys.AddHotKey(this, ZoomOut, Keys.OemMinus, true);
-            //GestorDeHotKeys.AddHotKey(this, ZoomDefault, Keys.D0, true);
+            CodeEditorHotKeys.AddHotKey(this, ZoomIn, Keys.Oemplus, true);
+            CodeEditorHotKeys.AddHotKey(this, ZoomOut, Keys.OemMinus, true);
             CodeEditorHotKeys.AddHotKey(this, CloseSearch, Keys.Escape);
-
-            // remove conflicting hotkeys from scintilla
+            // allows user to use ctrl + f to search
             TextArea.ClearCmdKey(Keys.Control | Keys.F);
-            TextArea.ClearCmdKey(Keys.Control | Keys.R);
-            TextArea.ClearCmdKey(Keys.Control | Keys.H);
-            TextArea.ClearCmdKey(Keys.Control | Keys.L);
-            TextArea.ClearCmdKey(Keys.Control | Keys.U);
         }
 
 
@@ -494,18 +490,23 @@ namespace CodrApp
 
         }
 
-        private void LoadDataFromFile(string path)
+        private void LoadDataFromFile(string path, bool hasTitle = false)
         {
             if (File.Exists(path))
             {
-                textBoxTitulo.Text = Path.GetFileName(path);
+                if (!hasTitle)
+                {
+                    textBoxTitulo.Text = Path.GetFileName(path);
+                }
                 TextArea.Text = File.ReadAllText(path);
+
             }
         }
+
+
 
         #endregion
 
 
-      
     }
 }
