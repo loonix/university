@@ -1,0 +1,81 @@
+/**************************************************************
+* @Author: Daniel Carneiro
+* @Date:   8 Nov 2020
+* @Desc:   Top navbar, breadcrumbs.
+***************************************************************/
+
+/* TOP NAVBAR */
+.top-nav {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-nav .logo {
+    font-weight: bold;
+    color: var(--bg-color);
+    font-size: 1.5em;
+    text-decoration: none;
+    padding-left: 1em;
+    white-space: nowrap;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 60px;
+}
+
+.top-nav ul li {
+    float: left;
+}
+
+.top-nav ul li a {
+    display: block;
+    color: var(--bg-color);
+    text-align: center;
+    padding: 14px 16px;
+    height: 100%;
+    text-decoration: none;
+}
+
+
+.top-nav ul li:not(:first-child) a:hover {
+    background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 600px) {}
+
+
+
+
+/* Breadcrumbs  */
+.breadcrumbs {
+    padding: 1em;
+    background-color: var(--light-calm-color);
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+
+
+
+}
+.breadcrumbs a:not(:last-child):after{
+    margin-left: .5em;
+    content: ">>";
+    color: var(--secondary-color);
+}
+
+.arrow {
+    border: solid #000000;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
