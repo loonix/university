@@ -1,0 +1,52 @@
+/**************************************************************
+* @Author: Daniel Carneiro
+* @Date:   8 Nov 2020
+* @Desc:   Main styles.
+***************************************************************/
+
+@import "variables.css";
+@import "header/_nav.css";
+@import "grid/_grid.css";
+
+
+/* MAIN */
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'OpenSans';
+    font-size: var(--body-text-size);
+}
+
+/* TEXT STYLES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+main {
+    padding: 1em;
+}
