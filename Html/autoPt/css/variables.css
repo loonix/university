@@ -1,0 +1,39 @@
+/**************************************************************
+* @Author: Daniel Carneiro
+* @Date:   8 Nov 2020
+* @Desc:   All Variables and font faces.
+***************************************************************/
+
+:root {
+
+    /* COLORS */
+    --bg-color: #ffffff;
+    --primary-color: #48ba7e;
+    --secondary-color: #66676d;
+    --assertive-color: #ff495c;
+    --info-color: #6d3965;
+    --calm-color: #cccccc;
+    --light-calm-color: #f2f2f2;
+    --transparent-black: rgba(100, 85, 85, 0.5);
+    --default-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+
+
+    /* FONTS */
+    --body-text-size: 12px;
+    --h1: 2em;
+    --h2: 1.5em;
+    --h3: 1.17em;
+    --h4: 1em;
+    --h5: .83em;
+    --h6: .67em;
+
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.ttf');
+    src: url('../fonts/OpenSans-Light.ttf');
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
