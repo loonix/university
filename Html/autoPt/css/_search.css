@@ -1,0 +1,20 @@
+/**************************************************************
+* @Author: Daniel Carneiro
+* @Date:   11 Nov 2020
+* @Desc:   Search bar.
+***************************************************************/
+
+.search input {
+    width: 80%;
+    margin: 2em auto;
+    display: block;
+    height: 3em;
+    border: 1px solid var(--calm-color);
+    border-radius: 30px;
+    box-shadow: var(--default-shadow);
+    padding: 0 2em;
+}
+
+.search input:focus {
+    outline: none;
+}
