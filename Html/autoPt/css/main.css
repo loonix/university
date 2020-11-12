@@ -5,7 +5,9 @@
 ***************************************************************/
 
 @import "variables.css";
-@import "_search.css";
+
+@import "parts/_footer.css";
+@import "parts/_search.css";
 @import "header/_nav.css";
 @import "grid/_grid.css";
 
