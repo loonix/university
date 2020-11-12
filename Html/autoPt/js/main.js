@@ -1,4 +1,4 @@
-angular.module("app", []).controller("HelloWorldCtrl", function ($scope, $http, $filter) {
+angular.module("app", []).controller("controller", function ($scope, $http, $filter) {
     $scope.title = "AutoPT"
     $scope.cars = null;
     $scope.searchQuery = '';

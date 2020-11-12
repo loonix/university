@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <title>AutoPT - Maior site de venda automovel e motociclos em Portugal</title>
+    <title>AutoPT - Stand de carros importados</title>
 </head>
 
 <body ng-app="app">
-    <div ng-controller="HelloWorldCtrl">
+    <div ng-controller="controller">
         <header>
             <nav class="top-nav">
                 <a class="logo" href="#home"><i class="fa fa-car" aria-hidden="true"></i>
@@ -39,14 +39,14 @@
         </nav>
 
         <div class="search">
-            <div><input ng-model="searchQuery" placeholder="Search here for cars..." /></div>
+            <div><input ng-model="searchQuery" placeholder="Pesquisa..." /></div>
 
         </div>
 
         <main>
             <section class="grid-container">
                 <div class="grid-item" ng-repeat="car in cars | filter:searchQuery">
-                    <h3 class="title">{{car.make}} | {{car.model}}</h3>
+                    <h3 class="title">{{car.make}} - {{car.model}} ({{car.modelYear}})</h3>
                     <p class="subtitle">{{car.city}} | {{car.country}}</p>
                     <div class="image-container">
                         <div class=" status" ng-if="car.status">{{car.status}}</div>
@@ -78,14 +78,18 @@
                         </li>
                     </ul>
                 </div>
-
-
-
-
             </section>
         </main>
 
     </div>
+
+    <footer>
+        <div>
+            <p>&copy 2020 Copyright</p>
+            <a href="https://github.com/loonix/"> Made by Daniel Carneiro</a>
+        </div>
+    </footer>
+
     <script src="https://code.angularjs.org/1.8.2/angular.js"></script>
     <script src="js/main.js"></script>
 </body>
