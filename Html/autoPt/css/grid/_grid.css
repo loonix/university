@@ -66,9 +66,7 @@
 .grid-item .specifications li .icon {
     color: var(--secondary-color);
     display: block;
-    /* font-size: 1.125em; */
     height: 1.5rem;
-    /* line-height: 1.75rem; */
     margin: 0 auto .5em;
     width: auto;
 }
@@ -79,11 +77,27 @@
     top: 0;
     left: 0;
     color: var(--bg-color);
-    padding: .3em .3em .3em .3em;
+    padding: .3em;
     background: var(--transparent-black);
     letter-spacing: .5px;
     font-weight: bold;
     font-size: 1rem;
+}
+
+.status-positive {
+    background: var(--transparent-green) !important;
+}
+
+.status-yellow {
+    background: var(--transparent-yellow) !important;
+}
+
+.status-assertive {
+    background: var(--transparent-assertive) !important;
+}
+
+.status-amber {
+    background: var(--transparent-amber) !important;
 }
 
 .grid-item .image-container .count {
@@ -104,9 +118,6 @@
     text-align: center;
 }
 
-/* .grid-item img {
-    max-width: 350px;
-} */
 
 .grid-item .image-container .placeholder {
     width: 100%;
