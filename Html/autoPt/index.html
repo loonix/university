@@ -49,7 +49,8 @@
                     <h3 class="title">{{car.make}} - {{car.model}} ({{car.modelYear}})</h3>
                     <p class="subtitle">{{car.city}} | {{car.country}}</p>
                     <div class="image-container">
-                        <div class=" status" ng-if="car.status">{{car.status}}</div>
+                        <div class="status {{getStatusClass(car.status)}}" ng-if="car.status">
+                            {{car.status}}</div>
                         <div class="count"><i class="fa fa-camera"></i> {{car.photos.length + 1}}</div>
                         <div class="placeholder" style="background-image: url({{car.featurePhoto}})">
                         </div>
@@ -91,6 +92,7 @@
     </footer>
 
     <script src="https://code.angularjs.org/1.8.2/angular.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 
