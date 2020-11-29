@@ -1,12 +1,16 @@
 "use strict";
 var app = angular.module('app', []);
 
-app.controller("controller", function ($scope, $http, $filter) {
+app.controller("controller", function ($scope, $http, $filter, $sce) {
     $scope.title = "AutoPT"
     $scope.cars = null;
     $scope.searchQuery = '';
     $scope.brands = null;
     $scope.status = null;
+    $scope.modalData = {
+        city: null,
+        country: null
+    };
 
     var statuses = {
         featured: "destaque",
@@ -18,8 +22,6 @@ app.controller("controller", function ($scope, $http, $filter) {
     $http.get('data/cars.json').then(function (response) {
         $scope.cars = $filter('orderBy')(response.data, 'status');
         $scope.status = $scope.cars.map((car) => car.status).filter((value, index, self) => self.indexOf(value) === index && value != null);
-        // console.log($scope.cars);
-        console.log($scope.status);
 
     });
 
@@ -35,5 +37,9 @@ app.controller("controller", function ($scope, $http, $filter) {
             return 'status-amber';
         }
     };
+
+    $scope.setModalData = (car) => {
+        $scope.modalData = car;
+    }
 
 });
