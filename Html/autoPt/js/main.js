@@ -1,7 +1,7 @@
 "use strict";
 var app = angular.module('app', []);
 
-app.controller("controller", function ($scope, $http, $filter, $sce) {
+app.controller("controller", function ($scope, $http, $filter) {
     $scope.title = "AutoPT"
     $scope.cars = null;
     $scope.searchQuery = '';
