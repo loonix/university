@@ -1,0 +1,15 @@
+/**************************************************************
+* @Author: Daniel Carneiro
+* @Date:   29 Nov 2020
+* @Desc:   Button styles.
+***************************************************************/
+
+.btn {
+    border: none;
+    border-radius: 0;
+    padding: 1em;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
