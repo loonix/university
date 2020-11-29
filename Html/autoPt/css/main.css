@@ -8,8 +8,14 @@
 
 @import "parts/_footer.css";
 @import "parts/_search.css";
+@import "parts/_modal.css";
+@import "parts/_images.css";
+@import "parts/_specifications.css";
+@import "parts/_buttons.css";
+
 @import "header/_nav.css";
 @import "grid/_grid.css";
+
 
 
 /* MAIN */
