@@ -1,0 +1,41 @@
+/**************************************************************
+* @Author: Daniel Carneiro
+* @Date:   29 Nov 2020
+* @Desc:   Images styles.
+***************************************************************/
+
+.specifications {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem .5rem 0;
+    list-style: none;
+}
+
+.specifications li {
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    font-family: Amsi, Verdana, Geneva, sans-serif;
+    font-size: .625rem;
+}
+
+.specifications li .icon {
+    color: var(--secondary-color);
+    display: block;
+    height: 1.5rem;
+    margin: 0 auto .5em;
+    width: auto;
+}
+
+.price {
+    font-family: Impact, "Franklin Gothic Bold", sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    padding: .5rem 0;
+    text-align: center;
+}
