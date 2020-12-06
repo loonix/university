@@ -4,21 +4,28 @@
 * @Desc:   Main styles.
 ***************************************************************/
 
+/* MAIN */
 @import "variables.css";
 
+/* STRUCTURE */
+@import "header/_nav.css";
+@import "grid/_grid.css";
+
+/* PARTS */
 @import "parts/_footer.css";
 @import "parts/_search.css";
 @import "parts/_modal.css";
 @import "parts/_images.css";
 @import "parts/_specifications.css";
 @import "parts/_buttons.css";
-
-@import "header/_nav.css";
-@import "grid/_grid.css";
+@import "parts/_forms.css";
 
 
+/* PAGES */
+@import "pages/_contacts.css";
+@import "pages/_about.css";
 
-/* MAIN */
+
 body {
     margin: 0 auto;
     padding: 0;

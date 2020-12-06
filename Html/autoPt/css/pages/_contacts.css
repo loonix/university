@@ -1,0 +1,41 @@
+.contact .map {
+    padding: 1em;
+    width: 100%;
+    height: 392px;
+}
+
+.contact .conteudo {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.contact .conteudo div:first-child() {
+    flex: 1;
+}
+
+.contact .conteudo div:nth-child(2) {
+    flex: 2;
+}
+
+.contact .contactos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--calm-color);
+}
+
+.contact .contactos p {
+    padding: .5em;
+    margin: .5em;
+}
+
+/* .contact .contactos p:not(:last-child)::after {
+    padding-left: 1em;
+    content: '|';
+} */
+
+@media screen and (max-width: 1000px) {
+    .conteudo {
+        flex-direction: column-reverse;
+    }
+}

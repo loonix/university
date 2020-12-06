@@ -19,7 +19,7 @@ app.controller("controller", function ($scope, $http, $filter) {
         sold: "vendido"
     }
 
-    $http.get('data/cars.json').then(function (response) {
+    $http.get('/data/cars.json').then(function (response) {
         $scope.cars = $filter('orderBy')(response.data, 'status');
         $scope.status = $scope.cars.map((car) => car.status).filter((value, index, self) => self.indexOf(value) === index && value != null);
 

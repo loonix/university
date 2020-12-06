@@ -1,0 +1,13 @@
+.sobre {
+    display: flex;
+}
+
+.sobre .stand-img {
+    background: url('/images/stand.jpg');
+    width: 20%;
+    height: auto;
+}
+
+.sobre div {
+    padding: 1em;
+}

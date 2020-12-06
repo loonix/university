@@ -1,0 +1,16 @@
+/**************************************************************
+* @Author: Daniel Carneiro
+* @Date:   29 Nov 2020
+* @Desc:   Forms styles.
+***************************************************************/
+
+form input[type=text],
+form select,
+form textarea {
+    width: 100%;
+    padding: .8em;
+    border: 1px solid var(--calm-color);
+    border-radius: 0;
+    margin-bottom: 1em;
+    resize: vertical
+}

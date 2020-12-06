@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Daniel Carneiro">
+    <meta name="description" content="Maior site de venda automovel e motociclos em Portugal">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="auto, venda, automoveis, veiculos, motociclos">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css"
+        integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <title>AutoPT - Stand de carros importados</title>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="controller">
+        <header>
+            <nav class="top-nav">
+                <a class="logo" href="#home"><i class="fa fa-car" aria-hidden="true"></i>
+                    {{title}}</a>
+                <ul>
+                    <li><a class="active" href="/index.html">Home</a></li>
+                    <li><a href="/pages/about.html">Sobre</a></li>
+                    <li><a href="/pages/contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="sobre">
+                <div class="stand-img"></div>
+                <div>
+                    <h1>Sobre a empresa</h1>
+                    <hr>
+                    <p>Somos uma empresa familiar com mais de 24 anos de existência (desde 4/11/1995).</p>
+                    <p>Temos muita honra e orgulho do nosso percurso, graças a si e aos nossos bons clientes! Bem hajam!
+                    </p>
+                    <p>Dedicamo-nos ao comércio de viaturas multi-marca: serviço, gestoras, semi-novas, usadas e de
+                        baixo
+                        valor. Aceitamos retomas e também compras.</p>
+                    <p>As viaturas são entregues com revisão, recondicionadas e com garantia até 24 meses.</p>
+                    <p>Temos preços para revenda sob-consulta.</p>
+                    <p>Oferecemos aos nossos clientes qualidade acima de tudo e desejamos a sua satisfação em todos os
+                        aspetos.</p>
+                    <p>Empresa aderente do Centro de Arbitragem do Sector Automóvel, com sítio em www.arbitragemauto.pt
+                        e
+                        sede
+                        na Av. República, 44 - 3º esq, 1050-194 Lisboa.</p>
+                    <img src="https://media.iolnegocios.pt/media1201/cb6551d9bf33d7b0c153e826115e3903/" alt=""
+                        srcset="">
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            <p>&copy 2020 Copyright</p>
+            <a href="https://github.com/loonix/"> Made by Daniel Carneiro</a>
+        </div>
+    </footer>
+
+    <script src="https://code.angularjs.org/1.8.2/angular.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
