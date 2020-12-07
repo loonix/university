@@ -3,11 +3,13 @@
 }
 
 .sobre .stand-img {
+    flex: 1;
     background: url('/images/stand.jpg');
-    width: 20%;
+    background-position: center;
     height: auto;
 }
 
 .sobre div {
+    flex: 2;
     padding: 1em;
 }

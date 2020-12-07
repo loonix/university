@@ -34,6 +34,16 @@
     content: '|';
 } */
 
+.horario {
+    display: flex;
+    text-align: center;
+}
+
+.horario .day {
+    border: 1px solid var(--calm-color);
+    padding: 1em;
+}
+
 @media screen and (max-width: 1000px) {
     .conteudo {
         flex-direction: column-reverse;

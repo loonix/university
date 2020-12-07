@@ -1,0 +1,14 @@
+.oficina {
+    display: flex;
+}
+
+.oficina .image {
+    flex: 1;
+    background: url('/images/garage.jpg');
+    height: auto;
+}
+
+.oficina div {
+    flex: 2;
+    padding: 1em;
+}
