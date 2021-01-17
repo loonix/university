@@ -1,0 +1,17 @@
+ 
+ 
+ string idadeClienteTexto = this.idadeClienteTextBox.Text;
+ string duracaoConsultaMinutosTexto = this.duracaoConsultaMinutostextBox.Text;
+ 
+ int idadeCliente = int.Parse(idadeClienteTexto);
+ int duracaoConsultaMinutos = int.Parse(duracaoConsultaMinutosTexto);
+ 
+ 
+ tipo de negocio e Estado de negocio nao é devolvida na função carregarprojetosvdf na camada interface
+ 
+ filtrar pv mes e ano para no ListForm
+ 
+ if (this.nivelComboBox.Enabled)
+            {
+                this.SelecionaNivel();
+            }
