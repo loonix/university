@@ -121,7 +121,7 @@ namespace CamadaNegocio
         /// <summary>
         /// Funcao que obtem a lista total ou parcial de testes
         /// </summary>
-        public static TesteCovid19Collection ObterListaNotas()
+        public static TesteCovid19Collection ObterListaTestes()
         {
             DataTable dataTable = CamadaDados.TesteCovid19.ObterLista();
             TesteCovid19Collection testes = new TesteCovid19Collection(dataTable);

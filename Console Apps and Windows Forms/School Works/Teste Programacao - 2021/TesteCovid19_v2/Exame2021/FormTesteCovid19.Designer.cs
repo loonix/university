@@ -57,6 +57,7 @@
             this.resultadoPanel = new System.Windows.Forms.Panel();
             this.positivoRadioButton = new System.Windows.Forms.RadioButton();
             this.negativoRadioButton = new System.Windows.Forms.RadioButton();
+            this.userControlData1 = new Exame2019.UserControlData();
             ((System.ComponentModel.ISupportInitialize)(this.testeCovid19ErrorProvider)).BeginInit();
             this.componenteMenuStrip.SuspendLayout();
             this.resultadoPanel.SuspendLayout();
@@ -178,30 +179,32 @@
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoToolStripMenuItem.Text = "&Novo";
+            this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // gravarToolStripMenuItem
             // 
             this.gravarToolStripMenuItem.Name = "gravarToolStripMenuItem";
-            this.gravarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.gravarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gravarToolStripMenuItem.Text = "Gravar";
+            this.gravarToolStripMenuItem.Click += new System.EventHandler(this.gravarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(114, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // resultadoTesteLabel
@@ -300,11 +303,21 @@
             this.negativoRadioButton.Text = "Negativo";
             this.negativoRadioButton.UseVisualStyleBackColor = true;
             // 
+            // userControlData1
+            // 
+            this.userControlData1.Location = new System.Drawing.Point(143, 221);
+            this.userControlData1.Name = "userControlData1";
+            this.userControlData1.Size = new System.Drawing.Size(222, 17);
+            this.userControlData1.TabIndex = 32;
+            this.userControlData1.Texto1 = "label1";
+            this.userControlData1.Texto2 = "label1";
+            // 
             // FormTesteCovid19
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 405);
+            this.Controls.Add(this.userControlData1);
             this.Controls.Add(this.resultadoPanel);
             this.Controls.Add(this.nomeLabel);
             this.Controls.Add(this.nomeTextBox);
@@ -368,6 +381,7 @@
         private System.Windows.Forms.Panel resultadoPanel;
         private System.Windows.Forms.RadioButton positivoRadioButton;
         private System.Windows.Forms.RadioButton negativoRadioButton;
+        private UserControlData userControlData1;
     }
 }
 

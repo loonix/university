@@ -30,5 +30,26 @@ namespace CamadaNegocio
 
         #endregion
 
+        #region Metodos
+        public int TotalTestesPositivosEmJaneiroAnoCorrente()
+        {
+            DateTime today = DateTime.Today;
+            int janeiro = 0;
+
+            int count = (from teste in this
+                         where (teste.DataTeste.Year == today.Year) && (teste.DataTeste.Month == janeiro)
+                         select teste).Count();
+            return count;
+        }
+
+        public static TesteCovid19Collection ObterListaSimples()
+        {
+            DataTable dataTable = CamadaDados.TesteCovid19.ObterLista();
+            TesteCovid19Collection testes = new TesteCovid19Collection(dataTable);
+            return testes;
+        }
+
+        #endregion
+
     }
 }

@@ -97,6 +97,15 @@ namespace Exame2019.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O codigo nao pode .
+        /// </summary>
+        internal static string ERRO_TESTE_NAO_ENCONTRADO {
+            get {
+                return ResourceManager.GetString("ERRO_TESTE_NAO_ENCONTRADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Erro: {0} \n Caminho: {1}.
         /// </summary>
         internal static string GLOBAL_ERROR {
