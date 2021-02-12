@@ -1,0 +1,13 @@
+initializecomponent - f12
+
+ir ao topo e alterar o nome do form antes de alterar no formulario 
+region tab - organizar codigo
+
+alt seta para cima ou alt seta para baixo
+
+
+CLASSES FICAM NA CAMADA DE NEGOCIO
+
+propfull tab tab para as propriedades
+
+CLASSES CAMADA DE DADOS

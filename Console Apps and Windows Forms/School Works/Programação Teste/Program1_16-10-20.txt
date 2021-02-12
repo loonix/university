@@ -1,0 +1,16 @@
+selecionar codigo
+control c control v
+ou
+control e v - duplica o codigo (função)
+ou
+control D
+
+shift control seta lado direito (no caracter a eliminar)
+control espaço (mostra as opçoes dos metodos)
+usar TAB (completa o metodo a palavra)
+
+propriedades F4
+
+control (-)vou para o ultimo sitio onde estava
+
+as funçoes ou metodos tem sempre abrir e fechar parentesis ()
