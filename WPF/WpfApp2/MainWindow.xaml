@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid ShowGridLines="false" Margin="10">        <Grid.ColumnDefinitions>            <ColumnDefinition></ColumnDefinition>            <ColumnDefinition></ColumnDefinition>            <ColumnDefinition></ColumnDefinition>            <ColumnDefinition></ColumnDefinition>            <ColumnDefinition></ColumnDefinition>        </Grid.ColumnDefinitions>        <Grid.RowDefinitions>            <RowDefinition Height="auto"></RowDefinition>            <RowDefinition Height="auto"></RowDefinition>            <RowDefinition Height="50"></RowDefinition>        </Grid.RowDefinitions>        <Border Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" CornerRadius="8 0 0 8" Margin="0 0 0 8">            <Border.Background>                <ImageBrush ImageSource="main.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Border.Background>
+        </Border>
+        <Border Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="0" Background="LightGray" Padding="15" CornerRadius="0 8 8 0" Margin="0 0 0 8">                    <TextBlock TextWrapping="Wrap" Margin="0 0 0 8" x:Name="bannerText">
+          <Bold FontSize="25"> Piers Morgan leaving show after storming off set</Bold>
+            <LineBreak></LineBreak>
+Piers Morgan walked off the set of his own show on Tuesday after being called out by co-presenter Alex Beresford for his criticism of the Duchess of Sussex.
+  <LineBreak></LineBreak>
+<Bold FontSize="14">'This is absolutely diabolical behavior' »</Bold>
+        </TextBlock>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="1" CornerRadius="8" Margin="3" Height="80">            <Border.Background>                <ImageBrush ImageSource="queen.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Border.Background>
+        </Border>
+        <TextBlock Grid.Column="0" Grid.Row="2" TextWrapping="Wrap" Margin="5">
+            <Bold>Queen breaks silence on Harry, Meghan's interview</Bold>
+        </TextBlock>
+
+        <Border Grid.Column="1"  Grid.Row="1" CornerRadius="8" Margin="3" >            <Border.Background>                <ImageBrush ImageSource="dog.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Border.Background>
+        </Border>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Margin="5">
+            <Bold>After 'biting incident,' Biden's dogs going home</Bold>
+        </TextBlock>
+        
+        <Border Grid.Column="2" Grid.Row="1" CornerRadius="8" Margin="3" >            <Border.Background>                <ImageBrush ImageSource="us.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Border.Background>
+        </Border>
+
+        <TextBlock Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" Margin="5">
+            <Bold>New poll reveals devastating impact of COVID in the U.S.</Bold>
+        </TextBlock>
+        <Border Grid.Column="3" Grid.Row="1" CornerRadius="8" Margin="3" >            <Border.Background>                <ImageBrush ImageSource="bill.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Border.Background>
+        </Border>
+
+        <TextBlock Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" Margin="5">
+            <Bold>Most stimulus checks going into the bank: Researchers</Bold>
+        </TextBlock>
+
+        <Border Grid.Column="4" Grid.Row="1" CornerRadius="8" Margin="3" >            <Border.Background>                <ImageBrush ImageSource="1year.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Border.Background>
+        </Border>
+
+        <TextBlock Grid.Column="4" Grid.Row="2" TextWrapping="Wrap" Margin="5">
+            <Bold>1 year later: 'I had to say it, because it was the truth'</Bold>
+        </TextBlock>
+    </Grid>
+
+</Window>

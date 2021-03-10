@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="WPF_Philosophers.ComponentPresenterUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             Width="400" 
+             Height="280" 
+             MinWidth="400" 
+             MinHeight="280" 
+             Opacity="100">
+
+    <Grid>
+        <Grid.Resources>
+            <LinearGradientBrush x:Key="HeadingBackGround" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Offset="0.4" Color="Green"/>
+                <GradientStop Offset="1" Color="Black"/>
+            </LinearGradientBrush>
+
+            <SolidColorBrush x:Key="HeadingForeGround" Color="Yellow"/>
+
+            <Style  x:Key="StackPanelHeaderStyle">
+                
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="MajorHeaderStyle">
+                <Setter Property="Foreground" Value="{StaticResource HeadingForeGround}"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Margin" Value="10,0,0,0" />
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="MinorHeaderStyle">
+                <Setter Property="Foreground" Value="{StaticResource HeadingForeGround}"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+            </Style>
+            
+            <Style TargetType="TextBlock" x:Key="QuoteStyle">
+                <Setter Property="Foreground" Value="{StaticResource HeadingForeGround}"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="FontStyle" Value="Italic" />
+                <Setter Property="TextWrapping" Value="Wrap" />
+                <Setter Property="Margin" Value="15,15,15,15" />
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="ThesisStyle">
+                <Setter Property="Foreground" Value="{StaticResource HeadingForeGround}"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="TextWrapping" Value="Wrap" />
+                <Setter Property="Margin" Value="15,0,0,0" />
+            </Style>
+        </Grid.Resources>
+
+        <Border Margin="0,0,0,0" CornerRadius="20" BorderThickness="5" BorderBrush="MediumPurple" Background="Black">
+            <StackPanel>
+                <StackPanel Margin="10,10,10,4" Orientation="Horizontal" >
+                    <Image Source="{Binding Path=ImageName}" MaxWidth="200" MaxHeight="120" />
+                    <StackPanel Margin="10,10,10,10" Orientation="Vertical" MinWidth="250" Width="250">
+                        <StackPanel Orientation="Horizontal" Style="{StaticResource StackPanelHeaderStyle}">
+                            <TextBlock Text="{Binding Path=Name}" Style="{StaticResource MajorHeaderStyle}"/>
+                            <TextBlock Text=" (" Style="{StaticResource MinorHeaderStyle}"/>
+                            <TextBlock Text="{Binding Path=DoB}" Style="{StaticResource MinorHeaderStyle}"/>
+                            <TextBlock Text="-" Style="{StaticResource MinorHeaderStyle}"/>
+                            <TextBlock Text="{Binding Path=DoP}" Style="{StaticResource MinorHeaderStyle}"/>
+                            <TextBlock Text=")" Style="{StaticResource MinorHeaderStyle}"/>
+                        </StackPanel>
+
+                        <TextBlock Text="{Binding Path=Quote}" Style="{StaticResource QuoteStyle}"/>
+                        
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="10,0,10,10">
+                    <StackPanel Orientation="Horizontal" Background="{StaticResource HeadingBackGround}">
+                        <TextBlock Text="Life and work: " Style="{StaticResource MajorHeaderStyle}"/>
+                    </StackPanel>
+                    <TextBlock Text="{Binding Path=Thesis}" Style="{StaticResource ThesisStyle}" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="ImageEffects.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ImageEffects" Height="600" Width="800" Background="#CCCCCC"
+    >
+    <StackPanel>
+        <Border BorderBrush="White" BorderThickness="5"  HorizontalAlignment="Center"  VerticalAlignment="Center">
+            <Button Width="100" Height="50" Content="ABC"></Button>
+            <Border.BitmapEffect>
+                <BitmapEffectGroup>
+                    <DropShadowBitmapEffect Color="Red" Direction="50" ShadowDepth="50" Softness="3" Opacity="0.1"/>
+                </BitmapEffectGroup>
+            </Border.BitmapEffect>
+            <Border.RenderTransform>
+                <SkewTransform CenterX="0" CenterY="0" AngleX="0" AngleY="10" />
+            </Border.RenderTransform>
+        </Border>
+      <Border BorderBrush="White" BorderThickness="5"  HorizontalAlignment="Center"  VerticalAlignment="Center">
+        <Image Source="image.jpg" Width="200" Height="300" Stretch="Fill" x:Name="myImage"></Image>
+        <Border.BitmapEffect>
+          <BitmapEffectGroup>
+            <DropShadowBitmapEffect Color="Red" Direction="50" ShadowDepth="50" Softness="3" Opacity="0.1"/>
+          </BitmapEffectGroup>
+        </Border.BitmapEffect>
+        <Border.RenderTransform>
+          <SkewTransform CenterX="0" CenterY="0" AngleX="0" AngleY="10" />
+        </Border.RenderTransform>
+      </Border>
+      <Border Width="210" Height="300" BorderThickness="5" BorderBrush="White">
+        <Border.Background>
+          <VisualBrush Visual="{Binding ElementName=myImage}">
+            <VisualBrush.Transform>
+              <ScaleTransform ScaleX="1" ScaleY="-1" CenterX="200" CenterY="150"></ScaleTransform>
+            </VisualBrush.Transform>
+          </VisualBrush>
+        </Border.Background>
+        <Border.OpacityMask>
+          <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0" Color="Black"></GradientStop>
+            <GradientStop Offset="0.6" Color="Transparent"></GradientStop>
+          </LinearGradientBrush>
+        </Border.OpacityMask>
+        <Border.RenderTransform>
+          <SkewTransform CenterX="30" CenterY="2" AngleX="-45" AngleY="10" />
+        </Border.RenderTransform>
+      </Border>
+    </StackPanel>
+</Window>

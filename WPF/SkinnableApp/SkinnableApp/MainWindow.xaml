@@ -1,0 +1,68 @@
+﻿<Window 
+  x:Class="SkinnableApp.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+  xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+  SizeToContent="Height"
+    xmlns:k="clr-namespace:SkinnableApp"
+  ResizeMode="NoResize"
+  Title="Skinnable App"
+  Width="680"
+  WindowStartupLocation="CenterScreen"
+  WindowStyle="ToolWindow"
+  >
+  <Grid Style="{DynamicResource styleBackground}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="2.5*" />
+    </Grid.ColumnDefinitions>    
+
+    <!-- CONTEXT MENU -->
+    <Grid.ContextMenu>
+      <ContextMenu MenuItem.Click="OnMenuItemClick">
+        <MenuItem Tag=".\Resources\Skins\BlackSkin.xaml" IsChecked="True">
+          <MenuItem.Header>
+                        <TextBlock>Opção 1</TextBlock>
+          </MenuItem.Header>
+        </MenuItem>
+        <MenuItem Tag=".\Resources\Skins\GreenSkin.xaml">
+          <MenuItem.Header>
+            <Rectangle Width="120" Height="40" Fill="Green" />
+          </MenuItem.Header>
+        </MenuItem>
+          <MenuItem Tag=".\Resources\Skins\BlueSkin.xaml">
+          <MenuItem.Header>
+            <Rectangle Width="120" Height="40" Fill="Blue" />
+          </MenuItem.Header>
+        </MenuItem>
+      </ContextMenu>
+    </Grid.ContextMenu>
+
+    <!-- AGENTS DATA SOURCE -->
+    <Grid.DataContext>
+      <CollectionViewSource>
+        <CollectionViewSource.Source>
+          <XmlDataProvider Source=".\Resources\Data\agents.xml" XPath="Agents/Agent" />
+        </CollectionViewSource.Source>
+        <CollectionViewSource.SortDescriptions>
+          <scm:SortDescription PropertyName="Name/Last" />
+          <scm:SortDescription PropertyName="Name/First" />
+        </CollectionViewSource.SortDescriptions>
+      </CollectionViewSource>
+    </Grid.DataContext>
+
+    <!-- BANNER -->
+    <k:ControlHeader Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></k:ControlHeader>
+
+    <!-- AGENT SELECTOR -->
+    <k:AgentSelectorControl Grid.Row="1" Grid.Column="0" />
+
+    <!-- AGENT DETAILS -->
+    <k:AgentDetailsControl Grid.Row="1" Grid.Column="1" />
+
+    </Grid>
+</Window>
