@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Aula 2 - Funções</title>
+    <meta name="description" content="Explorar funções em Javascript">
+    <meta name="keywords" content="LSM, Bootstrap, ISLA, Javascript, Estudo">
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="/javascript/scripts.js"></script>
+    <noscript></noscript>
+    <script>
+        function funcaoVerTabuada() {
+            //alert("OLA");
+            var campoNumero;
+            campoNumero = document.getElementById("textNumero").value;
+            //alert(campoNumero);
+            var resultado = tabuadaFormatada(campoNumero);
+            document.getElementById("divTabuada").innerHTML = resultado;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Aula 2 :: JS - Funções</h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Tabuada 5</div>
+            <script>
+                tabuada(5);
+            </script>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Tabuada de um numero</div>
+            <div style="width:200px;float:left;">
+                <input type="number" class="form-control" placeholder="Introduza
+numero" required="required" id="textNumero" name="textNumero" />
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" id="buttonVerTabuada" name="buttonVerTabuada"
+                    onclick="funcaoVerTabuada()">Ver Tabuada</button>
+            </div>
+            <div id="divTabuada">
+            </div>
+        </div>
+        <a href="/index.html" class="btn btn-success">Voltar</a>
+        <footer>
+            <hr>
+            <p>&copy; LSM TPW-II</p>
+        </footer>
+    </div>
+    <!--/container-->
+</body>
+
+</html>

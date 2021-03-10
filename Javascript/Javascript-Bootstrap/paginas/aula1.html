@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Aula 1 :: JS -conceitos básicos</title>
+    <meta name="description" content="Explorar conceitos básicos em Javascript">
+    <meta name="keywords" content="LSM, Bootstrap, ISLA, Javascript, Estudo">
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="/javascript/scripts.js"></script>
+    <noscript></noscript>
+    <style>
+        /*CSS*/
+        body {
+            background-color: #cff;
+            /*#ccffff*/
+        }
+    </style>
+    <script>
+        //document.write("<h1>Texto JS sem controlo!</h1>");
+        function EscreveDados() {
+            document.write("<h1>Texto escrito através da função EscreveDados()</h1>");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Aula 1 :: JS - conceitos básicos</h1>
+        </div>
+
+        <div class="panel panel-default">
+            <!--Inserir codigo JS -->
+            <script>
+                //linha de comentário
+                document.write("<h1>Texto escrito com JS!</h1>");
+            </script>
+        </div>
+        <div class="panel panel-default">
+            <script>
+                EscreveDados();
+                EscreveDados();
+                EscreveDadosExterno();
+            </script>
+        </div>
+        <a href="/index.html">Voltar</a>
+        <a href="/index.html" class="btn btn-success">Voltar</a>
+        <footer>
+            <hr>
+            <p>&copy; LSM TPW-II 2015 - 2016</p>
+        </footer>
+    </div>
+    <!--/container-->
+</body>
+
+</html>

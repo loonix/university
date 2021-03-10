@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Site com o objetivo de explorar a framework Bootstrap e Javascript">
+    <meta name="keywords" content="LSM, Bootstrap, ISLA, Javascript, Estudo">
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-body">
+                <h1>Estudo Bootstrap e JavaScript</h1>
+            </div>
+        </div>
+
+
+        <div style="width:50%;margin:auto;">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Menu
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="nav flex-column nav-pills">
+                                <li class="nav-item"><a href="/paginas/aula1.html">Aula 1 - Conceitos básicos</a></li>
+                                <li class="nav-item"><a href="/paginas/aula2.html">Aula 2 - Funções</a></li>
+                                <li class="nav-item"><a href="/paginas/aula3.html">Aula 3 - Objetos - Date</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <hr>
+            <p>&copy; LSM TPW-II</p>
+        </footer>
+    </div>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+
+    <script src="javascript/data.js"></script>
+    <script src="javascript/scripts.js"></script>
+
+
+</body>
+
+</html>
