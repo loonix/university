@@ -1,0 +1,42 @@
+﻿<Window x:Class="ProjetoAluno.AlunoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoAluno"
+        mc:Ignorable="d"
+        Title="AlunoWindow" Height="450" Width="800">
+    
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"
+               Content="Código Aluno:"></Label>
+
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Text="{Binding CodigoAluno}"></TextBox>
+
+        <Label Grid.Row="1" Grid.Column="0"
+               Content="Nome:"></Label>
+
+        <TextBox Grid.Row="1" Grid.Column="1"
+                 Text="{Binding Path=Nome}"></TextBox>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="Gray">
+
+            <Button x:Name="gravarButton" Content="Gravar" Width="100" Height="40"
+                    Click="gravarButton_Click"></Button>
+            
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
