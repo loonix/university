@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Second App</string>
+    <string name="LabelText">Escreve a mensagem</string>
+    <string name="edit_message">Insere a mensagem..</string>
+    <string name="btnLimpar">Limpar</string>
+    <string name="btnConfirmar">Confirmar</string>
+</resources>

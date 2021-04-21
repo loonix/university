@@ -1,0 +1,9 @@
+.rodape {
+
+    text-align: center;
+    width: 100%;
+    /*Colocar o rodapé na base (fundo do browser)*/
+    position: absolute;
+    bottom: 0;
+    
+}

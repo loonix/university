@@ -6,10 +6,13 @@
         xmlns:local="clr-namespace:ProjetoAluno"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
 
         <Button x:Name="alunoWindowButton" Width="100" Height="40" Content="Aluno"
                 Click="alunoWindowButton_Click"></Button>
-        
-    </Grid>
+
+        <Button x:Name="listaAlunoWindowButton" Width="100" Height="40" Content="Lista de Alunos"
+                Click="listaAlunoWindowButton_click"></Button>
+
+    </StackPanel>
 </Window>

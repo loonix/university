@@ -1,0 +1,33 @@
+<div class="sidebar">
+    <ul id="resultadosSidebar">
+    </ul>
+</div>
+
+<script>
+    var listItems = [
+        {
+            title: 'canal1',
+            icon: 'fa fa-chat',
+        },
+        {
+            title: 'canal2',
+            icon: 'fa fa-chat',
+        },
+        {
+            title: 'canal3',
+            icon: 'fa fa-chat',
+        },
+        {
+            title: 'canal4',
+            icon: 'fa fa-chat',
+        },
+    ];
+
+    mostrarDados();
+    function mostrarDados() {
+        listItems.forEach(function (item) {
+            document.getElementById('resultadosSidebar').innerHTML += '<li class="sidebarItem">' + item.title + '</li>';
+        });
+    }
+
+</script>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="@+id/txtLastName"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/txtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Last Name"
+        app:layout_constraintEnd_toEndOf="@+id/txtFirstName"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/txtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+
+    <EditText
+        android:id="@+id/edtTxteMail"
+        android:layout_width="337dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtLastName"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtLastName" />
+
+    <EditText
+        android:id="@+id/edtTxtLastName"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtFirstName" />
+
+    <EditText
+        android:id="@+id/edtTxtFirstName"
+        android:layout_width="342dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtLastName"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtLastName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="onRegisterBtnClick"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxteMail"
+        app:layout_constraintStart_toStartOf="@+id/edtTxteMail"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxteMail" />
+
+    <TextView
+        android:id="@+id/txtFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="First Name"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+    <Button
+        android:id="@+id/btnClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="onClearBtnClick"
+        android:text="CLEAR"
+        app:layout_constraintEnd_toEndOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <ImageView
+        android:id="@+id/imgMale"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/android"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imgFemale"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/andoid2" />
+
+    <RadioGroup
+        android:id="@+id/rdbGender"
+        android:layout_width="338dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxteMail"
+        app:layout_constraintStart_toStartOf="@+id/edtTxteMail"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxteMail">
+
+        <RadioButton
+            android:id="@+id/rbtFemale"
+            android:layout_width="165dp"
+            android:layout_height="76dp"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/rdbMale"
+            android:layout_width="172dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:text="Male" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

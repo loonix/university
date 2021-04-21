@@ -95,7 +95,7 @@ namespace CamadaNegocio
             return aluno;
         }
 
-        public static AlunoCollection ObterListaProjetos()
+        public static AlunoCollection ObterListaAlunos()
         {
             DataTable dataTable = CamadaDados.Aluno.ObterListaAlunos();
 

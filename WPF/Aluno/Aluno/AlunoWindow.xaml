@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:ProjetoAluno"
         mc:Ignorable="d"
         Title="AlunoWindow" Height="450" Width="800">
+
+    <Window.CommandBindings>
+        <CommandBinding x:Name="NovoCmd" Command="ApplicationCommands.New" Executed="Novo_Executed"></CommandBinding>
+        <CommandBinding x:Name="GravarCmd" Command="ApplicationCommands.Save" Executed="Gravar_Executed"></CommandBinding>
+        <CommandBinding x:Name="EliminarCmd" Command="ApplicationCommands.Delete" Executed="Eliminar_Executed"></CommandBinding>
+        <CommandBinding x:Name="SairCmd" Command="ApplicationCommands.Close" Executed="Sair_Executed"></CommandBinding>
+    </Window.CommandBindings>
     
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
@@ -13,28 +20,68 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0"
+
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <MenuItem Header="Aluno">
+                <MenuItem Header="_Novo" Command="New"></MenuItem>
+                <MenuItem Header="_Guardar" Command="Save"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="_Eliminar" Command="Delete"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Sair" Command="Close"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <Label Grid.Row="1" Grid.Column="0"
                Content="Código Aluno:"></Label>
 
-        <TextBox Grid.Row="0" Grid.Column="1"
-                 Text="{Binding CodigoAluno}"></TextBox>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="codAlunoTextBox" Width="200" 
+                 Text="{Binding CodigoAluno, UpdateSourceTrigger=PropertyChanged}" KeyUp="codAlunoTextBox_KeyUp"></TextBox>
+            <Button x:Name="listaAlunoButton" Content="..." Click="listaAlunoButton_Click"></Button>
+        </StackPanel>
 
-        <Label Grid.Row="1" Grid.Column="0"
+       
+
+        <Label x:Name="nomeTextBox" Grid.Row="2" Grid.Column="0"
                Content="Nome:"></Label>
 
-        <TextBox Grid.Row="1" Grid.Column="1"
-                 Text="{Binding Path=Nome}"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1"
+                 Text="{Binding Nome}"></TextBox>
+        
+        <Label Grid.Row="3" Grid.Column="0"
+               Content="Data Nascimento:"></Label>
+        <DatePicker x:Name="dataNascimentoDatePicker" Grid.Row="3" Grid.Column="2" SelectedDateFormat="Short"  
+                    SelectedDate="{Binding DataNascimento}"></DatePicker>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="Gray">
+        <Label Grid.Row="4" Grid.Column="0"
+               Content="Telefone:"></Label>
+        <TextBox Grid.Row="4" Grid.Column="1"
+                 Text="{Binding Telefone}"></TextBox>
 
-            <Button x:Name="gravarButton" Content="Gravar" Width="100" Height="40"
-                    Click="gravarButton_Click"></Button>
-            
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="Gray">
+
+            <Button x:Name="gravarButton" Content="Gravar" Width="100" Height="40" Margin="5"
+                    Command="Save"></Button>
+
+            <Button x:Name="novoButton" Content="Novo" Width="100" Height="40" Margin="5"
+                    Command="New"></Button>
+
+            <Button x:Name="eliminarButton" Content="Eliminar" Width="100" Height="40" Margin="5"
+                   Command="Delete"></Button>
+
+            <Button x:Name="SairButton" Content="Sair" Width="100" Height="40" Margin="5"
+                    Command="Close"></Button>
+
         </StackPanel>
         
         

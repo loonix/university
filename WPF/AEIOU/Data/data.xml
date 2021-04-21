@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Group>
+    <GroupTitle>REDE AEIOU</GroupTitle>
+    <Item>
+      <Title>MAIL AEIOU</Title>
+      <SubTitle>webmail gratis do aeiou</SubTitle>
+    </Item>
+    <Item>
+      <Title>CHAT BLA</Title>
+      <SubTitle>o maior chat nacional</SubTitle>
+    </Item>
+    <Item>
+      <Title>ZAP</Title>
+      <SubTitle>notícias de actualidade</SubTitle>
+    </Item>
+    <Item>
+      <Title>QUIOSQUE</Title>
+      <SubTitle>revista de Imprensa</SubTitle>
+    </Item>
+  </Group>
+
+  <Group>
+    <GroupTitle></GroupTitle>
+    <Item>
+      <Title>EMPREGO</Title>
+      <SubTitle>bolsa de emprego aeiou</SubTitle>
+    </Item>
+
+    <Item>
+      <Title>TUBE</Title>
+      <SubTitle>vídeos seleccionados</SubTitle>
+    </Item>
+
+    <Item>
+      <Title>GUIA DE VIAGENS</Title>
+      <SubTitle>para destinos de sonho</SubTitle>
+    </Item>
+  </Group>
+
+  <Group>
+    <GroupTitle>PARCEIROS AEIOU</GroupTitle>
+    <Item>
+      <Title>VIDA ECONÓMICA</Title>
+      <SubTitle>economia e negócios</SubTitle>
+    </Item>
+    <Item>
+      <Title>MAIS TECNOLOGIA</Title>
+      <SubTitle>tudo sobre tecnologia</SubTitle>
+    </Item>
+    <Item>
+      <Title>ECHO BOOMER</Title>
+      <SubTitle>Tecnologia e Lifestyle</SubTitle>
+    </Item>
+    <Item>
+      <Title>CHIP7</Title>
+      <SubTitle>tudo em informática</SubTitle>
+    </Item>
+  </Group>
+
+  <Group>
+    <GroupTitle></GroupTitle>
+    <Item>
+      <Title>GOAL POINT</Title>
+      <SubTitle>estatística é tudo</SubTitle>
+    </Item>
+    <Item>
+      <Title>RELVADO</Title>
+      <SubTitle>o jogo discute-se aqui</SubTitle>
+    </Item>
+    <Item>
+      <Title>FLAGRA</Title>
+      <SubTitle>magazine social</SubTitle>
+    </Item>
+    <Item>
+      <Title>VOUCHERS</Title>
+      <SubTitle>cupões de desconto</SubTitle>
+    </Item>
+  </Group>
+
+  <Group>
+    <GroupTitle></GroupTitle>
+    <Item>
+      <Title>PORTUGALMAIL</Title>
+      <SubTitle>email profissional</SubTitle>
+    </Item>
+    <Item>
+      <Title>PING</Title>
+      <SubTitle>sites à medida</SubTitle>
+    </Item>
+    <Item>
+      <Title>SOOMA</Title>
+      <SubTitle>email profissional</SubTitle>
+    </Item>
+  </Group>
+</Items>

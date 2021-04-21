@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:ProjetoAluno"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="DictionaryGlobal.xaml"></ResourceDictionary>
     </Application.Resources>
 </Application>

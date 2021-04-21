@@ -30,5 +30,16 @@ namespace ProjetoAluno
             AlunoWindow alunoWindow = new AlunoWindow();
             alunoWindow.ShowDialog();
         }
+
+        private void listaAlunoWindowButton_click(object sender, RoutedEventArgs e)
+        {
+            ListaAlunoWindow listaAlunoWindow = new ListaAlunoWindow();
+            
+
+            bool? dialogResult = listaAlunoWindow.ShowDialog();
+            if (dialogResult.HasValue && dialogResult.Value) this.DataContext = listaAlunoWindow.AlunoSelecionado;
+        }
+
+        
     }
 }

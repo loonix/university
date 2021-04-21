@@ -1,0 +1,23 @@
+﻿<Window x:Class="Geometria.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Geometria"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <ComboBox  x:Name="comboBox1" SelectedIndex="0">
+                <ComboBoxItem>Quadrado</ComboBoxItem>
+                <ComboBoxItem>Triangulo</ComboBoxItem>
+        </ComboBox>
+            <Button Click="Button_Click">Adicionar</Button>
+            <ListBox x:Name="listBox1"></ListBox>
+            <StackPanel Orientation="Horizontal">
+                <Label>Total Area:</Label>
+                <Label x:Name="resultadoAreaLabel"></Label>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

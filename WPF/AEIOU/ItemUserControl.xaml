@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="AEIOU.ItemUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AEIOU"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style x:Key="headerTitle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#0397B8" />
+            <Setter Property="FontWeight" Value="Light" />
+
+        </Style>
+
+        <Style x:Key="itemBlock" TargetType="StackPanel">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="TextBlock.Foreground" Value="#0397b8"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="itemTitle" TargetType="TextBlock">
+            <Setter Property="TextElement.FontFamily" Value="/AEIOU;component/#Bebas Neue" />
+            <Setter Property="Foreground" Value="#e0e0e0" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="0 0 0 -5" />
+
+        </Style>
+
+        <Style x:Key="itemSubTitle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Gray" />
+        </Style>
+    </UserControl.Resources>
+    
+    
+    
+    <Grid>
+        <StackPanel Grid.Row="1" Grid.Column="0" Style="{StaticResource itemBlock}">
+            <TextBlock Style="{StaticResource itemTitle}"  Text="{Binding Path=Title}"></TextBlock>
+            <TextBlock Style="{StaticResource itemSubTitle}"  Text="{Binding Path=Subtitle}"></TextBlock>
+            <Rectangle Height=".5" Margin="0">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset=".95"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+    </Grid>
+</UserControl>

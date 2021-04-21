@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My third APP</string>
+    <string name="edtTxtFirstName">First Name</string>
+    <string name="edtTxtLastName">Last Name</string>
+    <string name="edtTxtEmail">Email</string>
+    <string name="txtFirstName">First Name: </string>
+    <string name="txtLastName">Last Name: </string>
+    <string name="txtEmail">Email: </string>
+ </resources>
