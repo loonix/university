@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNomeConfirmarPassword" />
 
-    <TextView
+    <EditText
         android:id="@+id/LabelcriarConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +43,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+
+
+    <EditText
         android:id="@+id/textViewNomeConfirmarPassword"
         android:layout_width="0dp"
         android:layout_height="55dp"
@@ -53,8 +55,9 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/white"
-
+        android:ems="10"
         android:hint="Confirmar Password"
+        android:inputType="textPersonName"
         android:textColorHighlight="#1BBCBB"
         android:textColorHint="#1BBCBB"
         android:textIsSelectable="true"
@@ -65,7 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPassword" />
 
-    <TextView
+    <EditText
         android:id="@+id/textViewPassword"
         android:layout_width="0dp"
         android:layout_height="55dp"
@@ -87,7 +90,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
-    <TextView
+    <EditText
         android:id="@+id/textViewEmail"
         android:layout_width="0dp"
         android:layout_height="55dp"
@@ -109,7 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
 
-    <TextView
+    <EditText
         android:id="@+id/textViewNome"
         android:layout_width="0dp"
         android:layout_height="55dp"

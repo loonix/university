@@ -3,13 +3,13 @@ package com.example.quizzapp;
 import java.util.UUID;
 
 public class Utilizador {
-        private String id;
-        private String utilizador;
-        private String password;
-        private  String email;
-        private  String pontuacao;
+        public String id;
+        public String utilizador;
+        public String password;
+        public String email;
+        public int pontuacao;
 
-        public Utilizador( String utilizador, String password, String email, String pontuacao) {
+        public Utilizador( String utilizador, String password, String email, int pontuacao) {
             this.id = UUID.randomUUID().toString();
             this.utilizador = utilizador;
             this.password = password;

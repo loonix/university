@@ -10,5 +10,7 @@ public class Perguntas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perguntas);
+        System.out.println("Perguntas - Iniciou");
+
     }
 }

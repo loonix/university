@@ -7,34 +7,76 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Registo extends AppCompatActivity {
     ArrayList<Utilizador> utilizadores;
-    Button obtbCriaRegisto, obtbEntrar;
+    Button obtbCriaRegisto;
+    Button obtbEntrar;
+    EditText username;
+    EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registo);
+        System.out.println("Registo - Iniciou");
+
         carregarDados();
         obtbCriaRegisto = (Button) findViewById(R.id.buttonnovoRegisto);
         obtbEntrar = (Button) findViewById(R.id.buttonEntrar);
 
+        obtbEntrar = (Button)findViewById(R.id.buttonEntrar);
+        obtbEntrar.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                System.out.println(username.getText());
+                username = findViewById(R.id.editTextNome);
+                password = findViewById(R.id.editTextPassword);
+                if(podeFazerLogin()){
+                    accessScreen(MainActivity.class);
+                } else {
+                    // mostrar toast
+                    Toast.makeText(Registo.this, "Utilizador ou password erradas, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        obtbCriaRegisto = (Button)findViewById(R.id.buttonnovoRegisto);
+        obtbCriaRegisto.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                accessScreen(criarConta.class);
+            }
+        });
     }
 
-    private void salvarDados() {
-        SharedPreferences sharedPreferences = getSharedPreferences("quizzy", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(utilizadores);
-        editor.putString("utilizadores", json);
-        editor.apply();
+    // verifica se pode fazer o login c
+    private boolean podeFazerLogin() {
+        for (Utilizador user : utilizadores) {
+            // no caso do utilizador e password corresponderem
+            if (user.utilizador.equals(username.getText().toString()) && user.password.equals(password.getText().toString())) {
+                return true;
+            }
+        }
+        // no caso do utilizador e password nao corresponderem
+        return false;
+    }
+
+    // Recebe o nome da classe e abre a respetiva activity passada
+    private void accessScreen(Class className)
+    {
+        Intent intent = new Intent(this, className);
+        startActivity(intent);
     }
 
     private void carregarDados() {
@@ -46,38 +88,10 @@ public class Registo extends AppCompatActivity {
         if (utilizadores == null) {
             utilizadores = new ArrayList<>();
             // adiciona utilizador por defeito
-            utilizadores.add(new Utilizador("admin","admin","admin@quiz.com","560"));
+            utilizadores.add(new Utilizador("admin","admin","admin@quiz.com",560));
         }
     }
-    //obtbCriaRegisto = (Button)findViewById(R.id.buttonnovoRegisto);
 
-
-    /* obtbCriaRegisto.setOnClickListener (new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             goToSecondActivity();
-         }
-     });
-
-     obtbEntrar.setOnClickListener (new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             goToThirdActivity();
-         }
-     });
- }
- private void goToSecondActivity()
- {
-     Intent intent = new Intent(this, criarConta.class);
-     startActivity(intent);
-
- }
- private void goToThirdActivity()
- {
-     Intent intent = new Intent(this, resultado.class);
-     startActivity(intent);
-
- }*/
     public void onbuttonRegistarClick(View view) {
         if (view.getId() == R.id.buttonnovoRegisto) {
             Intent intent = new Intent(getBaseContext(), criarConta.class);
@@ -87,8 +101,5 @@ public class Registo extends AppCompatActivity {
             Intent intent = new Intent(getBaseContext(), Perguntas.class);
             startActivity(intent);
         }
-
-
     }
-
 }

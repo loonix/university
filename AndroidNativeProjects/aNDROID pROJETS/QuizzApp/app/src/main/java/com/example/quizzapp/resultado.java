@@ -10,5 +10,7 @@ public class resultado extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
+        System.out.println("resultado - Iniciou");
+
     }
 }
