@@ -13,7 +13,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -31,13 +31,13 @@
 
 </head>
 
-<body>
+<body onload="load()">
 
     <div id="header"></div>
+    <div class="login">
 
-    <div class="container">
+        <div class="container">
 
-        <div style="width:40%; margin:auto; text-align: center;">
 
             <img src="/images/estacionamento.png" alt="Logo" width="200px">
 
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <div id="DivLugar" style="display: none;" >
+            <div id="DivLugar" style="display: none;">
 
                 <h3>Dados do lugar</h3>
 
@@ -73,23 +73,20 @@
                     <option value="Verde">Verde</option>
                     <option value="Vermelho">Vermelho</option>
                 </select>
-        
+
                 <label for="inputSeccao" class="form-label">Secção:</label>
                 <input type="text" id="inputSeccao" class="form-control">
-        
+
                 <label for="inputNumero" class="form-label">Numero:</label>
                 <input type="number" id="inputNumero" class="form-control">
-        
-                <br /><br />
-        
-                <button onclick="registaLugar();" class="btn btn-primary">Guardar lugar</button>
-        
 
+                <br /><br />
+
+                <button onclick="registaLugar();" class="btn btn-primary">Guardar lugar</button>
 
             </div>
 
         </div>
-
     </div>
 
 

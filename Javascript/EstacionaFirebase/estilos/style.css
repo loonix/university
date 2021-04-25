@@ -5,5 +5,11 @@
     /*Colocar o rodapé na base (fundo do browser)*/
     position: absolute;
     bottom: 0;
-    
+
+}
+
+.login {
+    width: 50%;
+    margin: auto;
+    text-align: center;
 }

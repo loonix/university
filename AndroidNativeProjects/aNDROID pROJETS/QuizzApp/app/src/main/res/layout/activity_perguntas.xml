@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF2F3"
+    tools:context=".Perguntas">
+
+    <TextView
+        android:id="@+id/textviewPergunta"
+        android:layout_width="408dp"
+        android:layout_height="278dp"
+        android:background="@color/white"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRespostaA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewPergunta" />
+
+    <Button
+        android:id="@+id/buttonRespostaA"
+        android:layout_width="405dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:autoText="false"
+        android:gravity="left|center_vertical"
+        android:text="A"
+        android:textColor="#090909"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        app:backgroundTint="#C6C4C4"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRespostaB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewPergunta"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonRespostaB"
+        android:layout_width="405dp"
+        android:layout_height="70dp"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="B"
+        android:textColor="#090909"
+
+        android:textSize="18sp"
+        app:backgroundTint="#C6C4C4"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRespostaC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRespostaA" />
+
+    <Button
+        android:id="@+id/buttonRespostaC"
+        android:layout_width="405dp"
+        android:layout_height="70dp"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="C"
+        android:textColor="#090909"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        app:backgroundTint="#C6C4C4"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRespostaD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRespostaB" />
+
+    <Button
+        android:id="@+id/buttonRespostaD"
+        android:layout_width="405dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left|center_vertical"
+        android:layout_marginBottom="142dp"
+        android:text="D"
+        android:textColor="#090909"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        app:backgroundTint="#C6C4C4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRespostaC" />
+
+    <Button
+        android:id="@+id/butaoProximo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="60dp"
+        android:text="Proxima"
+        android:textColor="@color/white"
+        android:textColorHighlight="#1BBCBB"
+        android:textSize="18sp"
+        app:backgroundTint="#1BBCBB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRespostaD" />
+</androidx.constraintlayout.widget.ConstraintLayout>

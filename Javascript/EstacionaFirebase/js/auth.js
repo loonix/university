@@ -1,6 +1,4 @@
-//
 // https://github.com/firebase/quickstart-js/blob/master/auth/email-password.html
-//
 
 function registaUtilizador() {
 
@@ -24,14 +22,14 @@ function registaUtilizador() {
 
     // Create user with email and pass.
     firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(function () {
+        .then(() => {
             // sucesso
             alert("Utilizador criado com sucesso!")
 
             document.getElementById("texto-email").value = "";
             document.getElementById("texto-password").value = "";
         })
-        .catch(function (error) {
+        .catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -49,7 +47,7 @@ function registaUtilizador() {
             }
             console.log(error);
         });
-} // registaUtilizador
+}
 
 
 function validaUtilizador() {
@@ -74,15 +72,18 @@ function validaUtilizador() {
 
         // Sign in with email and pass.
         firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(function () {
+            .then(() => {
                 //alert("Sucesso!");
                 $("#DivLogin").hide();
                 $("#DivLugar").show();
+
+                sessionStorage.setItem("login", true)
             })
             .catch(function (error) {
                 // Handle Errors here.
 
                 alert("Entrada negada!");
+                sessionStorage.setItem("login", false)
 
                 var errorCode = error.code;
                 var errorMessage = error.message;
@@ -96,4 +97,4 @@ function validaUtilizador() {
             });
     }
 
-} // validaUtilizador
+}
