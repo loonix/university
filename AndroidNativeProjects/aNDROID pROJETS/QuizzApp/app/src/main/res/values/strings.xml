@@ -10,11 +10,11 @@
     <string name="textView3Lugar"></string>
     <string name="textView4Lugar"></string>
     <string name="textView5Lugar"></string>
-    <string name="Nome">Nome</string>
+    <string name="utilizador">Utilizador</string>
     <string name="Email">Email</string>
     <string name="Password">Password</string>
     <string name="ConfirmPassword">Confirmar Password</string>
-    <string name="buttonRegistar">Registar Password</string>
+    <string name="buttonRegistar">Registar</string>
 
     <string name="LabelcriarConta">Cria a tua Conta</string>
 

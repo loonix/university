@@ -29,14 +29,13 @@
         app:layout_constraintVertical_bias="0.11" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/utilizadorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="@string/Nome"
+        android:hint="@string/utilizador"
         android:inputType="textPersonName"
-
         android:textColorHighlight="#1BBCBB"
         android:textColorHint="#1BBCBB"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,26 +47,7 @@
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editTextTextPersonConfirmPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="@string/ConfirmPassword"
-        android:inputType="textPassword"
-        android:textColorHighlight="#1BBCBB"
-
-        android:textColorHint="#1BBCBB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.738"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonPassword"
+        android:id="@+id/passwordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -75,14 +55,48 @@
         android:hint="@string/Password"
         android:inputType="textPassword"
         android:textColorHighlight="#1BBCBB"
-
         android:textColorHint="#1BBCBB"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/editTextTextPersonEmail"
+        app:layout_constraintEnd_toEndOf="@id/emailText"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/editTextTextPersonEmail"
+        app:layout_constraintStart_toStartOf="@id/emailText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.572"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:textColorHighlight="#1BBCBB"
+        android:textColorHint="#1BBCBB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/confirmPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/ConfirmPassword"
+        android:inputType="textPassword"
+        android:textColorHighlight="#1BBCBB"
+        android:textColorHint="#1BBCBB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.738"
         android:autofillHints="" />
 
     <Button
@@ -99,24 +113,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.984" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="@string/Email"
-        android:inputType="textEmailAddress"
-        android:textColorHighlight="#1BBCBB"
-
-        android:textColorHint="#1BBCBB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395"
-        android:autofillHints="" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
