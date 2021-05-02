@@ -31,16 +31,16 @@ public class Registo extends AppCompatActivity {
         System.out.println("Registo - Iniciou");
 
         carregarDados();
-        obtbCriaRegisto = (Button) findViewById(R.id.buttonnovoRegisto);
-        obtbEntrar = (Button) findViewById(R.id.buttonEntrar);
+        obtbCriaRegisto = (Button) findViewById(R.id.buttonRegistar);
+        obtbEntrar = (Button) findViewById(R.id.buttonLogin);
 
-        obtbEntrar = (Button)findViewById(R.id.buttonEntrar);
+        obtbEntrar = (Button)findViewById(R.id.buttonLogin);
         obtbEntrar.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                System.out.println(username.getText());
-                username = findViewById(R.id.editTextNome);
-                password = findViewById(R.id.editTextPassword);
+                username = findViewById(R.id.utilizadorText);
+                password = findViewById(R.id.passwordText);
                 if(podeFazerLogin()){
                     accessScreen(MainActivity.class);
                 } else {
@@ -51,7 +51,7 @@ public class Registo extends AppCompatActivity {
             }
         });
 
-        obtbCriaRegisto = (Button)findViewById(R.id.buttonnovoRegisto);
+        obtbCriaRegisto = (Button)findViewById(R.id.buttonRegistar);
         obtbCriaRegisto.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,11 +93,11 @@ public class Registo extends AppCompatActivity {
     }
 
     public void onbuttonRegistarClick(View view) {
-        if (view.getId() == R.id.buttonnovoRegisto) {
+        if (view.getId() == R.id.buttonRegistar) {
             Intent intent = new Intent(getBaseContext(), criarConta.class);
             startActivity(intent);
 
-        } else if (view.getId() == R.id.buttonEntrar) {
+        } else if (view.getId() == R.id.buttonLogin) {
             Intent intent = new Intent(getBaseContext(), Perguntas.class);
             startActivity(intent);
         }

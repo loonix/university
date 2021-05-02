@@ -29,35 +29,35 @@ public class criarConta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_criar_conta);
         System.out.println("criarConta - Iniciou");
-
-        carregarDados();
-
-        nome = findViewById(R.id.textViewNome);
-        email = findViewById(R.id.textViewEmail);
-        password = findViewById(R.id.textViewPassword);
-        confirmarPassword = findViewById(R.id.textViewNomeConfirmarPassword);
-
-        registarBtn = (Button) findViewById(R.id.buttonRegistar);
-        registarBtn.setOnClickListener (new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                System.out.println(username.getText());
-                nome = findViewById(R.id.editTextNome);
-                email = findViewById(R.id.editTextPassword);
-
-                if(!confirmarPassword.getText().toString().equals(password.getText().toString())){
-                    Toast.makeText(criarConta.this, "As passwords nao combinam", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(podeAdicionar()){
-                    adicionarUser();
-                } else {
-                    // mostrar toast
-                    Toast.makeText(criarConta.this, "O utilizador ou email ja existe, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
+//
+//        carregarDados();
+//
+//        nome = findViewById(R.id.editTextTextPersonName);
+//        email = findViewById(R.id.editTextTextPersonEmail);
+//        password = findViewById(R.id.editTextTextPersonPassword);
+//        confirmarPassword = findViewById(R.id.editTextTextPersonConfirmPassword);
+//
+//        registarBtn = (Button) findViewById(R.id.buttonRegistar);
+//        registarBtn.setOnClickListener (new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                System.out.println(username.getText());
+//                nome = findViewById(R.id.editTextNome);
+//                email = findViewById(R.id.editTextPassword);
+//
+//                if(!confirmarPassword.getText().toString().equals(password.getText().toString())){
+//                    Toast.makeText(criarConta.this, "As passwords nao combinam", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if(podeAdicionar()){
+//                    adicionarUser();
+//                } else {
+//                    // mostrar toast
+//                    Toast.makeText(criarConta.this, "O utilizador ou email ja existe, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
+//                }
+//
+//            }
+//        });
     }
 
     // verifica se pode adicionar a nova conta

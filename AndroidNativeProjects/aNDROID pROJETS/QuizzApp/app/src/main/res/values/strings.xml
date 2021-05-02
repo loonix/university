@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">QuizzApp</string>
+    <string name="labelLugar2">2º</string>
+    <string name="labelLugar1">1º</string>
+    <string name="labelLugar3">3º</string>
+    <string name="labelLugar4">4º</string>
+    <string name="labelLugar5">5º</string>
+    <string name="textView1Lugar"></string>
+    <string name="textView2Lugar"></string>
+    <string name="textView3Lugar"></string>
+    <string name="textView4Lugar"></string>
+    <string name="textView5Lugar"></string>
+    <string name="Nome">Nome</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="ConfirmPassword">Confirmar Password</string>
+    <string name="buttonRegistar">Registar Password</string>
+
+    <string name="LabelcriarConta">Cria a tua Conta</string>
+
+
+
+
+
 </resources>

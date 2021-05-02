@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,129 +9,114 @@
 
     tools:context=".criarConta">
 
-    <Button
-        android:id="@+id/buttonRegistar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="127dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginRight="45dp"
-        android:text="Registar"
-        android:textSize="18sp"
-        app:backgroundTint="#1BBCBB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNomeConfirmarPassword" />
-
-    <EditText
+    <TextView
         android:id="@+id/LabelcriarConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
-        android:layout_marginTop="80dp"
         android:layout_marginEnd="160dp"
         android:layout_marginRight="160dp"
         android:layout_marginBottom="85dp"
-        android:text="Cria a tua Conta"
+        android:text="@string/LabelcriarConta"
         android:textColor="#1BBCBB"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/LabelJogoPerguntas"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11" />
 
     <EditText
-        android:id="@+id/textViewNomeConfirmarPassword"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/white"
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Confirmar Password"
+        android:hint="@string/Nome"
         android:inputType="textPersonName"
+
         android:textColorHighlight="#1BBCBB"
         android:textColorHint="#1BBCBB"
-        android:textIsSelectable="true"
-        android:textSize="14sp"
-        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPassword" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/textViewPassword"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/white"
-
-        android:hint="Password"
+        android:id="@+id/editTextTextPersonConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/ConfirmPassword"
+        android:inputType="textPassword"
         android:textColorHighlight="#1BBCBB"
+
         android:textColorHint="#1BBCBB"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewNomeConfirmarPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.738"
+        android:autofillHints="" />
 
     <EditText
-        android:id="@+id/textViewEmail"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/white"
-
-        android:hint="Email"
+        android:id="@+id/editTextTextPersonPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
         android:textColorHighlight="#1BBCBB"
+
         android:textColorHint="#1BBCBB"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/editTextTextPersonEmail"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/editTextTextPersonEmail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/buttonRegistar"
+        android:layout_width="250dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/buttonRegistar"
+        android:textSize="18sp"
+        app:backgroundTint="#1BBCBB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
 
     <EditText
-        android:id="@+id/textViewNome"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/white"
-
-        android:hint="Nome"
+        android:id="@+id/editTextTextPersonEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
         android:textColorHighlight="#1BBCBB"
+
         android:textColorHint="#1BBCBB"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LabelcriarConta" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395"
+        android:autofillHints="" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
