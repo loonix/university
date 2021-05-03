@@ -16,9 +16,9 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class criarConta extends AppCompatActivity {
+public class Registar extends AppCompatActivity {
     ArrayList<Utilizador> utilizadores;
-    EditText nome;
+    EditText user;
     EditText email;
     EditText password;
     EditText confirmarPassword;
@@ -32,7 +32,7 @@ public class criarConta extends AppCompatActivity {
 
         carregarDados();
 
-        nome = findViewById(R.id.utilizadorText);
+        user = findViewById(R.id.utilizadorText);
         email = findViewById(R.id.emailText);
         password = findViewById(R.id.passwordText);
         confirmarPassword = findViewById(R.id.confirmPasswordText);
@@ -42,18 +42,20 @@ public class criarConta extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                System.out.println(username.getText());
-                nome = findViewById(R.id.utilizadorText);
+                user = findViewById(R.id.utilizadorText);
                 email = findViewById(R.id.emailText);
 
                 if(!confirmarPassword.getText().toString().equals(password.getText().toString())){
-                    Toast.makeText(criarConta.this, "As passwords nao combinam", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registar.this, "As passwords nao combinam", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(podeAdicionar()){
                     adicionarUser();
+                    Toast.makeText(Registar.this, "O utilizador adicionado", Toast.LENGTH_SHORT).show();
+
                 } else {
                     // mostrar toast
-                    Toast.makeText(criarConta.this, "O utilizador ou email ja existe, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Registar.this, "O utilizador ou email ja existe, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -64,7 +66,7 @@ public class criarConta extends AppCompatActivity {
     private boolean podeAdicionar() {
         for (Utilizador user : utilizadores) {
             // no caso do utilizador e email corresponderem
-            if (user.utilizador.equals(nome.getText().toString()) && user.email.equals(email.getText().toString())) {
+            if (user.utilizador.equals(this.user.getText().toString()) && user.email.equals(email.getText().toString())) {
                 return false;
             }
         }
@@ -72,25 +74,20 @@ public class criarConta extends AppCompatActivity {
         return true;
     }
 
-    private void accessScreen(Class className)
-    {
-        Intent intent = new Intent(this, className);
-        startActivity(intent);
-    }
-
+    /// Adiciona o utilizador na localstorage e redireciona para o login
     private void adicionarUser() {
         SharedPreferences sharedPreferences = getSharedPreferences("quizzy", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        String usernameTxt = nome.getText().toString();
-        String passwordTxt = email.getText().toString();
-        String emailTxt = password.getText().toString();
+        String usernameTxt = user.getText().toString();
+        String passwordTxt = password.getText().toString();
+        String emailTxt = email.getText().toString();
 
-        utilizadores.add(new Utilizador(usernameTxt,passwordTxt,emailTxt,0));
+        utilizadores.add(new Utilizador( usernameTxt,passwordTxt,emailTxt,0));
         Gson gson = new Gson();
         String json = gson.toJson(utilizadores);
         editor.putString("utilizadores", json);
         editor.apply();
-        accessScreen(MainActivity.class);
+        accessScreen(Login.class);
     }
 
     private void carregarDados() {
@@ -104,5 +101,12 @@ public class criarConta extends AppCompatActivity {
             // adiciona utilizador por defeito
             utilizadores.add(new Utilizador("admin","admin","admin@quiz.com",560));
         }
+    }
+
+    /// acede a activity passada na [className]
+    private void accessScreen(Class className)
+    {
+        Intent intent = new Intent(this, className);
+        startActivity(intent);
     }
 }

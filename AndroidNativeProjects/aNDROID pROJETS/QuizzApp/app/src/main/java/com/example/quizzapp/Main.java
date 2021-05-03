@@ -3,18 +3,11 @@ package com.example.quizzapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-
-public class MainActivity extends AppCompatActivity {
+public class Main extends AppCompatActivity {
     Button obtbcomecar;
     Button obtbpontacao;
 
@@ -30,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         obtbcomecar.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               goToSecondActivity();
+               accessScreen(Perguntas.class);
             }
         });
 
@@ -38,34 +31,15 @@ public class MainActivity extends AppCompatActivity {
         obtbpontacao.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              goToThirdActivity();
+              accessScreen(Ranking.class);
             }
         });
     }
 
-    private void goToSecondActivity()
+    /// acede a activity passada na [className]
+    private void accessScreen(Class className)
     {
-        Intent intent = new Intent(this, Registo.class);
+        Intent intent = new Intent(this, className);
         startActivity(intent);
     }
-    private void goToThirdActivity()
-    {
-        Intent intent = new Intent(this, resultado.class);
-        startActivity(intent);
-    }
-
-
-
-   /* public void onbuttonComecarClick(View view) {
-        if (view.getId() == R.id.buttonComecar) {
-            Intent intent = new Intent(getBaseContext(), Registo.class);
-            startActivity(intent);
-
-        } else if (view.getId() == R.id.buttonPontuacao) {
-            Intent intent = new Intent(getBaseContext(), Pontuacao.class);
-            startActivity(intent);
-        }
-
-
-    }*/
 }

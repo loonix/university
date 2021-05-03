@@ -9,15 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Registo extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     ArrayList<Utilizador> utilizadores;
     Button obtbCriaRegisto;
     Button obtbEntrar;
@@ -27,7 +24,7 @@ public class Registo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registo);
+        setContentView(R.layout.activity_login);
         System.out.println("Registo - Iniciou");
 
         carregarDados();
@@ -38,14 +35,13 @@ public class Registo extends AppCompatActivity {
         obtbEntrar.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                System.out.println(username.getText());
                 username = findViewById(R.id.utilizadorText);
                 password = findViewById(R.id.passwordText);
                 if(podeFazerLogin()){
-                    accessScreen(MainActivity.class);
+                    accessScreen(Main.class);
                 } else {
                     // mostrar toast
-                    Toast.makeText(Registo.this, "Utilizador ou password erradas, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Utilizador ou password erradas, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -55,7 +51,7 @@ public class Registo extends AppCompatActivity {
         obtbCriaRegisto.setOnClickListener (new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                accessScreen(criarConta.class);
+                accessScreen(Registar.class);
             }
         });
     }
@@ -72,12 +68,7 @@ public class Registo extends AppCompatActivity {
         return false;
     }
 
-    // Recebe o nome da classe e abre a respetiva activity passada
-    private void accessScreen(Class className)
-    {
-        Intent intent = new Intent(this, className);
-        startActivity(intent);
-    }
+
 
     private void carregarDados() {
         SharedPreferences sharedPreferences = getSharedPreferences("quizzy", MODE_PRIVATE);
@@ -94,12 +85,17 @@ public class Registo extends AppCompatActivity {
 
     public void onbuttonRegistarClick(View view) {
         if (view.getId() == R.id.buttonRegistar) {
-            Intent intent = new Intent(getBaseContext(), criarConta.class);
-            startActivity(intent);
-
+            accessScreen(Registar.class);
         } else if (view.getId() == R.id.buttonLogin) {
-            Intent intent = new Intent(getBaseContext(), Perguntas.class);
-            startActivity(intent);
+            accessScreen(Perguntas.class);
+
         }
+    }
+
+    /// acede a activity passada na [className]
+    private void accessScreen(Class className)
+    {
+        Intent intent = new Intent(this, className);
+        startActivity(intent);
     }
 }
