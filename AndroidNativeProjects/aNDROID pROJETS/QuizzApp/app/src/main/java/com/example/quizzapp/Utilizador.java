@@ -16,4 +16,9 @@ public class Utilizador {
             this.email = email;
             this.pontuacao = pontuacao;
         }
+
+        public int compareTo(Utilizador user)
+        {
+            return(pontuacao - user.pontuacao);
+        }
 }

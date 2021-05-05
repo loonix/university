@@ -99,7 +99,11 @@ public class Registar extends AppCompatActivity {
         if (utilizadores == null) {
             utilizadores = new ArrayList<>();
             // adiciona utilizador por defeito
-            utilizadores.add(new Utilizador("admin","admin","admin@quiz.com",560));
+            utilizadores.add(new Utilizador("admin","admin","admin@quiz.com",100));
+            utilizadores.add(new Utilizador("xavier","xavier","xavier@quiz.com",150));
+            utilizadores.add(new Utilizador("matias","matias","matias@quiz.com",200));
+            utilizadores.add(new Utilizador("roberto","roberto","roberto@quiz.com",250));
+            utilizadores.add(new Utilizador("zacarias","zacarias","zacarias@quiz.com",300));
         }
     }
 
