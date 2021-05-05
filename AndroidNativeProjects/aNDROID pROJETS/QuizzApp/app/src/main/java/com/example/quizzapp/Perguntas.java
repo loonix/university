@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class Perguntas extends AppCompatActivity {
     ArrayList<Pergunta> perguntas;
     int indiceAtual = 0;
     Pergunta perguntaAtual;
+    Button btnProximo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,24 @@ public class Perguntas extends AppCompatActivity {
         carregarPerguntas();
         perguntaAtual = perguntas.get(indiceAtual);
         carregarPerguntaNaView();
+
+        btnProximo = (Button)findViewById(R.id.butaoProximo);
+        btnProximo.setOnClickListener (new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int totalPerguntas = perguntas.size();
+                if (indiceAtual == totalPerguntas) {
+                    Intent intent = new Intent(Perguntas.this, Resultado.class);
+                    intent.putExtra("totalErradas", 9);
+                    intent.putExtra("totalCertas", 1);
+                    startActivity(intent);
+                    return;
+                } else {
+                    mudarPergunta();
+                }
+            }
+        });
+
     }
 
     private void carregarPerguntaNaView() {
