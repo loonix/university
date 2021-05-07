@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SNS_ISP", "SNS_ISP.dtproj", "{55B67DB7-EF4D-4702-9029-6AC9005D15B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55B67DB7-EF4D-4702-9029-6AC9005D15B4}.Development|Default.ActiveCfg = Development
+		{55B67DB7-EF4D-4702-9029-6AC9005D15B4}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE87605A-D7C1-428A-99AB-62C079290EDF}
+	EndGlobalSection
+EndGlobal
