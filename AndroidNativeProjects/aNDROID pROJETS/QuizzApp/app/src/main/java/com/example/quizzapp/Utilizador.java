@@ -1,5 +1,6 @@
 package com.example.quizzapp;
 
+import java.util.List;
 import java.util.UUID;
 
 public class Utilizador {
@@ -15,10 +16,5 @@ public class Utilizador {
             this.password = password;
             this.email = email;
             this.pontuacao = pontuacao;
-        }
-
-        public int compareTo(Utilizador user)
-        {
-            return(pontuacao - user.pontuacao);
         }
 }

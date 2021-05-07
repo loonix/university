@@ -1,10 +1,12 @@
 package com.example.quizzapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,9 +18,12 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+
+import static java.util.Comparator.comparing;
 
 public class Ranking extends AppCompatActivity {
-    ArrayList<Utilizador> utilizadores;
+    List<Utilizador> utilizadores = new ArrayList<Utilizador>();;
     TextView top1;
     TextView top2;
     TextView top3;

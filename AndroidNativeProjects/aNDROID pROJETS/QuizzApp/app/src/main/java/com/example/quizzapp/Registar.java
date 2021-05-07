@@ -52,7 +52,6 @@ public class Registar extends AppCompatActivity {
                 if(podeAdicionar()){
                     adicionarUser();
                     Toast.makeText(Registar.this, "O utilizador adicionado", Toast.LENGTH_SHORT).show();
-
                 } else {
                     // mostrar toast
                     Toast.makeText(Registar.this, "O utilizador ou email ja existe, por favor verifique novamente.", Toast.LENGTH_SHORT).show();
