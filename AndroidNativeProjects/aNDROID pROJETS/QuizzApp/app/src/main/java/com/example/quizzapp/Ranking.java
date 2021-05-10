@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,12 +24,10 @@ import java.util.List;
 import static java.util.Comparator.comparing;
 
 public class Ranking extends AppCompatActivity {
-    List<Utilizador> utilizadores = new ArrayList<Utilizador>();;
-    TextView top1;
-    TextView top2;
-    TextView top3;
-    TextView top4;
-    TextView top5;
+    private List<Utilizador> utilizadores = new ArrayList<>();
+    ;
+    TextView top1, top2, top3, top4, top5;
+    TextView labelTop1, labelTop2, labelTop3, labelTop4, labelTop5, labelVazio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +41,14 @@ public class Ranking extends AppCompatActivity {
         top3 = (TextView) findViewById(R.id.textView3Lugar);
         top4 = (TextView) findViewById(R.id.textView4Lugar);
         top5 = (TextView) findViewById(R.id.textView5Lugar);
+        labelTop1 = (TextView) findViewById(R.id.labelLugar1);
+        labelTop2 = (TextView) findViewById(R.id.labelLugar2);
+        labelTop3 = (TextView) findViewById(R.id.labelLugar3);
+        labelTop4 = (TextView) findViewById(R.id.labelLugar4);
+        labelTop5 = (TextView) findViewById(R.id.labelLugar5);
+
+        labelVazio = (TextView) findViewById(R.id.textVazio);
+        labelVazio.setVisibility(View.INVISIBLE);
 
         carregarDados();
         ordenarPontuacoes();
@@ -49,8 +56,17 @@ public class Ranking extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    /// Carrega a tabela de rankings
+    /// Carrega a tabela de rankings e esconde as labels
     private void carregarRankings() {
+        if (utilizadores == null) {
+            labelTop1.setVisibility(View.INVISIBLE);
+            labelTop2.setVisibility(View.INVISIBLE);
+            labelTop3.setVisibility(View.INVISIBLE);
+            labelTop4.setVisibility(View.INVISIBLE);
+            labelTop5.setVisibility(View.INVISIBLE);
+            labelVazio.setVisibility(View.VISIBLE);
+            return;
+        }
         top1.setText(utilizadores.get(0).utilizador + " - " + utilizadores.get(0).pontuacao);
         top2.setText(utilizadores.get(1).utilizador + " - " + utilizadores.get(1).pontuacao);
         top3.setText(utilizadores.get(2).utilizador + " - " + utilizadores.get(2).pontuacao);
@@ -60,9 +76,10 @@ public class Ranking extends AppCompatActivity {
 
     /// ordena da pontuacao maior para a mais pequena
     private void ordenarPontuacoes() {
-        Collections.sort(utilizadores, new Comparator<Utilizador>(){
-            public int compare(Utilizador u1, Utilizador u2){
-                if(u1.pontuacao == u2.pontuacao)
+        if (utilizadores == null) return;
+        Collections.sort(utilizadores, new Comparator<Utilizador>() {
+            public int compare(Utilizador u1, Utilizador u2) {
+                if (u1.pontuacao == u2.pontuacao)
                     return 0;
                 return u1.pontuacao > u2.pontuacao ? -1 : 1;
             }
@@ -80,8 +97,7 @@ public class Ranking extends AppCompatActivity {
     }
 
     /// acede a activity passada na [className]
-    private void accessScreen(Class className)
-    {
+    private void accessScreen(Class className) {
         Intent intent = new Intent(this, className);
         startActivity(intent);
     }
