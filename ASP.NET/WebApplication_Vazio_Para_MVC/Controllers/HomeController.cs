@@ -18,6 +18,26 @@ namespace WebApplication_Vazio_Para_MVC.Controllers
             return View(); 
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Page1()
+        {
+            return View();
+        }
+
+        public IActionResult Page2()
+        {
+            return View();
+        }
+
+        public IActionResult Page3()
+        {
+            return View();
+        }
+
         public string Mensagem()
         {
             return $"A data de hoje e: {DateTime.Now}";
