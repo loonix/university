@@ -21,6 +21,9 @@ namespace AppStatistics
         public int totalCountDownloads { get; set; }
         public int totalCountApps { get; set; }
 
+        public DateTime DateFrom { get; set; }
+        public DateTime DateTo { get; set; }
+
         public string[] Labels { get; set; }
         public Func<double, string> YFormatter { get; set; }
 
@@ -28,6 +31,9 @@ namespace AppStatistics
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DateFrom = DateTime.Today;
+            this.DateTo = DateTime.Today.AddDays(1);
 
             totalDownloads = new ChartValues<int> { };
 
@@ -47,21 +53,6 @@ namespace AppStatistics
 
         private void GetMonthlyChart()
         {
-
-            //MonthlyChartSeries = new SeriesCollection()
-            //{
-            //            new LineSeries
-            //        {
-            //            Title = "TEST",
-            //            Values = new ChartValues<int> { 1,2,32 }
-            //      },
-
-            //                    new LineSeries
-            //        {
-            //            Title = "BLALBA",
-            //            Values = new ChartValues<int> { 5,5,2,1 }
-            //      },
-            //};
             MonthlyChartSeries = new SeriesCollection();
             Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec" };
 
