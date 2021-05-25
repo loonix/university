@@ -1,0 +1,837 @@
+Ano,Month Name,Dia,Regiao,Entidade ,Dadores_Inscritos,Dadores_de_1a_vez,Dadores_Regulares
+2016,January,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",19468,1539,11185
+2016,January,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",407,31,407
+2016,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",234,34,279
+2016,January,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1130,156,974
+2016,January,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",460,53,407
+2016,January,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",842,30,717
+2016,February,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",367,88,279
+2016,February,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1461,70,1391
+2016,February,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",167,33,121
+2016,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",334,103,188
+2016,March,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",657,44,613
+2016,March,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",525,70,455
+2016,March,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1563,164,1399
+2016,April,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",512,84,512
+2016,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",532,38,494
+2016,April,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",252,40,212
+2016,April,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",522,193,329
+2016,April,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",168,3,146
+2016,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",421,106,267
+2016,May,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",2549,267,2282
+2016,May,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",1349,68,1281
+2016,May,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",344,34,310
+2016,May,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",161,0,150
+2016,May,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",967,93,818
+2016,June,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",17176,1705,9811
+2016,June,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",355,34,355
+2016,June,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",839,70,718
+2016,July,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",560,28,532
+2016,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",116,3,113
+2016,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",106,14,92
+2016,August,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",229,37,192
+2016,August,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",753,77,676
+2016,August,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",1168,115,966
+2016,August,1,Região de Saúde Norte,"Hospital de Braga, PPP",464,183,227
+2016,October,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",326,16,310
+2016,October,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",349,66,283
+2016,October,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",170,37,113
+2016,December,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",0,0,0
+2016,December,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",229,19,210
+2016,December,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",65,1,51
+2016,December,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",620,0,0
+2016,December,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",0,0,0
+2017,January,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",701,62,639
+2017,January,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",427,72,355
+2017,January,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",46,16,34
+2017,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",0,0,0
+2017,February,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1089,116,973
+2017,February,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",152,21,131
+2017,February,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",201,23,178
+2017,February,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",685,74,611
+2017,February,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1503,46,1007
+2017,February,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1758,258,1500
+2017,February,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",0,0,0
+2017,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",343,7,165
+2017,March,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",238,26,212
+2017,March,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",737,57,680
+2017,April,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",299,24,275
+2017,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",354,1,257
+2017,April,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",462,39,423
+2017,April,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",374,46,374
+2017,April,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1793,151,1395
+2017,April,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",141,8,99
+2017,April,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",710,54,710
+2017,April,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",135,9,106
+2017,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",69,0,32
+2017,May,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",188,15,173
+2017,June,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",207,7,200
+2017,June,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",408,94,314
+2017,June,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",581,46,581
+2017,June,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",823,42,555
+2017,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",37,3,25
+2017,July,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",328,54,274
+2017,July,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1957,116,1452
+2017,August,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14784,1304,13480
+2017,August,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",614,47,457
+2017,September,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15470,1218,14252
+2017,September,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",234,31,203
+2017,October,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",658,39,658
+2017,October,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",822,61,509
+2017,November,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1088,118,970
+2017,November,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",529,40,489
+2017,November,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",830,73,527
+2017,November,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",582,25,451
+2017,December,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",61,0,43
+2017,December,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",916,64,852
+2017,December,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",699,48,651
+2017,December,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1637,104,1133
+2017,December,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",417,35,417
+2017,December,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",580,18,465
+2018,January,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",260,20,240
+2018,January,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",540,40,423
+2018,February,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15328,1606,13722
+2018,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",123,5,118
+2018,February,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1052,112,940
+2018,February,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",261,28,261
+2018,March,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1192,121,1071
+2018,March,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",390,55,335
+2018,March,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",557,44,513
+2018,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",144,3,90
+2018,April,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",347,20,347
+2018,May,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",333,14,192
+2018,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",124,1,80
+2018,May,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2018,May,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",443,15,348
+2018,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",73,0,46
+2018,June,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",231,17,214
+2018,June,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",550,38,512
+2018,June,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",331,33,298
+2018,June,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1480,79,946
+2018,June,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",253,10,253
+2018,June,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",813,59,531
+2018,July,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",345,34,311
+2018,July,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",331,30,331
+2018,August,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",175,26,149
+2018,August,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",211,19,134
+2018,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",170,3,98
+2018,September,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",232,23,209
+2018,September,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",393,17,393
+2018,October,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15503,1550,13953
+2018,October,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",2,0,2
+2018,October,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",210,12,135
+2018,October,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",270,82,188
+2018,October,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",207,14,193
+2018,October,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",493,68,425
+2018,October,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",355,21,355
+2018,October,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",559,35,392
+2018,November,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15568,1645,13923
+2018,November,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",67,1,48
+2018,November,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1077,124,953
+2018,November,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",464,29,435
+2018,November,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",656,54,468
+2018,December,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15365,1321,14044
+2018,December,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",98,1,72
+2018,December,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",425,48,377
+2018,December,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",879,71,605
+2019,January,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",357,11,284
+2019,February,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14474,1441,13033
+2019,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",167,5,124
+2019,February,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",209,23,186
+2019,February,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",181,36,145
+2019,February,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",436,38,398
+2019,February,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",866,100,496
+2019,March,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",229,28,201
+2019,March,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",354,51,303
+2019,March,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",418,74,418
+2019,March,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1873,149,1156
+2019,April,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15316,1497,13819
+2019,April,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",282,4,214
+2019,April,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",937,148,789
+2019,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",290,1,205
+2019,May,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",538,53,485
+2019,May,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1842,142,1355
+2019,May,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",162,8,117
+2019,May,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",516,39,397
+2019,June,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",918,107,811
+2019,June,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",441,37,404
+2019,June,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",428,99,428
+2019,June,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",277,25,277
+2019,July,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",206,19,187
+2019,July,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",347,25,347
+2019,July,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",1020,97,619
+2016,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",164,5,159
+2016,January,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",238,38,200
+2016,January,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",425,61,364
+2016,January,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",389,34,355
+2016,January,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",628,21,607
+2016,January,1,Região de Saúde Norte,"Hospital de Braga, PPP",277,155,96
+2016,February,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1444,170,1274
+2016,February,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",564,41,523
+2016,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",662,82,580
+2016,March,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1171,94,1077
+2016,March,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",357,49,308
+2016,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",505,119,329
+2016,April,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",712,36,676
+2016,April,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",663,44,619
+2016,April,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",648,23,625
+2016,April,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",216,37,157
+2016,May,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",976,136,840
+2016,May,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1138,71,857
+2016,May,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",506,29,477
+2016,June,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1171,78,1093
+2016,June,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",200,28,172
+2016,June,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",291,30,260
+2016,July,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",410,38,407
+2016,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",231,22,185
+2016,July,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",463,167,296
+2016,July,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1195,58,1137
+2016,July,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",177,24,130
+2016,July,1,Região de Saúde Norte,"Hospital de Braga, PPP",308,130,127
+2016,August,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",510,91,419
+2016,August,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",2282,279,2003
+2016,August,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",920,82,838
+2016,August,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",200,40,135
+2016,September,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",404,12,366
+2016,September,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",556,29,527
+2016,September,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",196,33,138
+2016,October,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",17713,2648,12620
+2016,October,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",452,27,392
+2016,October,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",210,29,181
+2016,October,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",134,7,127
+2016,November,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15677,2689,10920
+2016,November,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",0,0,0
+2016,November,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",215,25,190
+2016,November,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",562,37,525
+2016,November,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",0,0,0
+2016,November,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",0,0,0
+2016,November,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",0,0,0
+2016,December,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",175,18,175
+2016,December,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",31,5,24
+2017,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",0,0,0
+2017,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",0,0,0
+2017,January,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",49,2,49
+2017,January,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",858,79,531
+2017,January,1,Região de Saúde do Centro,"Hospital Distrital da Figueira da Foz, EPE",0,0,0
+2017,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",0,0,0
+2017,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",248,3,164
+2017,March,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",18017,2389,15628
+2017,March,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1974,274,1700
+2017,March,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",882,72,599
+2017,April,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",16663,1773,14890
+2017,April,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",339,50,289
+2017,April,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",0,0,0
+2017,May,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",167,25,142
+2017,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",190,8,182
+2017,May,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",582,59,523
+2017,May,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1720,134,1148
+2017,May,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",618,33,618
+2017,May,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",676,51,445
+2017,June,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15636,1384,14252
+2017,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",145,6,134
+2017,June,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",874,111,652
+2017,June,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",629,33,596
+2017,June,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",320,19,320
+2017,June,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1517,71,1095
+2017,July,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",586,55,531
+2017,July,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",486,54,432
+2017,July,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",376,21,376
+2017,July,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",114,3,85
+2017,July,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",438,23,316
+2017,August,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",218,42,176
+2017,August,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",347,56,291
+2017,August,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",142,3,85
+2017,September,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",391,42,349
+2017,October,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",479,18,326
+2017,October,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",240,20,220
+2017,November,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",339,32,339
+2017,November,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1534,106,1110
+2017,November,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",75,2,59
+2018,January,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",489,51,438
+2018,January,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2018,January,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",147,7,106
+2018,January,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",889,69,569
+2018,February,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",182,22,160
+2018,February,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1569,95,1030
+2018,March,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",439,9,315
+2018,March,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",585,29,556
+2018,March,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",426,69,426
+2018,March,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",939,93,578
+2018,April,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",16211,1524,14687
+2018,April,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",398,11,295
+2018,April,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",232,16,216
+2018,April,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",591,29,562
+2018,April,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1689,115,1061
+2018,May,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1054,139,915
+2018,May,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",385,61,324
+2018,June,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",361,13,257
+2018,June,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",185,20,165
+2018,June,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",350,45,350
+2018,June,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",320,30,320
+2018,June,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1585,135,1115
+2018,July,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",411,11,327
+2018,July,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",507,55,452
+2018,July,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",381,46,381
+2018,July,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1792,128,1307
+2018,August,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",549,59,490
+2018,August,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2018,August,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",357,18,357
+2018,August,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",1061,74,645
+2018,September,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",399,16,307
+2018,September,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",219,18,201
+2018,September,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",190,20,170
+2018,September,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",451,121,451
+2018,September,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",386,19,386
+2018,September,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",155,14,102
+2018,October,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1043,99,944
+2018,November,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",536,17,431
+2018,November,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",1,1,0
+2018,November,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",306,28,278
+2018,November,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",291,18,291
+2018,November,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",154,7,107
+2018,December,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",465,18,368
+2018,December,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",927,92,835
+2018,December,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",191,13,178
+2018,December,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",609,24,585
+2018,December,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",315,43,315
+2018,December,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1824,126,1173
+2019,January,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",528,64,464
+2019,January,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",781,58,472
+2019,February,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",213,38,175
+2019,February,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",484,53,431
+2019,February,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",372,56,372
+2019,February,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1472,104,988
+2019,February,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",168,8,122
+2019,February,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",500,37,351
+2019,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",293,11,163
+2019,March,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",216,18,198
+2019,March,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",2022,186,1388
+2019,March,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",669,51,493
+2019,April,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",419,80,419
+2019,April,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",330,33,330
+2019,April,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",584,54,427
+2019,May,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1021,83,938
+2019,May,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",204,18,186
+2019,May,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",331,51,280
+2019,May,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",355,81,355
+2019,June,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14671,1296,13375
+2019,June,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",189,20,169
+2019,June,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",134,5,107
+2019,June,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",196,11,196
+2019,July,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",360,80,360
+2019,July,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1725,132,1255
+2019,July,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",528,56,375
+2016,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",768,220,548
+2016,January,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",389,59,330
+2016,January,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",654,58,596
+2016,January,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1123,83,887
+2016,January,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",110,4,96
+2016,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",284,50,210
+2016,February,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1289,112,1177
+2016,March,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",483,64,480
+2016,March,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1541,74,1467
+2016,March,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",328,37,291
+2016,April,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1363,138,1225
+2016,April,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",548,78,470
+2016,April,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1784,88,1696
+2016,April,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",400,49,351
+2016,May,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",836,145,691
+2016,May,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",464,58,406
+2016,May,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1556,147,1409
+2016,June,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",237,19,218
+2016,June,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",350,58,292
+2016,June,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",515,123,392
+2016,June,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1544,83,1461
+2016,June,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",114,2,105
+2016,June,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",488,22,466
+2016,July,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",234,24,210
+2016,July,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",498,61,437
+2016,July,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1073,56,822
+2016,July,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",118,5,103
+2016,July,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",888,62,771
+2016,August,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",437,102,335
+2016,August,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",599,95,504
+2016,August,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",423,51,372
+2016,August,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",232,9,195
+2016,August,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",588,36,552
+2016,September,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14822,2072,10537
+2016,September,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1246,155,1091
+2016,September,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",283,32,251
+2016,September,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",243,45,198
+2016,September,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",723,54,669
+2016,September,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",471,69,402
+2016,September,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1714,63,1660
+2016,September,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",2067,212,1582
+2016,September,1,Região de Saúde Norte,"Hospital de Braga, PPP",335,140,154
+2016,October,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",103,11,92
+2016,October,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",622,39,583
+2016,October,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",283,11,247
+2016,October,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",976,66,910
+2016,October,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",825,74,570
+2016,November,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",6,0,6
+2016,November,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",302,70,232
+2016,November,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",186,19,167
+2016,November,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",468,116,352
+2016,November,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",415,46,369
+2016,December,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14285,1803,10532
+2016,December,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",0,0,0
+2016,December,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",72,2,33
+2016,December,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",206,22,184
+2016,December,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",562,51,511
+2016,December,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",487,34,341
+2017,January,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",247,15,232
+2017,January,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",0,0,0
+2017,January,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",0,0,0
+2017,January,1,Região de Saúde Norte,"Hospital de Braga, PPP",0,0,0
+2017,February,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",181,41,140
+2017,February,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",544,68,476
+2017,March,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",441,50,377
+2017,March,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",607,65,607
+2017,March,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",751,53,751
+2017,April,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1045,72,792
+2017,April,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1760,94,1140
+2017,May,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",319,34,319
+2017,May,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",133,6,100
+2017,May,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",470,40,346
+2017,June,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",432,48,432
+2017,June,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1361,63,910
+2017,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",205,9,188
+2017,July,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",324,34,324
+2017,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",184,11,144
+2017,August,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",670,61,609
+2017,August,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",940,58,667
+2017,August,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",2014,149,1355
+2017,August,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",866,73,866
+2017,August,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",1091,102,670
+2017,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",47,0,35
+2017,September,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",472,21,451
+2017,September,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",523,67,456
+2017,September,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",376,41,376
+2017,September,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",699,39,699
+2017,October,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",238,14,223
+2017,October,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",244,24,220
+2017,October,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",482,88,394
+2017,October,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1768,118,1246
+2017,November,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",220,23,197
+2017,November,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",182,20,162
+2017,November,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",400,88,312
+2017,November,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",450,39,411
+2017,November,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1634,117,1101
+2017,December,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14841,1086,13755
+2017,December,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",365,39,326
+2017,December,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",533,43,490
+2017,December,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",966,63,682
+2018,January,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14790,1085,13705
+2018,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",31,1,21
+2018,January,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",424,6,344
+2018,January,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",298,7,298
+2018,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",29,0,23
+2018,February,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",314,17,200
+2018,February,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",297,36,261
+2018,February,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",129,12,90
+2018,February,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",327,16,327
+2018,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",61,6,39
+2018,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",104,8,96
+2018,March,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",194,25,169
+2018,March,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1699,119,1248
+2018,March,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",630,21,494
+2018,April,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",946,82,574
+2018,May,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15437,1394,14043
+2018,May,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",171,22,149
+2018,May,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",412,34,378
+2018,May,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",471,28,443
+2018,May,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",313,27,313
+2018,May,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",288,26,288
+2018,May,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",79,2,62
+2018,June,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",992,98,894
+2018,June,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",41,4,37
+2018,June,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",463,38,425
+2018,June,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",146,12,99
+2018,June,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",628,42,483
+2018,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",202,4,128
+2018,July,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",315,50,265
+2018,July,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",204,25,179
+2018,August,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",303,8,228
+2018,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",4,0,4
+2018,August,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1070,122,948
+2018,August,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1255,41,907
+2018,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",68,9,59
+2018,September,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",243,44,199
+2018,September,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1842,149,1303
+2018,September,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",869,68,529
+2018,October,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",413,17,277
+2018,October,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",319,61,258
+2018,November,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",217,16,201
+2018,November,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1526,128,1063
+2018,November,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",143,8,143
+2018,December,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",240,47,193
+2018,December,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",331,27,304
+2019,January,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",13049,1053,11996
+2019,January,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",487,28,459
+2019,January,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",379,57,379
+2019,January,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",383,32,383
+2019,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",87,1,64
+2019,February,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",301,10,228
+2019,February,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",979,143,836
+2019,February,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",270,45,225
+2019,February,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",397,24,397
+2019,March,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",17640,2065,15575
+2019,March,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",524,20,370
+2019,March,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",1120,113,669
+2019,April,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",259,35,224
+2019,April,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",169,32,137
+2019,April,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",263,40,223
+2019,April,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",397,28,397
+2019,April,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",134,8,94
+2019,April,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",995,99,592
+2019,May,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",215,33,182
+2019,May,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",184,17,167
+2019,May,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1665,150,1022
+2019,May,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",892,90,552
+2019,June,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",152,24,128
+2019,July,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",982,103,879
+2019,July,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",159,14,145
+2019,July,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",497,31,466
+2019,July,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",509,57,452
+2016,January,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",458,131,327
+2016,January,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1482,135,1347
+2016,February,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",19389,1677,11115
+2016,February,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",566,25,541
+2016,February,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",375,51,324
+2016,February,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",143,1,131
+2016,February,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",537,22,515
+2016,February,1,Região de Saúde Norte,"Hospital de Braga, PPP",253,122,97
+2016,March,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",450,63,387
+2016,March,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",623,38,585
+2016,March,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",962,62,801
+2016,March,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",541,22,519
+2016,March,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",164,34,109
+2016,March,1,Região de Saúde Norte,"Hospital de Braga, PPP",259,122,100
+2016,April,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",24493,2521,14318
+2016,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",132,0,132
+2016,April,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",479,96,383
+2016,April,1,Região de Saúde Norte,"Hospital de Braga, PPP",336,130,174
+2016,May,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",21264,1875,12918
+2016,May,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",470,158,531
+2016,May,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1963,113,1850
+2016,May,1,Região de Saúde Norte,"Hospital de Braga, PPP",350,137,181
+2016,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",137,2,135
+2016,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",262,32,230
+2016,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",288,57,197
+2016,June,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",632,42,590
+2016,June,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1443,121,1222
+2016,June,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1041,53,806
+2016,June,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",168,27,119
+2016,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",146,3,143
+2016,July,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1231,124,1107
+2016,July,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",237,18,219
+2016,July,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",334,26,308
+2016,July,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1518,147,1371
+2016,July,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",607,42,565
+2016,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",325,43,246
+2016,August,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1474,141,1137
+2016,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",87,13,74
+2016,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",225,10,215
+2016,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",278,54,217
+2016,September,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",351,55,296
+2016,September,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",722,41,677
+2016,October,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1247,121,1130
+2016,October,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",631,35,596
+2016,November,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1163,129,1034
+2016,November,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",253,0,0
+2016,December,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",251,27,224
+2016,December,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",707,38,669
+2016,December,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",108,7,101
+2016,December,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",198,25,173
+2016,December,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2017,January,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",6959,695,4871
+2017,January,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",315,69,244
+2017,January,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1155,131,1024
+2017,January,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",232,23,209
+2017,January,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2017,January,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",773,0,0
+2017,January,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",0,0,0
+2017,February,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2017,February,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",105,4,76
+2017,February,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",843,70,534
+2017,March,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1348,139,973
+2017,March,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",613,73,540
+2017,March,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1585,105,954
+2017,April,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",189,18,171
+2017,April,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",565,43,522
+2017,May,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1102,100,672
+2017,May,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",237,18,219
+2017,May,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",161,22,139
+2017,May,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",503,50,453
+2017,June,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",112,7,76
+2017,July,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15118,1260,13858
+2017,July,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",221,17,204
+2017,July,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1076,50,724
+2017,July,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",723,41,723
+2017,July,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",588,25,441
+2017,August,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",108,13,72
+2017,August,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1333,244,1089
+2017,August,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",271,32,239
+2017,August,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",399,38,399
+2017,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",181,20,135
+2017,September,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1047,100,900
+2017,September,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",182,18,164
+2017,September,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",365,21,365
+2017,October,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",71,1,40
+2017,October,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",455,52,403
+2017,October,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",390,48,390
+2017,October,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",492,84,492
+2017,October,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",593,39,447
+2017,November,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",58,2,42
+2017,November,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",475,4,356
+2017,November,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",298,31,298
+2017,November,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",298,15,298
+2017,December,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",390,9,331
+2017,December,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",263,11,252
+2017,December,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1891,79,1496
+2017,December,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",350,5,350
+2018,January,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1206,97,1109
+2018,January,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",192,27,165
+2018,January,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1396,137,889
+2018,January,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1840,114,1313
+2018,February,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",516,35,481
+2018,February,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",456,78,378
+2018,February,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",90,14,90
+2018,March,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",16002,1749,14253
+2018,March,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",227,18,209
+2018,March,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1678,162,1029
+2018,April,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1042,125,917
+2018,April,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",505,53,452
+2018,April,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1872,118,1361
+2018,April,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",491,46,491
+2018,April,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",525,22,397
+2018,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",95,3,63
+2018,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",22,0,22
+2018,May,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1457,135,893
+2018,May,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",443,22,443
+2018,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",179,5,123
+2018,July,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14708,1427,13281
+2018,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",72,0,50
+2018,July,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1049,108,941
+2018,July,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",201,15,186
+2018,July,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",542,42,500
+2018,July,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1440,84,937
+2018,August,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",13637,1114,12523
+2018,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",262,2,196
+2018,August,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",240,36,204
+2018,August,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",245,33,212
+2018,August,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",382,51,331
+2018,August,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",362,40,362
+2018,August,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1995,189,1327
+2018,August,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",566,33,438
+2018,September,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",214,9,147
+2018,September,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",914,67,847
+2018,September,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",494,52,442
+2018,September,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1410,96,933
+2018,October,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",434,108,434
+2018,October,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1489,120,1016
+2018,October,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",149,6,108
+2018,October,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",870,83,512
+2018,November,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",364,4,242
+2018,November,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",228,45,183
+2018,November,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",487,40,447
+2018,November,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",428,68,428
+2018,November,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",929,98,566
+2018,December,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",166,4,162
+2019,January,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1087,117,970
+2019,January,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",332,36,296
+2019,January,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1365,88,894
+2019,February,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1570,125,1124
+2019,March,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",536,42,494
+2019,March,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",337,26,337
+2019,March,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",188,13,132
+2019,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",92,4,71
+2019,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",293,3,197
+2019,April,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",633,51,582
+2019,April,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",471,67,404
+2019,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",81,2,46
+2019,May,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",584,56,528
+2019,June,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",201,16,185
+2019,June,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",253,30,223
+2019,June,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1391,65,953
+2019,June,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1412,121,998
+2019,June,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",719,59,441
+2019,July,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14205,1298,12907
+2019,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",185,0,135
+2019,July,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",250,40,210
+2019,July,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",300,22,278
+2019,July,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1274,71,843
+2019,July,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",136,11,94
+2016,January,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",252,23,229
+2016,January,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1724,162,1562
+2016,January,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",649,42,607
+2016,January,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",157,20,118
+2016,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",146,4,142
+2016,February,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",339,32,339
+2016,February,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",478,84,394
+2016,February,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",243,22,221
+2016,February,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",207,28,179
+2016,February,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",480,58,422
+2016,February,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",378,74,304
+2016,February,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",265,29,236
+2016,February,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1035,99,791
+2016,February,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",780,37,665
+2016,March,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",21402,2276,12011
+2016,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",129,3,126
+2016,March,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",278,30,248
+2016,March,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",226,29,197
+2016,March,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",545,211,334
+2016,March,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",172,1,162
+2016,April,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",337,26,311
+2016,April,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",542,81,461
+2016,April,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1969,194,1775
+2016,April,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1095,83,813
+2016,April,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",1054,94,866
+2016,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",180,4,176
+2016,May,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",530,64,530
+2016,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",322,30,292
+2016,May,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",614,48,566
+2016,May,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",1006,119,887
+2016,May,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",677,38,639
+2016,May,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",170,23,125
+2016,June,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",471,44,427
+2016,June,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",453,139,314
+2016,June,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",478,20,458
+2016,June,1,Região de Saúde Norte,"Hospital de Braga, PPP",315,116,153
+2016,July,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",18035,1657,10663
+2016,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",96,20,76
+2016,July,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",336,52,284
+2016,July,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",373,45,328
+2016,July,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",616,45,571
+2016,August,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",18260,2622,13620
+2016,August,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",398,397,51
+2016,August,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1490,182,1308
+2016,August,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",295,37,258
+2016,August,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",419,124,295
+2016,August,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1437,60,1377
+2016,September,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",552,76,476
+2016,September,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",1232,103,1127
+2016,September,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",182,17,165
+2016,September,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",950,85,806
+2016,October,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",278,29,249
+2016,October,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",440,64,376
+2016,October,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",453,51,402
+2016,October,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1777,176,1357
+2016,November,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",15,1,14
+2016,November,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",0,0,0
+2016,November,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",9,1,6
+2016,November,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",0,0,0
+2016,November,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2016,November,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",184,29,155
+2016,November,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",0,0,0
+2016,December,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",217,13,204
+2016,December,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",495,107,388
+2016,December,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",398,6,268
+2017,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",278,8,170
+2017,January,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",560,57,503
+2017,January,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1406,45,914
+2017,January,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",111,8,79
+2017,January,1,Região de Saúde LVT,"Hospital de Vila Franca de Xira, PPP",0,0,0
+2017,February,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",113,6,107
+2017,February,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",686,41,519
+2017,March,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",144,9,92
+2017,April,1,Região de Saúde Norte,"Centro Hospitalar Universitário do Porto, EPE",0,0,0
+2017,April,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",923,78,620
+2017,May,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15937,1592,14345
+2017,May,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",415,3,223
+2017,May,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",57,6,57
+2017,May,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1490,96,1091
+2017,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",91,1,63
+2017,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",58,2,35
+2017,June,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",198,24,174
+2017,June,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",511,75,436
+2017,June,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",605,29,451
+2017,July,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",933,72,861
+2017,July,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",212,28,184
+2017,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",47,4,33
+2017,August,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",577,62,515
+2017,August,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",378,34,378
+2017,September,1,Região de Saúde do Alentejo,"Hospital Espírito Santo de Évora, EPE",498,15,399
+2017,September,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1543,99,1131
+2017,September,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",770,60,476
+2017,September,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",538,22,416
+2017,October,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",17143,1605,15538
+2017,October,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1280,135,1145
+2017,October,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",566,48,518
+2017,October,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1671,153,996
+2017,November,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15363,1540,13823
+2017,December,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",55,2,53
+2017,December,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",200,19,181
+2017,December,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",172,6,132
+2018,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",211,24,187
+2018,January,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",646,61,585
+2018,January,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",401,59,342
+2018,January,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",327,23,327
+2018,February,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",185,15,170
+2018,February,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1570,140,1091
+2018,February,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",789,73,483
+2018,February,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",487,36,360
+2018,March,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",365,16,365
+2018,March,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",95,3,63
+2018,March,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",414,41,414
+2018,April,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",2,0,2
+2018,April,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",201,23,178
+2018,April,1,Região de Saúde LVT,"Hospital Professor Doutor Fernando Fonseca, EPE",347,61,286
+2018,April,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",355,28,355
+2018,April,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",113,1,90
+2018,May,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",219,24,195
+2018,May,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1425,98,1055
+2018,May,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",819,85,468
+2018,June,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",14287,1417,12870
+2018,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",5,0,5
+2018,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Norte Alentejano, EPE",11,0,11
+2018,July,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",129,5,91
+2018,July,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",448,29,448
+2018,July,1,Região de Saúde Norte,"Instituto Português Oncologia do Porto, EPE",979,68,645
+2018,July,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",511,24,382
+2018,August,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",27,2,21
+2018,August,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",650,46,604
+2018,August,1,Região de Saúde LVT,"Instituto Português Oncologia de Lisboa, EPE",295,31,295
+2018,September,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15198,1259,13939
+2018,September,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",533,24,509
+2018,September,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",607,25,484
+2018,October,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",113,2,70
+2018,October,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",206,17,189
+2018,October,1,Região de Saúde LVT,"Centro Hospitalar Médio Tejo, EPE",460,22,438
+2018,October,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1970,145,1199
+2018,October,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",323,21,323
+2018,November,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",182,11,171
+2018,November,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1810,143,1119
+2018,December,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",298,3,222
+2018,December,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",376,20,376
+2018,December,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1991,111,1551
+2018,December,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",117,6,90
+2018,December,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",462,14,462
+2018,December,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",668,30,508
+2019,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",145,2,92
+2019,January,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",213,7,153
+2019,January,1,Região de Saúde LVT,"Centro Hospitalar Barreiro/Montijo, EPE",272,28,244
+2019,January,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",202,31,171
+2019,January,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",234,29,205
+2019,January,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1668,113,1192
+2019,January,1,Região de Saúde Norte,"Centro Hospitalar do Médio Ave, EPE",190,7,138
+2019,January,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",348,12,348
+2019,January,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",512,36,382
+2019,February,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",248,24,248
+2019,March,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",117,2,61
+2019,March,1,Região de Saúde do Algarve,"Centro Hospitalar Universitário do Algarve, EPE",1163,175,988
+2019,March,1,Região de Saúde LVT,"Centro Hospitalar Universitário Lisboa Central, EPE",246,47,199
+2019,March,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",565,79,486
+2019,March,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",297,21,297
+2019,April,1,Região de Saúde LVT,"Centro Hospitalar de Setúbal, EPE",198,20,178
+2019,April,1,Região de Saúde do Centro,"Centro Hospitalar e Universitário de Coimbra, EPE",1694,156,1091
+2019,April,1,Região de Saúde Norte,"Centro Hospitalar Universitário de São João, EPE",1801,139,1282
+2019,May,1,"Entidade Central (IPST, IP)","Instituto Português do Sangue e Transplantação (IPST), I.P",15132,1638,13494
+2019,May,1,Região de Saúde do Centro,"Centro Hospitalar Tondela-Viseu, EPE",290,21,290
+2019,May,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",275,10,275
+2019,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",63,1,31
+2019,June,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Baixo Alentejo, EPE",239,2,154
+2019,June,1,Região de Saúde LVT,"Hospital Garcia de Orta, EPE",413,40,373
+2019,June,1,Região de Saúde Norte,"Unidade Local de Saúde do Alto Minho, EPE",504,52,377
+2019,July,1,Região de Saúde do Alentejo,"Unidade Local de Saúde do Litoral Alentejano, EPE",50,2,30
+2019,July,1,Região de Saúde Norte,"Centro Hospitalar Vila Nova de Gaia/Espinho, EPE",252,7,252
