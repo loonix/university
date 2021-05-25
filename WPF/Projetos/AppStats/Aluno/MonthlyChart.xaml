@@ -4,20 +4,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AppStatistics"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
-    <!--<lvc:CartesianChart Series="{Binding MonthlyChartSeries}" Margin="10" Grid.Column="0" Grid.ColumnSpan="4" Height="200" LegendLocation="Right">
+
+    <lvc:CartesianChart Series="{Binding MonthlyChartSeries}" Margin="10" Height="200" LegendLocation="Right">
         <lvc:CartesianChart.AxisY>
-            <lvc:Axis Title="Height" LabelFormatter="{Binding YFormatter}">
-                <lvc:Axis.Separator>
-                    <lvc:Separator Step="50" />
-                </lvc:Axis.Separator>
+            <lvc:Axis Title="Downloads">
             </lvc:Axis>
         </lvc:CartesianChart.AxisY>
         <lvc:CartesianChart.AxisX>
-            <lvc:Axis Title="Samples" Labels="{Binding Labels}" />
+            <lvc:Axis Title="Months" Labels="{Binding Labels}" />
         </lvc:CartesianChart.AxisX>
-    </lvc:CartesianChart>-->
-    
+    </lvc:CartesianChart>
+
 </UserControl>

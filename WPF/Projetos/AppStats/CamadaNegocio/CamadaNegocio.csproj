@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="ContadorContext.cs" />
     <Compile Include="Download.cs" />
-    <Compile Include="MontlyData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

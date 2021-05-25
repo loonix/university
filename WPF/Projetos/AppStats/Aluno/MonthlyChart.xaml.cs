@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using CamadaNegocio;
+using LiveCharts;
+using LiveCharts.Configurations;
+using LiveCharts.Wpf;
 
 namespace AppStatistics
 {
@@ -20,9 +15,51 @@ namespace AppStatistics
     /// </summary>
     public partial class MonthlyChart : UserControl
     {
+        public string[] Labels { get; set; }
+        public SeriesCollection MonthlyChartSeries { get; set; }
+        private DownloadCollection Downloads { get; set; }
+
         public MonthlyChart()
         {
             InitializeComponent();
+        }
+
+        public void FillData(DownloadCollection downloads)
+        {
+            this.Downloads = downloads;
+            this.GetMonthlyChart();
+        }
+
+        private void GetMonthlyChart()
+        {
+            MonthlyChartSeries = new SeriesCollection();
+            Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec" };
+
+            List<IEnumerable<Download>> months = new List<IEnumerable<Download>>();
+
+            for (int i = 1; i < 12; i++)
+            {
+                IEnumerable<Download> month = this.Downloads.Where(dnl => dnl.Timestamp.Month == i).ToList();
+                months.Add(month);
+            }
+
+            LineSeries lineSeries = new LineSeries();
+            lineSeries.Title = "Count";
+            lineSeries.Stroke = Brushes.Gray;
+            lineSeries.Fill = Brushes.LightBlue;
+            lineSeries.Configuration = new CartesianMapper<Point>();
+
+            ChartValues<int> charvals = new ChartValues<int>();
+
+            for (int i = 0; i < 11; i++)
+            {
+                charvals.Add(this.Downloads.Count(dnl => dnl.Timestamp.Month == i + 1));
+            }
+
+            lineSeries.Values = charvals;
+            MonthlyChartSeries.Add(lineSeries);
+
+            DataContext = this;
         }
     }
 }
