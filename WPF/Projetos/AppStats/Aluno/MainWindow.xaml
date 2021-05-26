@@ -74,7 +74,7 @@
                     <TextBlock Text="App Dashboard" Margin="10 0 0 0" Foreground="White" FontSize="30" FontWeight="Bold" />
                 </StackPanel>
 
-                <rh:DateRangePicker From="{Binding DateFrom}" To="{Binding DateTo}" Command=""  Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"  Margin="0 0 10 0" Height="50">
+                <!--<rh:DateRangePicker From="{Binding DateFrom}" To="{Binding DateTo}" DateRangeChanged="DateRangePicker_DateRangeChanged"  Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"  Margin="0 0 10 0" Height="50">
                     <rh:DateRangePicker.Style>
                         <Style>
                             <Style.Resources>
@@ -82,7 +82,10 @@
                             </Style.Resources>
                         </Style>
                     </rh:DateRangePicker.Style>
-                </rh:DateRangePicker>
+                </rh:DateRangePicker>-->
+
+                <Calendar Height="170" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"  Margin="0 0 10 0"  Name="Calendar1"  Width="180" SelectionMode="MultipleRange" SelectedDatesChanged="Calendar1_SelectedDatesChanged">
+                </Calendar>
 
                 <!--Pesquisa-->
                 <Border Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Height="50"  Margin="0 0 10 0"

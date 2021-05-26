@@ -85,5 +85,10 @@ namespace AppStatistics
                 this.downloads = downloadCollection;
             }
         }
+
+        private void Calendar1_SelectedDatesChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
