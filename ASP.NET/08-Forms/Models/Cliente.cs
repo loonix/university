@@ -8,6 +8,8 @@ namespace _08_Forms.Models
 {
     public class Cliente
     {
+        [Key]
+        public int Id { get; set; }
         [Required(ErrorMessage = "Nome obrigatório", AllowEmptyStrings = false)]
         [Display(Name = "Nome do Utilizador")]
         public string Nome { get; set; }
@@ -18,8 +20,8 @@ namespace _08_Forms.Models
         [Required(ErrorMessage = "Email obrigatório", AllowEmptyStrings = false)]
         [StringLength(100, ErrorMessage = "Permitido máximo de 100 catacteres")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Email errado!")]
-        [EmailAddress(ErrorMessage = "Email errado!")]
         public string Email { get; set; }
+
 
     }
 
