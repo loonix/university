@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "AS_Dadores_de_Sangue", "AS_Dadores_de_Sangue.dwproj", "{7710033B-9FCD-4087-941C-4E0A937B33CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7710033B-9FCD-4087-941C-4E0A937B33CC}.Development|Default.ActiveCfg = Development
+		{7710033B-9FCD-4087-941C-4E0A937B33CC}.Development|Default.Build.0 = Development
+		{7710033B-9FCD-4087-941C-4E0A937B33CC}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60955F55-2D58-4E6A-B715-600D17F8F63C}
+	EndGlobalSection
+EndGlobal

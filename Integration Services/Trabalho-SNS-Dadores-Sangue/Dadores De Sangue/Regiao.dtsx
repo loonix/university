@@ -1,31 +1,42 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="5/3/2021 10:03:17 PM"
+  DTS:CreationDate="5/31/2021 9:41:18 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-5BF80AR"
   DTS:CreatorName="DESKTOP-5BF80AR\danie"
-  DTS:DTSID="{7A2D53D9-7BD0-4211-B634-239432F88980}"
+  DTS:DTSID="{5EDD25A7-C94F-4B93-93CA-9AB466F2CCF0}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.152"
   DTS:LocaleID="2057"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Package3"
   DTS:PackageType="5"
   DTS:VersionBuild="6"
-  DTS:VersionGUID="{BD53A734-23C0-4335-8B53-5D0F84EBF765}">
+  DTS:VersionGUID="{481B7DD6-0DCC-4AA7-9081-BAAFA85A7922}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5BF80AR.SNS_DADORES]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{32B4D327-225C-4358-B191-4AF3B1A0A628}"
+      DTS:ObjectName="DESKTOP-5BF80AR.SNS_DADORES">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-5BF80AR;Initial Catalog=SNS_DADORES;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{BDAAA8CA-72DB-4F2B-9A4E-4225E954B7B9}"
+      DTS:DTSID="{1074A7E4-0ECD-4005-9534-CDFD418443AC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      DTS:ObjectName="Data Flow Task">
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
@@ -44,11 +55,11 @@
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Entidade ]"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Regiao]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Entidade "
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]" />
+                      cachedName="Regiao"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Regiao]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -61,21 +72,21 @@
                   synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[RegiaoConverted]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]"
-                      name="EntidadeConvert"
-                      truncationRowDisposition="IgnoreFailure">
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[RegiaoConverted]"
+                      name="RegiaoConverted"
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Regiao]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -125,7 +136,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">SNS$</property>
+                  name="OpenRowset">Dadores_de_sangue$</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -152,7 +163,7 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{2E0240E5-1307-4E86-A882-7E90D97A7330}:external"
+                  connectionManagerID="{B94F1A2D-F996-4EB3-933A-632A684B1EFE}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -163,33 +174,31 @@
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]"
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Regiao]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Entidade ]"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Regiao]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]"
-                      name="Entidade "
-                      truncationRowDisposition="FailComponent" />
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Regiao]"
+                      name="Regiao"
+                      truncationRowDisposition="IgnoreFailure" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ano]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="r8"
                       name="Ano" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mes]"
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Month_Name]"
                       dataType="wstr"
                       length="255"
-                      name="Mes" />
+                      name="Month_Name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[N_Mes]"
-                      dataType="wstr"
-                      length="255"
-                      name="N_Mes" />
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dia]"
+                      dataType="r8"
+                      name="Dia" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Regiao]"
                       dataType="wstr"
@@ -201,14 +210,21 @@
                       length="255"
                       name="Entidade " />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Grupo Sanguineo]"
-                      dataType="wstr"
-                      length="255"
-                      name="Grupo Sanguineo" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reservas]"
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dadores_Inscritos]"
                       dataType="r8"
-                      name="Reservas" />
+                      name="Dadores_Inscritos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dadores_de_1a_vez]"
+                      dataType="r8"
+                      name="Dadores_de_1a_vez" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dadores_Regulares]"
+                      dataType="r8"
+                      name="Dadores_Regulares" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[N_Mes]"
+                      dataType="r8"
+                      name="N_Mes" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -229,11 +245,11 @@
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Entidade ]"
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Regiao]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Entidade ]"
-                      name="Entidade " />
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Regiao]"
+                      name="Regiao" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -255,7 +271,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Entidade]</property>
+                  name="OpenRowset">[dbo].[Regiao]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -277,7 +293,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -298,8 +314,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{671358DB-FB26-4C96-835B-F633737D25D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-5BF80AR_SQLEXPRESS.SNS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5BF80AR.SNS_DADORES]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5BF80AR.SNS_DADORES]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -307,32 +323,32 @@
                 <input
                   refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RegiaoConverted]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EntidadeConvert"
+                      cachedLength="50"
+                      cachedName="RegiaoConverted"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Entidade]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConvert]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Regiao]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[RegiaoConverted]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDentidade]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDregiao]"
                       dataType="i4"
-                      name="IDentidade" />
+                      name="IDregiao" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Entidade]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Regiao]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Entidade" />
+                      name="Regiao" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -385,12 +401,12 @@
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[RegiaoConverted]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EntidadeConvert"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]">
+                      cachedLength="50"
+                      cachedName="RegiaoConverted"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[RegiaoConverted]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -400,6 +416,23 @@
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
                           name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Regiao]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Regiao"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Regiao]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -413,19 +446,33 @@
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[RegiaoConverted]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConvert]"
-                      name="EntidadeConvert"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[RegiaoConverted]"
+                      name="RegiaoConverted"
                       sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[RegiaoConverted]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Regiao]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Regiao]"
+                      name="Regiao">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Regiao]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -480,35 +527,35 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="766,181" />
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="573,67" />
         <NodeLayout
           Size="139,42"
           Id="Package\Data Flow Task\Excel Source"
-          TopLeft="97.5,170.5" />
+          TopLeft="60,60" />
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="302,173" />
+          TopLeft="311,66" />
         <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="549,178" />
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="783,68" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="647,200.5">
+          TopLeft="671,88.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="119,0"
+              EndConnector="112,0"
               Start="0,0"
-              End="111.5,0">
+              End="104.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="111.5,0" />
+                    End="104.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -519,18 +566,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="236.5,192.75">
+          TopLeft="199,84">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="65.5,0"
+              EndConnector="112,0"
               Start="0,0"
-              End="58,0">
+              End="104.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="58,0" />
+                    End="104.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -541,18 +588,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="458,196.5">
+          TopLeft="467,87.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="91,0"
+              EndConnector="106,0"
               Start="0,0"
-              End="83.5,0">
+              End="98.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="83.5,0" />
+                    End="98.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -565,7 +612,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -578,7 +625,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Source">
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

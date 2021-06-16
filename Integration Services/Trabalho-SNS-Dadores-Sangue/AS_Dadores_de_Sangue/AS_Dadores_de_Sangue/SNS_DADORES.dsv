@@ -1,0 +1,151 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="467a4142-1e8f-46ba-a2e5-ace9294df03b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SNS_DADORES</ID>
+  <Name>SNS_DADORES</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>SNS DADORES</DataSourceID>
+  <Schema>
+    <xs:schema id="SNS_DADORES" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="SNS_DADORES" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="3401d422-ddb9-43e0-9a1e-fcbeace883b9">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Entidade" msprop:design-time-name="2cf4b913-2c6f-4150-854c-80de645f443f" msprop:DbTableName="Entidade" msprop:FriendlyName="Entidade" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDentidade" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="ee001239-da96-4313-b6db-3d0dfecaa104" msprop:DbColumnName="IDentidade" msprop:FriendlyName="IDentidade" type="xs:int" />
+                  <xs:element name="Entidade" msprop:design-time-name="d3a6d724-1f4e-4c5a-ba5c-4ed046c98a75" msprop:DbColumnName="Entidade" msprop:FriendlyName="Entidade" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactoDadores" msprop:design-time-name="1b0c2351-8e3f-4ea3-8920-82306811a8df" msprop:DbTableName="FactoDadores" msprop:FriendlyName="FactoDadores" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDFacto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="2bd10053-9e3c-4e86-87c2-fd3ed2237aac" msprop:DbColumnName="IDFacto" msprop:FriendlyName="IDFacto" type="xs:int" />
+                  <xs:element name="IDPeriodo" msprop:design-time-name="8b580f92-9e98-4dc1-8915-e6a8ec5b42d1" msprop:DbColumnName="IDPeriodo" msprop:FriendlyName="IDPeriodo" type="xs:int" />
+                  <xs:element name="IDEntidade" msprop:design-time-name="4d11a00b-dda7-4957-a43e-e4e54b21572b" msprop:DbColumnName="IDEntidade" msprop:FriendlyName="IDEntidade" type="xs:int" />
+                  <xs:element name="IDRegiao" msprop:design-time-name="08f11c0c-985e-4469-a776-a39fcec51a86" msprop:DbColumnName="IDRegiao" msprop:FriendlyName="IDRegiao" type="xs:int" />
+                  <xs:element name="Dadores_Inscritos_total" msprop:design-time-name="cf8c0ef8-ec3a-4f2a-92d1-a483c40c904e" msprop:DbColumnName="Dadores_Inscritos_total" msprop:FriendlyName="Dadores_Inscritos_total" type="xs:int" />
+                  <xs:element name="Dadores_de_1a_vez_total" msprop:design-time-name="01e7d031-41ec-4b5a-9b8c-c39f1d7cc308" msprop:DbColumnName="Dadores_de_1a_vez_total" msprop:FriendlyName="Dadores_de_1a_vez_total" type="xs:int" />
+                  <xs:element name="Dadores_Regulares_total" msprop:design-time-name="ca9ed36d-868e-44ec-95ef-e233b8d2500d" msprop:DbColumnName="Dadores_Regulares_total" msprop:FriendlyName="Dadores_Regulares_total" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Periodo" msprop:design-time-name="4e077c7a-59d2-4991-b576-33cab10455f0" msprop:DbTableName="Periodo" msprop:FriendlyName="Periodo" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDperiodo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="798621e3-4cb7-451c-82a5-a40f160f4ed7" msprop:DbColumnName="IDperiodo" msprop:FriendlyName="IDperiodo" type="xs:int" />
+                  <xs:element name="Ano" msprop:design-time-name="a9f957ed-f467-41b5-b971-3939b895f440" msprop:DbColumnName="Ano" msprop:FriendlyName="Ano" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Mes" msprop:design-time-name="b90b4971-b1ec-4684-ad6d-34a52c548e2e" msprop:DbColumnName="Mes" msprop:FriendlyName="Mes" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MesNum" msprop:design-time-name="6497d24d-c0ae-428b-b6be-c8a02aad230c" msprop:DbColumnName="MesNum" msprop:FriendlyName="MesNum" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Regiao" msprop:design-time-name="f753a988-340a-4c26-9003-b780b22a1190" msprop:DbTableName="Regiao" msprop:FriendlyName="Regiao" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDregiao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="17a9b7aa-f970-49b5-aa53-8eaca6bc7303" msprop:DbColumnName="IDregiao" msprop:FriendlyName="IDregiao" type="xs:int" />
+                  <xs:element name="Regiao" msprop:design-time-name="a9336560-5c74-42d2-bcba-457d67dc661a" msprop:DbColumnName="Regiao" msprop:FriendlyName="Regiao" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Entidade" />
+          <xs:field xpath="IDentidade" />
+        </xs:unique>
+        <xs:unique name="dbo_FactoDadores_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactoDadores" />
+          <xs:field xpath="IDFacto" />
+        </xs:unique>
+        <xs:unique name="dbo_Periodo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Periodo" />
+          <xs:field xpath="IDperiodo" />
+        </xs:unique>
+        <xs:unique name="dbo_Regiao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Regiao" />
+          <xs:field xpath="IDregiao" />
+        </xs:unique>
+        <xs:keyref name="FK_FactoDadores_Entidade" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactoDadores" />
+          <xs:field xpath="IDEntidade" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactoDadores_Periodo" refer="dbo_Periodo_Constraint1">
+          <xs:selector xpath=".//dbo_FactoDadores" />
+          <xs:field xpath="IDPeriodo" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactoDadores_Regiao" refer="dbo_Regiao_Constraint1">
+          <xs:selector xpath=".//dbo_FactoDadores" />
+          <xs:field xpath="IDRegiao" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <SNS_DADORES xmlns="" />
+  </Schema>
+</DataSourceView>

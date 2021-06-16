@@ -1,31 +1,42 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="5/3/2021 10:03:17 PM"
+  DTS:CreationDate="5/31/2021 9:40:21 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-5BF80AR"
   DTS:CreatorName="DESKTOP-5BF80AR\danie"
-  DTS:DTSID="{7A2D53D9-7BD0-4211-B634-239432F88980}"
+  DTS:DTSID="{192CC1B0-9766-4E6B-ABC6-566571AB3341}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.152"
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{BD53A734-23C0-4335-8B53-5D0F84EBF765}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{59497E32-C47D-4D63-AD27-0FA98780E6EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5BF80AR.SNS_DADORES]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5D02BCAB-2AF8-4BC2-8292-EA76E86A6098}"
+      DTS:ObjectName="DESKTOP-5BF80AR.SNS_DADORES">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-5BF80AR;Initial Catalog=SNS_DADORES;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{BDAAA8CA-72DB-4F2B-9A4E-4225E954B7B9}"
+      DTS:DTSID="{1BCB6833-8368-4680-BDCC-B676FED88BA7}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      DTS:ObjectName="Data Flow Task">
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
@@ -61,14 +72,14 @@
                   synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConverted]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]"
-                      name="EntidadeConvert"
+                      errorRowDisposition="IgnoreFailure"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConverted]"
+                      name="EntidadeConverted"
                       truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
@@ -125,7 +136,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">SNS$</property>
+                  name="OpenRowset">Dadores_de_sangue$</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -152,7 +163,7 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{2E0240E5-1307-4E86-A882-7E90D97A7330}:external"
+                  connectionManagerID="{B94F1A2D-F996-4EB3-933A-632A684B1EFE}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -166,30 +177,28 @@
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Entidade ]"
                       length="255"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]"
                       name="Entidade "
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ano]"
-                      dataType="wstr"
-                      length="255"
+                      dataType="r8"
                       name="Ano" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Mes]"
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Month_Name]"
                       dataType="wstr"
                       length="255"
-                      name="Mes" />
+                      name="Month_Name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[N_Mes]"
-                      dataType="wstr"
-                      length="255"
-                      name="N_Mes" />
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dia]"
+                      dataType="r8"
+                      name="Dia" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Regiao]"
                       dataType="wstr"
@@ -201,14 +210,21 @@
                       length="255"
                       name="Entidade " />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Grupo Sanguineo]"
-                      dataType="wstr"
-                      length="255"
-                      name="Grupo Sanguineo" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reservas]"
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dadores_Inscritos]"
                       dataType="r8"
-                      name="Reservas" />
+                      name="Dadores_Inscritos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dadores_de_1a_vez]"
+                      dataType="r8"
+                      name="Dadores_de_1a_vez" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Dadores_Regulares]"
+                      dataType="r8"
+                      name="Dadores_Regulares" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[N_Mes]"
+                      dataType="r8"
+                      name="N_Mes" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -298,8 +314,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{671358DB-FB26-4C96-835B-F633737D25D2}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-5BF80AR_SQLEXPRESS.SNS]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5BF80AR.SNS_DADORES]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5BF80AR.SNS_DADORES]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -307,19 +323,19 @@
                 <input
                   refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EntidadeConverted]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EntidadeConvert"
+                      cachedLength="50"
+                      cachedName="EntidadeConverted"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Entidade]"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConvert]" />
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConverted]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -385,12 +401,12 @@
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[EntidadeConverted]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="EntidadeConvert"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]">
+                      cachedLength="50"
+                      cachedName="EntidadeConverted"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConverted]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -400,6 +416,23 @@
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
                           name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[Entidade ]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Entidade "
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -413,19 +446,33 @@
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConvert]"
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConverted]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConvert]"
-                      name="EntidadeConvert"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[EntidadeConverted]"
+                      name="EntidadeConverted"
                       sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConvert]}</property>
+                          name="SortColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EntidadeConverted]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Entidade ]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Entidade ]"
+                      name="Entidade ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Entidade ]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -480,35 +527,35 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="766,181" />
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="649,172" />
         <NodeLayout
           Size="139,42"
           Id="Package\Data Flow Task\Excel Source"
-          TopLeft="97.5,170.5" />
+          TopLeft="137,165" />
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="302,173" />
+          TopLeft="388,171" />
         <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="549,178" />
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="860,173" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="647,200.5">
+          TopLeft="747,193.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="119,0"
+              EndConnector="113,0"
               Start="0,0"
-              End="111.5,0">
+              End="105.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="111.5,0" />
+                    End="105.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -519,18 +566,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="236.5,192.75">
+          TopLeft="276,189">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="65.5,0"
+              EndConnector="112,0"
               Start="0,0"
-              End="58,0">
+              End="104.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="58,0" />
+                    End="104.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -541,18 +588,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="458,196.5">
+          TopLeft="544,192.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="91,0"
+              EndConnector="105,0"
               Start="0,0"
-              End="83.5,0">
+              End="97.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="83.5,0" />
+                    End="97.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -565,7 +612,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -578,7 +625,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Source">
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
