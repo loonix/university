@@ -1,0 +1,338 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="faab1abd-3412-4c26-a7e2-ffbe0f2a8028" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SNS</ID>
+  <Name>SNS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="aad0650a-ac6b-44bf-b96e-6ea8e6e4ae38">
+      <ID>Entidade</ID>
+      <Name>Entidade</Name>
+      <DimensionID>Entidade</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d9ee1e44-317f-47a9-a0e7-07241ec101d1">
+          <AttributeID>I Dentidade</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7c6ae681-9a4e-4cf2-bdfb-116651d6995a">
+      <ID>Facto SNS</ID>
+      <Name>Facto SNS</Name>
+      <DimensionID>Facto SNS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2b5f5e38-57e9-4d6d-ae42-8ffa81b26c1b">
+          <AttributeID>I Dfacto</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a894ba24-f5d9-4f73-9db6-3c7a2c649281">
+      <ID>GR Sanguineo</ID>
+      <Name>GR Sanguineo</Name>
+      <DimensionID>GR Sanguineo</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f63436fa-40ac-4ce6-83f3-c9494e88c03a">
+          <AttributeID>Idgruposanguineo</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="109c8d23-78ab-4232-b222-1ea9a2a0f90b">
+      <ID>Periodo</ID>
+      <Name>Periodo</Name>
+      <DimensionID>Periodo</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="236f39e2-eab6-4fab-adc6-e6733341fa0e">
+          <AttributeID>I Dperiodo</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="66f188be-d021-4f5e-9142-c7227c8ea44a">
+      <ID>Regiao</ID>
+      <Name>Regiao</Name>
+      <DimensionID>Regiao</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="48a0bb27-e865-4bc0-a100-ea72b95940a3">
+          <AttributeID>I Dregiao</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="e9ce801e-0db6-419f-82b3-e97cd06f65ea">
+      <ID>Entidade</ID>
+      <Name>Entidade</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="677d5b20-f036-4040-8595-7a9b741e0692">
+          <ID>Entidade Count</ID>
+          <Name>Entidade Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2b5cd079-66a8-4715-801a-4fbe0ecf76a3">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="796e3ea1-5f7f-490b-b7da-aa2196e9c8ad">
+              <TableID>dbo_Entidade</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="6eb49334-3be9-4fcf-ae2a-159634241399">
+          <CubeDimensionID>Entidade</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7bbcb230-73b4-4e05-9aec-ae82f8916af4">
+              <AttributeID>I Dentidade</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="10111f7f-1480-44d4-b22b-9fe8d875eae0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7ea08b54-b001-4897-a68c-5af93aeb72b4">
+                    <TableID>dbo_Entidade</TableID>
+                    <ColumnID>IDentidade</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="ec4ba31c-190b-4ff4-a21e-b23a8e168e26">
+      <ID>Facto SNS</ID>
+      <Name>Facto SNS</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2e0048cf-0909-4387-a500-0ab32f222776">
+          <ID>Reservas</ID>
+          <Name>Reservas</Name>
+          <Source dwd:design-time-name="0ec9d24a-eaa9-474f-881c-ded55cbb7e97">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="aa34894d-34cc-41d0-902d-dc98b00632c8">
+              <TableID>dbo_FactoSNS</TableID>
+              <ColumnID>Reservas</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ff0185de-af65-418e-b228-2a798ffa5b64">
+          <ID>Facto SNS Count</ID>
+          <Name>Facto SNS Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="f991d88e-d261-4965-be19-ed748fc12b16">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2c2dd1f2-8b76-4ac5-b0a8-8821ef1a7fbe">
+              <TableID>dbo_FactoSNS</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="fe31db17-144d-49db-8dda-b2afc735f5b8">
+          <CubeDimensionID>Facto SNS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e8cb4f7d-6ba4-47f9-83e6-54ed3490845a">
+              <AttributeID>I Dfacto</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4dad7cc5-89ee-4e59-b7e0-d1cb801faf84">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ef2a02d5-6e29-4c5d-a083-c4e27fd0eddc">
+                    <TableID>dbo_FactoSNS</TableID>
+                    <ColumnID>IDfacto</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="76d08722-8eb2-4e7a-9d9e-691db35221d6">
+      <ID>GR Sanguineo</ID>
+      <Name>GR Sanguineo</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="0c13a0f9-5952-467e-a347-607208ebbcae">
+          <ID>GR Sanguineo Count</ID>
+          <Name>GR Sanguineo Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d5113130-648d-462f-a0be-05fbe84ebc76">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="affe2011-d916-496c-a343-9fb837f48012">
+              <TableID>dbo_GRSanguineo</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="4f43b6cf-fff0-4b81-8df5-89ebcd57413b">
+          <CubeDimensionID>GR Sanguineo</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d7f23a15-7d95-4a39-9572-5e4a6082ac0d">
+              <AttributeID>Idgruposanguineo</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="41b18731-6660-49ce-b532-0c54d3ad0e3f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="305fbaa3-1177-458c-b3ab-55b65eeb1445">
+                    <TableID>dbo_GRSanguineo</TableID>
+                    <ColumnID>Idgruposanguineo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="ca966e60-2f57-41df-8e2a-b6a0aef33e48">
+      <ID>Periodo</ID>
+      <Name>Periodo</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2956f685-7e46-4248-9189-c8872fc6cfa7">
+          <ID>Periodo Count</ID>
+          <Name>Periodo Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="eaaa7642-de6e-4910-bd38-294a8301f9d0">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="51a10959-314a-41c7-a0f9-3d827d98cdc2">
+              <TableID>dbo_Periodo</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="1f520e2c-b870-4ceb-8ab2-bb01102dfa8b">
+          <CubeDimensionID>Periodo</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8de86e72-f5a0-4dd5-9983-86baafcd094b">
+              <AttributeID>I Dperiodo</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8eaba295-7cab-49f5-afb9-975e1542f95b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3c0b96ab-cb0c-4eaa-a380-47bcfd4ce56a">
+                    <TableID>dbo_Periodo</TableID>
+                    <ColumnID>IDperiodo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="f56caa6a-0b6b-4e89-9c74-c75dd24a04f5">
+      <ID>Regiao</ID>
+      <Name>Regiao</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="8357a0f3-e57c-465f-8e11-65c58b77cf10">
+          <ID>Regiao Count</ID>
+          <Name>Regiao Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="747ddfee-60e3-410d-b9f4-6181639ed764">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="a984cbae-4b27-44e4-9f9a-9be3f87f48d6">
+              <TableID>dbo_Regiao</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="21dc38bf-3aea-41ff-bf45-721769297a23">
+          <CubeDimensionID>Regiao</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ea9c64a4-2349-4c96-9e87-c7353500d358">
+              <AttributeID>I Dregiao</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f7c1911c-61aa-4607-b035-a0226ca68d0a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1e538637-d0b7-436f-9e26-160397a90feb">
+                    <TableID>dbo_Regiao</TableID>
+                    <ColumnID>IDregiao</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="9dcab95e-fb33-41db-bce8-d0f27c1461a4">
+    <DataSourceViewID>SNS</DataSourceViewID>
+  </Source>
+</Cube>

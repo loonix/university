@@ -1,0 +1,228 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="19e7d0e0-3b04-4d32-9244-cc489e6dced6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SNS</ID>
+  <Name>SNS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>3</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1916" scrolltop="-6800" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="32306" y="17198" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Entidade" left="1734" top="-450" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_Entidade" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactoSNS" left="6486" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3519" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000bf0d00004d0c0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_FactoSNS" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="GRSanguineo" left="5761" top="-2990" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3466" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00008a0d000057070000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_GRSanguineo" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Periodo" left="6405" top="4286" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_Periodo" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Regiao" left="11438" top="-106" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_Regiao" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-1916</DiagramViewPortLeft>
+            <DiagramViewPortTop>-6800</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>SNS</DataSourceID>
+  <Schema>
+    <xs:schema id="SNS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="SNS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="2dbcc6ce-242d-4d3d-8a8e-95f2d65d5dae">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Entidade" msprop:design-time-name="a572f940-7ffe-43c8-8332-9f5b0c947da7" msprop:FriendlyName="Entidade" msprop:DbSchemaName="dbo" msprop:DbTableName="Entidade" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDentidade" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="8cca7587-7738-4141-8ba8-3b17349e4569" msprop:DbColumnName="IDentidade" msprop:FriendlyName="IDentidade" type="xs:int" />
+                  <xs:element name="Entidade" msprop:design-time-name="3896d7fb-a0b7-400e-930e-4a63faf1c116" msprop:DbColumnName="Entidade" msprop:FriendlyName="Entidade" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactoSNS" msprop:design-time-name="36c2b078-904a-4c7f-9b4c-c5c6024b2c2a" msprop:FriendlyName="FactoSNS" msprop:DbSchemaName="dbo" msprop:DbTableName="FactoSNS" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDfacto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="363ba6bb-9b57-4702-8e44-19672af4f4cb" msprop:DbColumnName="IDfacto" msprop:FriendlyName="IDfacto" type="xs:int" />
+                  <xs:element name="IDregiao" msprop:design-time-name="91286d03-7c2d-4a04-953e-9e46929d0056" msprop:DbColumnName="IDregiao" msprop:FriendlyName="IDregiao" type="xs:int" minOccurs="0" />
+                  <xs:element name="IDentidade" msprop:design-time-name="481e144d-0d66-4e3d-951b-82c25c129e1c" msprop:DbColumnName="IDentidade" msprop:FriendlyName="IDentidade" type="xs:int" minOccurs="0" />
+                  <xs:element name="IDgruposanguineo" msprop:design-time-name="8f10c050-59ad-4f1a-896b-27dbb3703625" msprop:DbColumnName="IDgruposanguineo" msprop:FriendlyName="IDgruposanguineo" type="xs:int" minOccurs="0" />
+                  <xs:element name="Reservas" msprop:design-time-name="2cbab551-fa12-46e8-bf1b-bc952b131708" msprop:DbColumnName="Reservas" msprop:FriendlyName="Reservas" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_GRSanguineo" msprop:design-time-name="aeb64794-c6b0-48d9-bef6-ce0b5fefb56d" msprop:FriendlyName="GRSanguineo" msprop:DbSchemaName="dbo" msprop:DbTableName="GRSanguineo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Idgruposanguineo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="e9b00034-87fb-4103-82ed-c5b6ed1bd5bb" msprop:DbColumnName="Idgruposanguineo" msprop:FriendlyName="Idgruposanguineo" type="xs:int" />
+                  <xs:element name="Gruposanguineo" msprop:design-time-name="85e68cb4-4e8d-4592-93a2-a89464afe81d" msprop:DbColumnName="Gruposanguineo" msprop:FriendlyName="Gruposanguineo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Periodo" msprop:design-time-name="b6990c91-11d3-4896-9bed-ae33db491520" msprop:FriendlyName="Periodo" msprop:DbSchemaName="dbo" msprop:DbTableName="Periodo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDperiodo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="4365e7e8-1e59-4268-a3cd-51d7a2d2bd1a" msprop:DbColumnName="IDperiodo" msprop:FriendlyName="IDperiodo" type="xs:int" />
+                  <xs:element name="Ano" msprop:design-time-name="2ea1cf04-82cf-4b2b-b11f-0a669226f6d4" msprop:DbColumnName="Ano" msprop:FriendlyName="Ano" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Mes" msprop:design-time-name="a12f7b39-241f-4e02-a5a9-1daa659ccaf9" msprop:DbColumnName="Mes" msprop:FriendlyName="Mes" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MesNum" msprop:design-time-name="d0248628-25f9-41ec-aa46-ebd3ffaf6165" msprop:DbColumnName="MesNum" msprop:FriendlyName="MesNum" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Regiao" msprop:design-time-name="b1d63167-c87b-45c3-ba42-0087f3f83ffe" msprop:FriendlyName="Regiao" msprop:DbSchemaName="dbo" msprop:DbTableName="Regiao" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IDregiao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="d4416ac6-914a-431f-94ef-f4de04604dec" msprop:DbColumnName="IDregiao" msprop:FriendlyName="IDregiao" type="xs:int" />
+                  <xs:element name="Regiao" msprop:design-time-name="8a905a07-129a-4aab-ab03-2eee403d0852" msprop:DbColumnName="Regiao" msprop:FriendlyName="Regiao" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Entidade" />
+          <xs:field xpath="IDentidade" />
+        </xs:unique>
+        <xs:unique name="dbo_FactoSNS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactoSNS" />
+          <xs:field xpath="IDfacto" />
+        </xs:unique>
+        <xs:unique name="dbo_GRSanguineo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_GRSanguineo" />
+          <xs:field xpath="Idgruposanguineo" />
+        </xs:unique>
+        <xs:unique name="dbo_Periodo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Periodo" />
+          <xs:field xpath="IDperiodo" />
+        </xs:unique>
+        <xs:unique name="dbo_Regiao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Regiao" />
+          <xs:field xpath="IDregiao" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <SNS xmlns="" />
+  </Schema>
+</DataSourceView>
