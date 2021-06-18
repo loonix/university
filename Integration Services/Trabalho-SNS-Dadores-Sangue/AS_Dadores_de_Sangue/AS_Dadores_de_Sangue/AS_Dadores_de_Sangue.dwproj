@@ -50,12 +50,12 @@
       <FullPath>Facto Dadores.dmm</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Facto Dadores 1.dmm</Name>
-      <FullPath>Facto Dadores 1.dmm</FullPath>
+      <Name>Facto Dadores Clustering.dmm</Name>
+      <FullPath>Facto Dadores Clustering.dmm</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Facto Dadores 2.dmm</Name>
-      <FullPath>Facto Dadores 2.dmm</FullPath>
+      <Name>DT-Todos.dmm</Name>
+      <FullPath>DT-Todos.dmm</FullPath>
     </ProjectItem>
   </MiningModels>
   <Configurations>
