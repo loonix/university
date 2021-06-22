@@ -1,6 +1,6 @@
-﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d3c4536b-2cc0-43e3-920c-0cb0e66e42c0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Facto Dadores Clustering</ID>
-  <Name>Facto Dadores Clustering</Name>
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e68499fd-0544-4b89-811a-627276d937ff" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Neural-Dadores</ID>
+  <Name>Neural-Dadores</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -46,85 +46,85 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="45655d22-7bba-48c0-88b2-ac38136556b7">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9556304c-c01d-488f-99fa-1e2132f7909e">
     <DataSourceViewID>SNS_DADORES</DataSourceViewID>
   </Source>
   <Columns>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7b3c6a7f-8f33-4c8b-ad4a-c7e132653ffb">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7567d2cc-6dce-4c88-92a9-0212b5f9e6fa">
       <ID>Dadores De 1a Vez Total</ID>
       <Name>Dadores De 1a Vez Total</Name>
       <Type>Long</Type>
       <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="fb08b875-bee8-4923-bd34-74fa5cfcffc5">
+        <KeyColumn dwd:design-time-name="ef0ad968-66d1-451d-a0f9-83af97c999f1">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="046bc078-9b60-4ab7-8846-cef6bceb3f19">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5b60418a-d32d-4f9c-947d-55289fbcac09">
             <TableID>dbo_FactoDadores</TableID>
             <ColumnID>Dadores_de_1a_vez_total</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f7f9fca9-9d1c-4cc4-b3cf-6ec7e79e0dcc">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f989339f-d336-4de6-97f5-7019487a64bb">
       <ID>Dadores Inscritos Total</ID>
       <Name>Dadores Inscritos Total</Name>
       <Type>Long</Type>
       <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="a6bd9d87-cd6e-4283-8249-8a1d8f105052">
+        <KeyColumn dwd:design-time-name="31d73032-f8fa-4d11-93e4-e73f67f8fd31">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0fda2b4e-9e22-4516-ab6f-4212738e2499">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a41a8167-ad1f-49ea-9867-7d248e77c761">
             <TableID>dbo_FactoDadores</TableID>
             <ColumnID>Dadores_Inscritos_total</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e1458c89-bca9-49e1-9bb7-336d80348d19">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fb1f97af-cfe3-4200-9fb2-3da42d9ce09d">
       <ID>Dadores Regulares Total</ID>
       <Name>Dadores Regulares Total</Name>
       <Type>Long</Type>
       <Content>Continuous</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="358e5f42-d70c-4955-9c2f-aabc24bec90b">
+        <KeyColumn dwd:design-time-name="923e0d4b-aff6-419c-8a19-3505edbbad75">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d7143451-6b4d-4f68-bb86-ffd68523384d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91c5d06a-47e5-4d30-b387-0e1269f34490">
             <TableID>dbo_FactoDadores</TableID>
             <ColumnID>Dadores_Regulares_total</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3155ec7a-7234-469e-94bf-648412251340">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3d4f04d1-10d3-409e-a9f4-2116e32d70ad">
       <ID>ID Facto</ID>
       <Name>ID Facto</Name>
       <IsKey>true</IsKey>
       <Type>Long</Type>
       <Content>Key</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="9b568311-dbc5-40a4-9374-73c43e3bf11e">
+        <KeyColumn dwd:design-time-name="5fb12f25-aa00-4c46-abf8-2bf85935be99">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f7488e2-7abf-4efe-9c4b-319787e67b43">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="22a9d955-55f2-4d32-a389-c73c159982dc">
             <TableID>dbo_FactoDadores</TableID>
             <ColumnID>IDFacto</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
     </Column>
-    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="84364458-534d-4959-9eae-f18d8752f34f">
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0a864b06-763f-4105-832b-30935422ccf8">
       <ID>ID Regiao</ID>
       <Name>ID Regiao</Name>
       <Type>Long</Type>
-      <Content>Continuous</Content>
+      <Content>Discrete</Content>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="9c85839d-213a-4f07-9252-07d93c2b23c7">
+        <KeyColumn dwd:design-time-name="d5886064-3759-4a42-a125-119237733622">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c4e1c98-1696-4a49-967f-a0aedc3c3105">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cd2ddc93-51fd-4f36-8d7b-b99d9ed9ba27">
             <TableID>dbo_FactoDadores</TableID>
             <ColumnID>IDRegiao</ColumnID>
           </Source>
@@ -133,43 +133,41 @@
     </Column>
   </Columns>
   <MiningModels>
-    <MiningModel dwd:design-time-name="b36de3ee-8630-4451-8395-fc5efcbd84fd">
-      <ID>Facto Dadores 1</ID>
-      <Name>Facto Dadores 1</Name>
+    <MiningModel dwd:design-time-name="d3acc410-9ef0-4615-bd19-aabece55c964">
+      <ID>Facto Dadores</ID>
+      <Name>Facto Dadores</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
-      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Algorithm>Microsoft_Neural_Network</Algorithm>
       <Columns>
-        <Column dwd:design-time-name="9210d534-87fc-46c4-9116-f7c7113605d0">
+        <Column dwd:design-time-name="8cdee081-2b1f-4556-b90c-0ab58012caf4">
           <ID>Dadores De 1a Vez Total</ID>
           <Name>Dadores De 1a Vez Total</Name>
           <SourceColumnID>Dadores De 1a Vez Total</SourceColumnID>
-          <Usage>PredictOnly</Usage>
         </Column>
-        <Column dwd:design-time-name="8e3b13ae-3af8-4b70-b020-bb498a6f2e8c">
+        <Column dwd:design-time-name="776c7fa2-b5af-4541-aa64-228995d06607">
           <ID>Dadores Inscritos Total</ID>
           <Name>Dadores Inscritos Total</Name>
           <SourceColumnID>Dadores Inscritos Total</SourceColumnID>
-          <Usage>PredictOnly</Usage>
         </Column>
-        <Column dwd:design-time-name="4102b9ec-3ead-42a4-8416-aa024a3f00f3">
+        <Column dwd:design-time-name="a0ebfb8b-2c58-4847-87dd-cf2bee8cab5a">
           <ID>Dadores Regulares Total</ID>
           <Name>Dadores Regulares Total</Name>
           <SourceColumnID>Dadores Regulares Total</SourceColumnID>
-          <Usage>PredictOnly</Usage>
         </Column>
-        <Column dwd:design-time-name="f156d977-ced9-4c0f-98b0-149a2c5df74f">
+        <Column dwd:design-time-name="daa408aa-cd79-4865-94c7-318cf9a6b9fb">
           <ID>ID Facto</ID>
           <Name>ID Facto</Name>
           <SourceColumnID>ID Facto</SourceColumnID>
           <Usage>Key</Usage>
         </Column>
-        <Column dwd:design-time-name="72f0bc41-23bf-4619-9793-db487b54f48a">
+        <Column dwd:design-time-name="d44d40a5-4377-4155-9c8b-d67d3bdc471f">
           <ID>ID Regiao</ID>
           <Name>ID Regiao</Name>
           <SourceColumnID>ID Regiao</SourceColumnID>
+          <Usage>Predict</Usage>
         </Column>
       </Columns>
     </MiningModel>

@@ -46,16 +46,16 @@
   </DataSourceViews>
   <MiningModels>
     <ProjectItem>
-      <Name>Facto Dadores.dmm</Name>
-      <FullPath>Facto Dadores.dmm</FullPath>
+      <Name>Cluster.dmm</Name>
+      <FullPath>Cluster.dmm</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Facto Dadores Clustering.dmm</Name>
-      <FullPath>Facto Dadores Clustering.dmm</FullPath>
+      <Name>DT-Dadores-1vez.dmm</Name>
+      <FullPath>DT-Dadores-1vez.dmm</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>DT-Todos.dmm</Name>
-      <FullPath>DT-Todos.dmm</FullPath>
+      <Name>Neural-Dadores.dmm</Name>
+      <FullPath>Neural-Dadores.dmm</FullPath>
     </ProjectItem>
   </MiningModels>
   <Configurations>
