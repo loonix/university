@@ -17,11 +17,9 @@ namespace AppStatistics
         public SeriesCollection GenderSeries { get; set; }
         public ChartValues<int> totalDownloads { get; set; }
         public DownloadCollection downloads { get; set; }
+        public DownloadCollection allDownloads { get; set; }
         public int totalCountDownloads { get; set; }
         public int totalCountApps { get; set; }
-
-        public DateTime DateFrom { get; set; }
-        public DateTime DateTo { get; set; }
 
         public MainWindow()
         {
@@ -32,42 +30,51 @@ namespace AppStatistics
         private void Init()
         {
             this.totalDownloads = new ChartValues<int> { };
-            this.setDates();
-            this.ObterDownload();
-            //this.GetGenderSeriesCollection();
+            this.ObterDownloads();
             this.GetTotals();
+            this.setDates();
+            this.GetGenderSeriesCollection();
             this.monthlyChartData.FillData(this.downloads);
         }
 
         private void setDates(DateTime? dateFrom = null, DateTime? dateTo = null)
         {
-            this.DateFrom = dateFrom ?? DateTime.Today;
-            this.DateTo = dateTo ?? DateTime.Today.AddDays(1);
+            this.DataInicio.SelectedDate = dateFrom ?? DateTime.Today.AddMonths(-1);
+            this.DataFim.SelectedDate = dateTo ?? DateTime.Today;
+
+            List<Download> downloadsFiltered = (
+                from d in this.allDownloads
+                where (d.Timestamp >= this.DataInicio.SelectedDate) && (d.Timestamp <= this.DataFim.SelectedDate)
+                select d).ToList();
+
+
+            //this.downloads = this.allDownloads.Where(d => (d.Timestamp >= this.DataInicio.SelectedDate) && (d.Timestamp <= this.DataFim.SelectedDate)).ToList();
+            this.monthlyChartData.FillData(downloadsFiltered);
         }
 
-        //private void GetGenderSeriesCollection()
-        //{
-        //    GenderSeries = new SeriesCollection
-        //    {
-        //        new PieSeries
-        //        {
-        //            Title = "Male",
-        //            Values = new ChartValues<ObservableValue> { new ObservableValue(8) },
-        //            DataLabels = true
-        //        },
-        //        new PieSeries
-        //        {
-        //            Title = "Female",
-        //            Values = new ChartValues<ObservableValue> { new ObservableValue(6) },
-        //            DataLabels = true
-        //        },
-        //    };
-        //}
+        private void GetGenderSeriesCollection()
+        {
+            GenderSeries = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Male",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(8) },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Female",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(6) },
+                    DataLabels = true
+                },
+            };
+        }
 
         private void GetTotals()
         {
-            this.totalCountDownloads = this.downloads.Count();
-            this.totalCountApps = this.downloads.Select(x => x.AppName).Distinct().Count();
+            this.totalCountDownloads = this.downloads?.Count() ?? 0;
+            this.totalCountApps = this.downloads?.Select(x => x.AppName).Distinct().Count() ?? 0;
 
             ContadorContext contadorTotalDownloads = new ContadorContext("TOTAL DOWNLOADS", this.totalCountDownloads.ToString());
             this.contadorTotal.DataContext = contadorTotalDownloads;
@@ -77,18 +84,20 @@ namespace AppStatistics
 
         }
 
-        private void ObterDownload()
+        private void ObterDownloads()
         {
             DownloadCollection downloadCollection = Download.ObterListaDownloads();
             if (downloadCollection != null)
             {
-                this.downloads = downloadCollection;
+                this.allDownloads = downloadCollection;
             }
         }
 
-        private void Calendar1_SelectedDatesChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void SelectedDateChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-
+            setDates(this.DataInicio.SelectedDate);
+            setDates(this.DataFim.SelectedDate);
         }
+     
     }
 }

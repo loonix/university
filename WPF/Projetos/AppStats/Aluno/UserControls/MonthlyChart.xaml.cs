@@ -17,14 +17,14 @@ namespace AppStatistics
     {
         public string[] Labels { get; set; }
         public SeriesCollection MonthlyChartSeries { get; set; }
-        private DownloadCollection Downloads { get; set; }
+        private List<Download> Downloads { get; set; }
 
         public MonthlyChart()
         {
             InitializeComponent();
         }
 
-        public void FillData(DownloadCollection downloads)
+        public void FillData(List<Download> downloads)
         {
             this.Downloads = downloads;
             this.GetMonthlyChart();
@@ -36,6 +36,12 @@ namespace AppStatistics
             Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec" };
 
             List<IEnumerable<Download>> months = new List<IEnumerable<Download>>();
+
+            if(this.Downloads == null) {
+
+                DataContext = this;
+                return; 
+            }
 
             for (int i = 1; i < 12; i++)
             {

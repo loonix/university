@@ -1,0 +1,161 @@
+﻿<UserControl x:Class="Social_Blade_Dashboard.Dashboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:local="clr-namespace:Social_Blade_Dashboard"
+             xmlns:uc="clr-namespace:Social_Blade_Dashboard.UserControls"
+             
+           
+             
+           
+            
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="materialDesign:PackIcon">
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Background="#F6F6F8">
+            <StackPanel Margin="10">
+                <Grid Height="60">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                     BorderBrush="{x:Null}" Background="{x:Null}">
+                        <StackPanel Margin="-5">
+                            <materialDesign:PackIcon Kind="ReorderHorizontal" Foreground="Gray" />
+                        </StackPanel>
+                    </Button>
+                    <materialDesign:PackIcon  Kind="ViewDashboard"  Foreground="Red" HorizontalAlignment="Right" Height="50" Width="41" />
+
+                </Grid>
+                <WrapPanel HorizontalAlignment="Center">
+
+                    <uc:myCard x:Name="totalCard" CardIcon="Hackernews">
+
+                    </uc:myCard>
+
+                    <uc:myCard x:Name="inProgressCard" CardIcon="Hackernews">
+
+                    </uc:myCard>
+
+                    <uc:myCard x:Name="onHoldCard" CardIcon="Hackernews">
+
+                    </uc:myCard>
+
+                    <uc:myCard x:Name="infoPendCard" CardIcon="Hackernews">
+
+                    </uc:myCard>
+                    
+                    <uc:myCard Height="140" x:Name="subecasePendCard" CardIcon="Hackernews">
+
+                    </uc:myCard>
+
+                    <uc:myCard Height="140" x:Name="closePendCard" CardIcon="Hackernews">
+
+                    </uc:myCard>
+
+                    <uc:myCard Height="140" x:Name="proposalCard" CardIcon="Hackernews">
+
+                    </uc:myCard>
+
+                    <uc:myCardFiltro  x:Name="FiltroNomePV"  CardIcon="Hackernews" PreVendaChange="nomePV_PreVendaChange">
+
+                    </uc:myCardFiltro>
+
+                   
+
+                </WrapPanel>
+
+                <WrapPanel HorizontalAlignment="Center" Width="600">
+                               
+                    <Border BorderThickness="2" BorderBrush="Blue" Height="400" Width="594" >
+                        <!--<lvc:CartesianChart x:Name ="cartesianChart"  DataTooltip="{x:Null}"  Hoverable="False"  
+                                            LegendLocation="Top" Loaded="cartesianChart_Loaded">
+                            --><!--<lvc:CartesianChart.AxisY>
+                                <lvc:Axis Title="Browser" Labels="{Binding CardValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                            </lvc:CartesianChart.AxisY>
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis LabelFormatter="{Binding CardText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                            </lvc:CartesianChart.AxisX>
+                            <lvc:CartesianChart.DataTooltip>
+                                <lvc:DefaultTooltip SelectionMode="SharedYValues"></lvc:DefaultTooltip>
+                            </lvc:CartesianChart.DataTooltip>-->
+
+                            <!--Series="{Binding SeriesCollection}"--><!--
+                            
+                        </lvc:CartesianChart>-->
+
+                        <lvc:PieChart x:Name ="pipChart" LegendLocation="Bottom"  Hoverable="False"
+                          DataTooltip="{x:Null}" Loaded="pipChart_Loaded">
+
+
+                        </lvc:PieChart>
+
+                    </Border>
+              
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+        <StackPanel Background="White" Grid.ColumnSpan="2" Margin="733,0,0,0">
+            <WrapPanel VerticalAlignment="Top" Margin="20 20 20 20">
+                <Button VerticalAlignment="Center" Background="DarkGray" BorderBrush="#FFFFEEFA" Foreground="White" Margin="105 20 20 20 "
+                        Height="40">
+                    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5 5 5 5">
+                        <TextBlock TextAlignment="Center" Text="Vodafone"  VerticalAlignment="Center" FontWeight="SemiBold" Margin="5 5 5 5
+" />
+                    </WrapPanel>
+                </Button>
+            </WrapPanel>
+            <Border Margin="40 10" CornerRadius="20" Background="DarkGray">
+                <Image Source="Images/vfd.png"  Stretch="Uniform" x:Name="ImgCartoon" Height="150" />
+            </Border>
+
+
+            <DatePicker materialDesign:HintAssist.Hint="Data de Inicio"  Height="50" Name="DataInicioDatePicker" DisplayDate="" IsDropDownOpen="False" Margin="5"></DatePicker>
+            <DatePicker materialDesign:HintAssist.Hint="Data de Fim"  Height="50" Name="DataFimDatePicker" DisplayDate="" IsDropDownOpen="False" Margin="5"></DatePicker>
+
+            <Border BorderThickness="2" BorderBrush="Blue" Margin="10" Height="200">
+
+             
+                <!--<lvc:PieChart x:Name ="pipChart" LegendLocation="Bottom"  Hoverable="False"
+                          DataTooltip="{x:Null}" Loaded="pipChart_Loaded">
+                    --><!--<lvc:PieChart.Series>
+                        <lvc:PieSeries x:Name="BF" Title="Progresso"  DataLabels="False" LabelPoint="{Binding CardText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                       Values="7"/>
+                        <lvc:PieSeries Title="Espera" DataLabels="False" LabelPoint="{Binding CardText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                       Values="6"/>
+                        <lvc:PieSeries Title="Pendente" DataLabels="False" LabelPoint="{Binding CardText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                       Values="6"/>
+                        <lvc:PieSeries Title="Sub-Pendente" DataLabels="False" LabelPoint="{Binding CardText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                       Values="4"/>
+                        <lvc:PieSeries Title="Fechado" DataLabels="False" LabelPoint="{Binding CardText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                       Values="5"/>
+                        <lvc:PieSeries Title="Proposta" DataLabels="False" LabelPoint="{Binding CardText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                       Values="3"/>
+                    </lvc:PieChart.Series>--><!--
+                </lvc:PieChart>-->
+            </Border>
+            <Border  BorderThickness="2" BorderBrush="Blue" Margin="10" Height="150">
+
+            </Border>
+
+
+          
+
+        </StackPanel>
+    </Grid>
+</UserControl>

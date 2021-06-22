@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:AppStatistics"
         mc:Ignorable="d"
         xmlns:rh="http://schemas.rollinghours.com/wpf"
-        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="MainWindow" Height="450" Width="800">
 
     <Window.Resources>
@@ -46,14 +47,17 @@
         </Style>
     </Window.Resources>
 
-    <Grid>
+    <Grid ShowGridLines="true">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.9*"/>
-            <RowDefinition/>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
-        <Grid>
+        <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -67,68 +71,14 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
                 <StackPanel  VerticalAlignment="Top" Orientation="Horizontal" Margin="10 0 0 0">
                     <!--<Image Source="./microsoft.png" Width="30" Height="30" VerticalAlignment="Top"/>-->
-                    <TextBlock Text="App Dashboard" Margin="10 0 0 0" Foreground="White" FontSize="30" FontWeight="Bold" />
+                    <TextBlock Text="App Dashboard" Margin="20" Foreground="White" FontSize="30" FontWeight="Bold" />
                 </StackPanel>
-
-                <!--<rh:DateRangePicker From="{Binding DateFrom}" To="{Binding DateTo}" DateRangeChanged="DateRangePicker_DateRangeChanged"  Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"  Margin="0 0 10 0" Height="50">
-                    <rh:DateRangePicker.Style>
-                        <Style>
-                            <Style.Resources>
-                                <Style TargetType="Button" />
-                            </Style.Resources>
-                        </Style>
-                    </rh:DateRangePicker.Style>
-                </rh:DateRangePicker>-->
-
-                <Calendar Height="170" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"  Margin="0 0 10 0"  Name="Calendar1"  Width="180" SelectionMode="MultipleRange" SelectedDatesChanged="Calendar1_SelectedDatesChanged">
-                </Calendar>
-
-                <!--Pesquisa-->
-                <Border Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Height="50"  Margin="0 0 10 0"
-                        Background="#0EA7B7" CornerRadius="10">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-
-
-                        <TextBox Name="inputText" Grid.Column="1" Width="500" >
-                            <TextBox.Resources>
-                                <VisualBrush x:Key="hinttext" TileMode="None" AlignmentX="Left" Stretch="None">
-                                    <VisualBrush.Visual>
-                                        <TextBlock FontStyle="Normal" Foreground="#76CBD2" Text="Search for what you like"/>
-                                    </VisualBrush.Visual>
-                                </VisualBrush>
-                            </TextBox.Resources>
-
-
-                            <TextBox.Style>
-                                <Style TargetType="TextBox">
-                                    <Setter Property="VerticalAlignment" Value="Center"/>
-                                    <Setter Property="FontSize" Value="14"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Setter Property="Background" Value="Transparent"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="Text" Value="">
-                                            <Setter Property="Background" Value="{StaticResource hinttext}"/>
-                                        </Trigger>
-
-                                        <Trigger Property="Text" Value="{x:Null}">
-                                            <Setter Property="Background" Value="{StaticResource hinttext}"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </TextBox.Style>
-
-                        </TextBox>
-                    </Grid>
-                </Border>
-
+             
                 <UniformGrid Grid.Row="2" Columns="0" VerticalAlignment="Center">
                     <Border CornerRadius="5" Background="White" Margin="10">
                         <Border.Effect>
@@ -156,7 +106,7 @@
                 
                 </UniformGrid>
 
-                <!--<UniformGrid Grid.Row="3" Columns="0" VerticalAlignment="Center">
+                <!--<UniformGrid Grid.Row="4" Columns="0" VerticalAlignment="Center" >
                     <Border  CornerRadius="5" Background="White" Margin="10">
                         <Border.Effect>
                             <DropShadowEffect Color="#F2F2F2" ShadowDepth="10" BlurRadius="10" Opacity="0.4" Direction="270"/>
@@ -171,9 +121,9 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="2*"/>
                                 <RowDefinition/>
-                            </Grid.RowDefinitions>
+                            </Grid.RowDefinitions>-->
 
-                            <lvc:PieChart  Grid.Column="1" Name="pie1" Series="{Binding SeriesCollection1}" 
+                            <lvc:PieChart  Grid.Column="1" Grid.Row="4" Name="pie1" Series="{Binding SeriesCollection1}" 
                       LegendLocation="Right" InnerRadius="12" Margin="5">
                                 <lvc:PieChart.ChartLegend>
                                     <lvc:DefaultLegend BulletSize="10"></lvc:DefaultLegend>
@@ -183,14 +133,72 @@
                                 </lvc:PieChart.DataTooltip>
                             </lvc:PieChart>
 
-                        </Grid>
+                        <!--</Grid>
             </Border>
 
             </UniformGrid>-->
 
+             
 
 
+
+            </Grid>
+            
+            
         </Grid>
-        </Grid>
+        
+        <!--#region Filtros-->
+        <Border Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+            <Grid ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Filter" Height="20" Width="20" Margin="15" Foreground="CadetBlue"/>
+                    <TextBlock  Grid.Row="0" Grid.Column="0" Foreground="CadetBlue" FontWeight="Bold" Height="30" FontSize="20">FILTROS</TextBlock>
+                </StackPanel>
+
+                <materialDesign:Card Padding="20" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0 5" Background="CadetBlue">
+                    <StackPanel>
+                        <TextBlock FontWeight="DemiBold" Foreground="White">Data Inicio</TextBlock>
+                        <DatePicker FontWeight="Bold" Foreground="White" Height="25" Name="DataInicio" DisplayDate="" IsDropDownOpen="False" Margin="5" SelectedDateChanged="SelectedDateChanged">
+                            <DatePicker.Resources>
+                                <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="Black" />
+                                <SolidColorBrush x:Key="MaterialDesignBody" Color="Black" />
+                            </DatePicker.Resources>
+                        </DatePicker>
+                    </StackPanel>
+                    </materialDesign:Card>
+
+                <materialDesign:Card Padding="20" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0 5" Background="CadetBlue">
+                    <StackPanel>
+                        <TextBlock FontWeight="DemiBold" Foreground="White">Data Fim</TextBlock>
+                        <DatePicker FontWeight="Bold" Foreground="White" Height="25" Name="DataFim" DisplayDate="" IsDropDownOpen="False" Margin="5" SelectedDateChanged="SelectedDateChanged"></DatePicker>
+                    </StackPanel>
+                </materialDesign:Card>
+
+                <materialDesign:Card Padding="20" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0 5" Background="CadetBlue">
+                    <ComboBox>
+                        <ComboBoxItem>ComboBox Item #1</ComboBoxItem>
+                        <ComboBoxItem IsSelected="True">ComboBox Item #2</ComboBoxItem>
+                        <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+                    </ComboBox>
+                </materialDesign:Card>
+
+
+            </Grid>
+        </Border>
+        <!--#endregion-->
+
     </Grid>
 </Window>

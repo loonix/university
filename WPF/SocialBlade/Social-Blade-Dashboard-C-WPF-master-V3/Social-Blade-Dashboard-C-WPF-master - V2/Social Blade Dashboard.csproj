@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Social_Blade_Dashboard</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp3.1\Social Blade Dashboard.deps.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\Social Blade Dashboard.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\Social Blade Dashboard.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp3.1\CamadaDados.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\CamadaDados.pdb" />
+    <None Include="bin\Debug\netcoreapp3.1\CamadaNegocio.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\CamadaNegocio.pdb" />
+    <None Include="bin\Debug\netcoreapp3.1\ControlzEx.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\LiveCharts.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\LiveCharts.Wpf.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\MahApps.Metro.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\MaterialDesignColors.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\MaterialDesignThemes.MahApps.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\Social Blade Dashboard.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\Social Blade Dashboard.exe" />
+    <None Include="bin\Debug\netcoreapp3.1\Social Blade Dashboard.pdb" />
+    <None Include="bin\Debug\netcoreapp3.1\System.Text.Json.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+  </ItemGroup>
+
+</Project>
