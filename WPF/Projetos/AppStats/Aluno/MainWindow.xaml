@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppStatistics"
+        xmlns:uc="clr-namespace:AppStatistics.UserControls"
         mc:Ignorable="d"
         xmlns:rh="http://schemas.rollinghours.com/wpf"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" 
@@ -72,10 +73,10 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
                 <StackPanel  VerticalAlignment="Top" Orientation="Horizontal" Margin="10 0 0 0">
-                    <!--<Image Source="./microsoft.png" Width="30" Height="30" VerticalAlignment="Top"/>-->
                     <TextBlock Text="App Dashboard" Margin="20" Foreground="White" FontSize="30" FontWeight="Bold" />
                 </StackPanel>
              
@@ -95,18 +96,14 @@
                                 <RowDefinition Height="2*"/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-
                             <local:MonthlyChart x:Name="monthlyChartData" Grid.Column="0" Grid.ColumnSpan="4"></local:MonthlyChart>
-
                             <local:Contador x:Name="contadorTotal" Grid.Row="1" Grid.Column="0"></local:Contador>
                             <local:Contador x:Name="contadorAppTotal" Grid.Row="1" Grid.Column="1"></local:Contador>
-                            
                         </Grid>
                     </Border>
-                
                 </UniformGrid>
 
-                <!--<UniformGrid Grid.Row="4" Columns="0" VerticalAlignment="Center" >
+              <UniformGrid Grid.Row="3" Columns="0" VerticalAlignment="Center" >
                     <Border  CornerRadius="5" Background="White" Margin="10">
                         <Border.Effect>
                             <DropShadowEffect Color="#F2F2F2" ShadowDepth="10" BlurRadius="10" Opacity="0.4" Direction="270"/>
@@ -121,26 +118,47 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="2*"/>
                                 <RowDefinition/>
-                            </Grid.RowDefinitions>-->
-
-                            <lvc:PieChart  Grid.Column="1" Grid.Row="4" Name="pie1" Series="{Binding SeriesCollection1}" 
-                      LegendLocation="Right" InnerRadius="12" Margin="5">
-                                <lvc:PieChart.ChartLegend>
-                                    <lvc:DefaultLegend BulletSize="10"></lvc:DefaultLegend>
-                                </lvc:PieChart.ChartLegend>
-                                <lvc:PieChart.DataTooltip>
-                                    <lvc:DefaultTooltip BulletSize="10"></lvc:DefaultTooltip>
-                                </lvc:PieChart.DataTooltip>
-                            </lvc:PieChart>
-
-                        <!--</Grid>
+                            </Grid.RowDefinitions>
+                            <uc:PieChart x:Name="pieChartData" Grid.Column="0" Grid.Row="0"></uc:PieChart>
+                        </Grid>
             </Border>
+            </UniformGrid>
 
-            </UniformGrid>-->
+                <UniformGrid Grid.Row="4" Columns="0" VerticalAlignment="Center" >
+                    <Border  CornerRadius="5" Background="White" Margin="10">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#F2F2F2" ShadowDepth="10" BlurRadius="10" Opacity="0.4" Direction="270"/>
+                        </Border.Effect>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                               
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="300"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                         
+                            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                                <ItemsControl ItemsSource="{Binding allDownloads}" Width="auto" Grid.Column="0" Grid.Row="0" Margin="10 5 10 5">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <materialDesign:Card Padding="10" VerticalAlignment="Center" Width="auto" Height="auto" Margin="0 5" Background="GhostWhite">
+                                            <StackPanel>
+                                                <TextBlock FontSize="15" FontWeight="Bold" Text="{Binding Path=AppName}" />
+                                                <TextBlock Text="{Binding Path=Gender}" />
+                                                <TextBlock Text="{Binding Path=Country}" />
+                                            </StackPanel>
+                                            </materialDesign:Card>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                            </ScrollViewer>
 
-             
+                        </Grid>
+                    </Border>
 
-
+                </UniformGrid>
 
             </Grid>
             
@@ -171,7 +189,7 @@
                 <materialDesign:Card Padding="20" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0 5" Background="CadetBlue">
                     <StackPanel>
                         <TextBlock FontWeight="DemiBold" Foreground="White">Data Inicio</TextBlock>
-                        <DatePicker FontWeight="Bold" Foreground="White" Height="25" Name="DataInicio" DisplayDate="" IsDropDownOpen="False" Margin="5" SelectedDateChanged="SelectedDateChanged">
+                        <DatePicker FontWeight="Bold" Foreground="White" Height="25" Name="DataInicio" DisplayDate="" IsDropDownOpen="False" Margin="5">
                             <DatePicker.Resources>
                                 <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="Black" />
                                 <SolidColorBrush x:Key="MaterialDesignBody" Color="Black" />
@@ -183,18 +201,9 @@
                 <materialDesign:Card Padding="20" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0 5" Background="CadetBlue">
                     <StackPanel>
                         <TextBlock FontWeight="DemiBold" Foreground="White">Data Fim</TextBlock>
-                        <DatePicker FontWeight="Bold" Foreground="White" Height="25" Name="DataFim" DisplayDate="" IsDropDownOpen="False" Margin="5" SelectedDateChanged="SelectedDateChanged"></DatePicker>
+                        <DatePicker FontWeight="Bold" Foreground="White" Height="25" Name="DataFim" DisplayDate="" IsDropDownOpen="False" Margin="5"></DatePicker>
                     </StackPanel>
                 </materialDesign:Card>
-
-                <materialDesign:Card Padding="20" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0 5" Background="CadetBlue">
-                    <ComboBox>
-                        <ComboBoxItem>ComboBox Item #1</ComboBoxItem>
-                        <ComboBoxItem IsSelected="True">ComboBox Item #2</ComboBoxItem>
-                        <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
-                    </ComboBox>
-                </materialDesign:Card>
-
 
             </Grid>
         </Border>

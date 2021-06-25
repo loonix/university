@@ -64,8 +64,11 @@ namespace AppStatistics
 
             lineSeries.Values = charvals;
             MonthlyChartSeries.Add(lineSeries);
-
+            //if (monthlyChart.Series != null) { monthlyChart.Series.Clear(); }
+            monthlyChart.Series = this.MonthlyChartSeries;
+            monthlyChart.Update();
             DataContext = this;
         }
+      
     }
 }
