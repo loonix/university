@@ -12,22 +12,20 @@
 
 <body>
     <?php
-    include "../includes/menu.inc.php";
+    include "../includes/menu_admin.inc.php";
     include "../bd/ligacaoBD.php";
     $conn = connectDatabase();
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $telefone = $_POST["telefone"];
-    $sql = "INSERT INTO inscricoes (Nome, Email, Telefone) VALUES ('$nome', '$email',
-'$telefone')";
+    $pagina = $_POST["Pagina"];
+    $titulo = $_POST["Titulo"];
+    $texto = $_POST["Texto"];
+    $autor = $_POST["Autor"];
+    $sql = "INSERT INTO Conteudos (Pagina, Titulo, Texto, Autor) VALUES ('$pagina', '$titulo', '$texto', '$autor')";
     echo "<div class='container'>";
-    //if($conn->query($sql) == TRUE) { //estilo objeto
     if (mysqli_query($conn, $sql) === TRUE) {
-        echo "<br/><br/><h3>Inscrição efectuada! </h3><br /><br />";
-        echo "<a class='btn btn-outline-light' href='verinscricoes.php'>Ver Inscrições</a>";
-        header("Location:verinscricoes.php");
+        header("Location:default.php");
     } else {
         echo "<h3>Impossivel registar</h3>";
+        echo "<a class='btn btn-outline-light' href='default.php'>Ver todas as paginas</a>";
     }
     echo "</div>";
     include "../includes/footer.inc.php";

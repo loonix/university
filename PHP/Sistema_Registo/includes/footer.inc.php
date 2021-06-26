@@ -1,7 +1,7 @@
 <style>
     .rodape {
+        border-top: 3px dashed white;
         text-align: center;
-        /*Colocar o rodapé na base (fundo do browser)*/
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -9,5 +9,5 @@
 </style>
 <footer class="rodape">
     <hr />
-    <p>&copy; LSM 2020-2021</p>
+    <p>&copy; Daniel Carneiro, LSM 2020-2021</p>
 </footer>

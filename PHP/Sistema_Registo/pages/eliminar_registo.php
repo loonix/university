@@ -1,7 +1,8 @@
 <?php
 include "../bd/ligacaoBD.php";
 $conn = connectDatabase();
-//Pesquisa registo
+
+// Pesquisa registo
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET["id"])) {
         $id = $_GET["id"];
@@ -12,7 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         }
     }
 }
-//Eliminar registo
+
+// Eliminar registo
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id_registo'];
     $sql = "DELETE FROM inscricoes WHERE id = $id";
@@ -20,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //volta para a pagina verinscricoes
     header("Location:verinscricoes.php");
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -29,12 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-
-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-
-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-
-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <?php include "../includes/header.php"; ?>
+
     <title>Alterar</title>
 </head>
 
@@ -43,22 +42,27 @@ JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="a
     <div class="container">
         <h1>Inscrição :: Eliminar</h1>
         <form action="eliminar_registo.php" method="post">
-            <!-- campo invisivel-->
+
             <input type="hidden" name="id_registo" value="<?php echo $id; ?>">
-            <div class="form-floating mb-3">
-                <input type="text" class="formcontrol" id="nome" name="nome" readonly value="<?php echo $row[1]; ?>" placeholder="Introduza nome">
-             
+            <div class="form-group" style="position: relative;">
+                <label for="nome" class="form-label mt-4">Nome:</label>
+                <input readonly type="nome" class="form-control" id="nome" name="nome" placeholder="Introduza nome" data-focused="true" value="<?php echo $row[1]; ?>">
             </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="formcontrol" id="telefone" name="telefone" readonly value="<?php echo $row[3]; ?>" placehold er="Introduza telefone">
-            
+
+            <div class="form-group" style="position: relative;">
+                <label for="telefone" class="form-label mt-4">Telefone:</label>
+                <input readonly type="tel" class="form-control" id="telefone" name="telefone" minlength="9" maxlength="14" placeholder="Introduza telefone" value="<?php echo $row[3]; ?>">
             </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="formcontrol" id="email" name="email" readonly value="<?php echo $row[2]; ?>" placeholder="Introduza email">
-              
+
+            <div class="form-group" style="position: relative;">
+                <label for="email" class="form-label mt-4">Email:</label>
+                <input readonly type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com" value="<?php echo $row[2]; ?>">
             </div>
-            <input class="btn btnsuccess" type="submit" name="Eliminar" value="Eliminar" />
-            <a class="btn btn-primary" href="verInscricoes.php">Ver Inscricoes</a>
+
+            <div class="gap-4 mt-3">
+                <input class="btn btn-outline-danger" type="submit" name="Eliminar" value="Eliminar" />
+                <a class="btn btn-outline-light" href="verinscricoes.php">Ver Inscrições</a>
+            </div>
         </form>
     </div>
     <?php include "../includes/footer.inc.php"; ?>

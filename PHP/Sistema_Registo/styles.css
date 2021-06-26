@@ -1,0 +1,68 @@
+:root {
+
+    /* COLORS */
+    --bg-color: #ffffff;
+    --primary-color: #48ba7e;
+    --secondary-color: #66676d;
+    --assertive-color: #ff495c;
+    --info-color: #6d3965;
+    --calm-color: #cccccc;
+    --light-calm-color: #f2f2f2;
+    --transparent-black: rgba(100, 85, 85, 0.5);
+    --transparent-green: rgb(0 156 74 / 38%);
+    --transparent-assertive: rgb(150 0 0 / 50%);
+    --transparent-yellow: rgb(232 218 95 / 45%);
+    --transparent-amber: rgb(255 152 0 / 34%);
+    --default-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+
+
+    /* FONTS */
+    --body-text-size: 12px;
+    --h1: 2em;
+    --h2: 1.5em;
+    --h3: 1.17em;
+    --h4: 1em;
+    --h5: .83em;
+    --h6: .67em;
+
+}
+
+/* TEXT STYLES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+.container {
+    padding: 2em;
+}
+
+
+.table {
+    background: aliceblue;
+    border-radius: 5px;
+}

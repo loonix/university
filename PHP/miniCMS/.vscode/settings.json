@@ -1,0 +1,28 @@
+{
+// Set the default
+"editor.formatOnSave": false,
+// Enable per-language
+"[php]": {
+    "editor.formatOnSave": true
+},
+
+// Should point to php-cs-fixer.phar file, if you have installed this manually (without Composer). Should include .phar extension.
+"phpformatter.pharPath": "/home/user/.config/composer/vendor/friendsofphp/php-cs-fixer/php-cs-fixer.phar",
+
+// If the pharPath is set, and you are not using Composer, and you haven't added PHP to your PATH, this should point to the php.exe file.
+"phpformatter.phpPath": "php",
+
+// Whether the php-cs-fixer library has been installed using Composer. If true, the extension will override pharPath and assume you have added Composer to your PATH.
+"phpformatter.composer": false,
+
+// Add arguments to the executed fix command, like so: ['--level=psr2', '--fixers=linefeed,short_tag,indentation'].
+"phpformatter.arguments": [
+    "--level=psr2"
+],
+
+// If true, the extension will log all sorts of (debug) info to the console. Useful for troubleshooting.
+"phpformatter.logging": true,
+
+// If true, the extension will show notifications.
+"phpformatter.notifications": true
+}
