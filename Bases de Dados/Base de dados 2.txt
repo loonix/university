@@ -1,0 +1,124 @@
+create database db21 charset latin1 collate latin1_swedish_ci;
+
+mysql.exe -h localhost -u root
+
+CREATE table if not exists suppliers (
+    suppID INT(4) unsigned not null AUTO_INCREMENT,
+    name char(30) not null DEFAULT '',
+    phone char(9) not null DEFAULT '',
+    primary key (suppID)
+    );
+
+INSERT INTO suppliers VALUES 
+(501, 'Paper & Office Supplies Co.', 123456789),
+(\N, 'Books & School Ltd', 234567890),  
+(\N, 'Electronics Corp.', 345678901);
+
+ALTER TABLE products ADD COLUMN suppID INT UNSIGNED NOT NULL;
+
+INSERT INTO products VALUES 
+(\N, 'PEC', 'Pencil 3B','500','0.52',501),
+(\N, 'PEC', 'Pencil 4B','200','0.62',501), 
+(\N, 'PEC', 'Pencil 5B','100','0.73',501),
+(\N, 'PEC', 'Pencil 6B','500','0.47',501);
+
+
+UPDATE products SET suppID = 502 WHERE productID= '1022'; 
+
+select products.name, price, suppliers.name from products 
+join suppliers on products.suppID = suppliers.suppID where price > 0.4
+
+
+SELECT products.name, price, suppliers.name  
+FROM products, suppliers  
+WHERE products.suppID = suppliers.suppID AND price < 0.6;
+
+
+SELECT products.name AS 'Product Name', price AS Price, 
+suppliers.name AS 'Supplier Name' 
+FROM products 
+JOIN suppliers ON products.suppID = suppliers.suppID
+WHERE price < 0.6;
+
+
+CREATE TABLE products_suppliers (
+productID   INT UNSIGNED  NOT NULL,
+suppID  INT UNSIGNED  NOT NULL,
+PRIMARY KEY (productID, suppID),
+FOREIGN KEY (productID)  REFERENCES products  (productID),
+FOREIGN KEY (suppID) REFERENCES suppliers (suppID)
+);
+
+INSERT INTO suppliers VALUES 
+(501, 'Paper & Office Supplies Co.', 123456789),
+(\N, 'Books & School Ltd', 234567890),  
+(\N, 'Electronics Corp.', 345678901);
+
+INSERT INTO products_suppliers VALUES
+(1001, 501), 
+(1002, 501),
+(1003, 501), 
+(1004, 502),
+(1005, 502),
+(1006, 502),
+(1001, 503),
+(1005, 503);
+
+
+ALTER TABLE products DROP FOREIGN KEY products_ibfk_1;
+
+
+Alter table products drop suppID;
+
+DELETE FROM suppliers WHERE suppID = 501;
+
+
+SELECT products.name AS 'Product Name', price, 
+suppliers.name AS 'Supplier Name'
+FROM products_suppliers 
+JOIN products  ON products_suppliers.productID = products.productID
+JOIN suppliers ON products_suppliers.suppID = suppliers.suppID
+WHERE price < 0.6;
+
+
+SELECT products.name AS 'Product Name', price, 
+suppliers.name AS 'Supplier Name'
+FROM products, suppliers, products_suppliers
+WHERE products_suppliers.productID = products.productID
+AND products_suppliers.suppID = suppliers.suppID
+AND price < 0.6;
+
+
+SELECT p.name AS 'Product Name', s.name AS 'Supplier Name'
+FROM products AS p, products_suppliers AS ps, suppliers AS s
+WHERE p.name = 'Pencil 3B'
+AND ps.productID = p.productID 
+AND ps.suppID = s.suppID;
+
+SELECT p.name AS 'Product Name', s.name AS 'Supplier Name'
+FROM products AS p, products_suppliers AS ps, suppliers AS s
+WHERE p.productID = ps.productID
+AND ps.suppID = s.suppID
+AND s.name = 'Paper & Office Supplies Co.';
+
+
+
+LOAD DATA LOCAL INFILE 'C:/Users/Hugo/Desktop/product_details.csv' 
+INTO TABLE product_details COLUMNS TERMINATED BY ',';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
