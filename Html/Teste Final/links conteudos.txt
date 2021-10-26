@@ -1,0 +1,8 @@
+gráfico
+=======
+<iframe src="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fesriportugal.maps.arcgis.com%2Fapps%2Fopsdashboard%2Findex.html%23%2F01bb26e8a53847338f1d508da7e7924a&amp;data=02%7C01%7CMario.Santos.ext%40spms.min-saude.pt%7C6230566161fd43983c7508d7cd1591f2%7C22c84608f01d46c5802463cc962e5f51%7C1%7C0%7C637203365132094355&amp;sdata=%2Bvvf8kHoaPbfYYJydo0vwc3aKytgsNV5N1qy39xd%2FHs%3D&amp;reserved=0" style="width:100%;" height="400" frameborder="0"></iframe>
+
+video
+=====
+<iframe style="width: 100%; height: 400px;" src="https://www.youtube.com/embed/z_u_9cZJT-w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
