@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid::Areas</title>
+
+    <style>
+        .container {
+            display: grid;
+
+            grid-template-columns: 150px auto auto;
+
+            grid-template-areas: "menulateral  cabecalho cabecalho"
+                                 "menulateral  conteudo  conteudo"
+                                 "menulateral  rodape    rodape";
+            
+            background-color: deepskyblue;
+            padding: 10px; 
+
+            width: 80%; 
+            margin: auto;  
+
+        }
+
+        .item {
+
+            background-color: chartreuse;    
+            margin: 5px;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: chocolate;
+            grid-area: cabecalho;
+        }
+
+        .sidenav {
+            background-color: crimson;
+            grid-area: menulateral;
+        }
+
+        .content {
+            background-color: hotpink;
+            grid-area: conteudo;
+        }
+
+        .footer {
+            background-color: lime;
+            grid-area: rodape;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item header">HEADER</div>
+        <div class="item sidenav">SIDENAV</div>
+        <div class="item content">CONTENT</div>
+        <div class="item footer">FOOTER</div>
+
+    </div>
+
+</body>
+
+</html>

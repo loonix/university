@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" “http-equiv="Content-Type">
+    <title>Animação simples</title>
+    <style>
+        #canvas_anim {
+            border: 1px solid #d3d3d3;
+        }
+    </style>
+    <script>
+        // variaveis x e y para incrementar velocidade
+        var velx = 1;
+        var vely = 1;
+
+        //tamanho do ecran (resolucao)
+        var _width = window.innerWidth - 30;
+        var _height = window.innerHeight - 30;
+
+        //x a y aleatorio para desenhar o primeiro circulo;
+        var x = Math.floor((Math.random() * _width / 2) + 40);
+        var y = Math.floor((Math.random() * _height / 2) + 40);
+
+        function init() {
+            var canvas = document.getElementById('canvas_anim');
+            var ctx = canvas.getContext('2d');
+            canvas.width = _width;
+            canvas.height = _height;
+            desenhaCirculo(ctx);
+            setInterval("loopAnimacao()", 10);
+        }
+
+        function desenhaCirculo(ctx) {
+            ctx.beginPath();
+            ctx.arc(velx, vely, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+
+        function loopAnimacao(ctx) {
+            var canvas = document.getElementById('canvas_anim');
+            var ctx = canvas.getContext('2d');
+            if (x > _width - 40 || x < 40) velx *= -1;
+            if (y > _height - 40 || y < 40) vely *= -1;
+            x += velx;
+            y += vely;
+            ctx.clearRect(0, 0, _width, _height) // Limpa ecra
+            ctx.fillStyle = "#CC0000";
+            ctx.beginPath();
+            ctx.arc(x, y, 40, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <canvas id="canvas_anim" width="400" height="300">
+    </canvas>
+</body>
+
+</html>

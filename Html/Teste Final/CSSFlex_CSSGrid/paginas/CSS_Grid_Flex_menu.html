@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid::Areas</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: "area_header  area_header  area_header "
+                                 "area_sidenav area_content area_content "
+                                 "area_footer  area_footer  area_footer ";
+            background-color: tomato;
+            padding: 10px;
+
+            width: 80%;
+            margin: auto;
+        }
+
+        .item {
+            background-color: orange;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .header {
+            grid-area: area_header;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .sidenav {
+            grid-area: area_sidenav;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            grid-area: area_content;
+        }
+
+        .footer {
+            grid-area: area_footer;
+        }
+
+        .header a {
+            text-decoration: none;
+            background-color: yellowgreen;
+            padding: 10px;
+            margin-right: 5px;
+            font-size: 20px;
+        }
+
+        .header a:hover {
+            background-color: yellow;
+        }
+
+        .sidenav a {
+            text-decoration: none;
+            background-color: yellowgreen;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .sidenav a:hover {
+            background-color: yellow;
+        }
+
+
+        @media (max-width: 680px) { /* Regras entram em acção quanod o 
+                                    Browser tem menos 680px */
+
+            body {
+                background-color: aquamarine;
+            }
+            
+            .container {
+                grid-template-areas: "area_header  area_header "
+                    "area_content area_content "
+                    "area_sidenav area_sidenav "
+                    "area_footer  area_footer ";
+
+                background-color: chartreuse;
+                padding: 5px;
+
+                width: 100%;
+            }
+
+            .header {               
+                
+                justify-content: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item header">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+
+        <div class="item sidenav">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </div>
+
+        <div class="item content">
+            <p>
+                Minim pariatur culpa labore in. Laboris veniam non consectetur
+                eu ea labore qui officia ut minim aute cupidatat sit.
+                Et eiusmod id incididunt officia nostrud anim magna nostrud
+                aliquip deserunt ullamco. Eu ex amet sunt aliqua duis
+                anim ad cupidatat fugiat sint dolore aute.
+            </p>
+        </div>
+
+        <div class="item footer">
+            <p>&copy; 2020-2021 - TPW-I</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

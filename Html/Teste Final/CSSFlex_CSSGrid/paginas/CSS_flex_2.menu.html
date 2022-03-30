@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex :: Menu</title>
+
+    <style>
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end ;
+            flex-wrap: wrap; /* conteudo em várias linhas,  */
+
+            background-color: yellow;
+            padding: 10px;           
+
+        }
+
+        body {
+
+            height: 100%;
+        }
+
+        .container2 {
+            display: flex;
+            background-color: violet;
+            justify-content: space-between;            
+        }
+
+        main {
+
+            height: 300px;
+        }
+
+        a {
+
+            background-color: tomato;
+            margin: 5px;
+            padding: 10px;
+            text-emphasis: none;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            background-color: orange;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </div>
+
+    <main>
+
+
+    </main>
+    
+    <div class="container2">
+        <a href="#">Link 11</a>
+        <a href="#">Link 12</a>
+        <a href="#">Link 13</a>
+        <a href="#">Link 14</a>        
+    </div>
+
+</body>
+</html>

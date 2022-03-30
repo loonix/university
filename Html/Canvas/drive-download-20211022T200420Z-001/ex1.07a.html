@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" “http-equiv="Content-Type">
+    <title>Animação simples</title>
+    <style>
+        #canvas_anim {
+            border: 1px solid #d3d3d3;
+        }
+    </style>
+    <script>
+        //variaveis x e y para incrementar velocidade
+        var velx = 1;
+        var vely = 1;
+
+        // tamanho do ecran (resolucao)
+        var _width = window.innerWidth - 30;
+        var _height = window.innerHeight - 30;
+        //x a y aleatorio para desenhar o primeiro circulo;
+        var x = Math.floor((Math.random() * _width / 2) + 40);
+        var y = Math.floor((Math.random() * _height / 2) + 40);
+        var imageObj = new Image();
+        function init() {
+            var canvas = document.getElementById('canvas_anim');
+            var ctx = canvas.getContext('2d');
+            imageObj.src = "img/isla.png"
+            canvas.width = _width;
+            canvas.height = _height;
+            desenhaLogo(ctx);
+            setInterval("loopAnimacao()", 10);
+        }
+
+        function desenhaLogo(ctx) {
+            ctx.drawImage(imageObj, velx, vely);
+        }
+
+        function loopAnimacao(ctx) {
+            var canvas = document.getElementById('canvas_anim');
+            var ctx = canvas.getContext('2d');
+            if (x > _width - 40 || x < 40) velx *= -1;
+            if (y > _height - 40 || y < 40) vely *= -1;
+            x += velx;
+            y += vely;
+            ctx.clearRect(0, 0, _width, _height)//Limpa tela
+            ctx.drawImage(imageObj, x, y);
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <canvas id="canvas_anim" width="400" height="300">
+        Este Browser nao suporta HTML5
+    </canvas>
+</body>
+
+</html>

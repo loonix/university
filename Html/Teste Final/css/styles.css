@@ -1,0 +1,188 @@
+/*
+Ficheiro CSS de Daniel Jose Guedes Carneiro
+Prefixo: DJGC
+*/
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+body {
+  font-family: Montserrat;
+}
+
+h2 {
+  font-size: 15px;
+}
+h3 {
+  font-size: 13px;
+}
+
+.DJGC_main {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "DJGC_header  DJGC_header  DJGC_header"
+    "DJGC_conteudo DJGC_conteudo DJGC_conteudo"
+    "DJGC_footer  DJGC_footer  DJGC_footer";
+}
+
+.DJGC_header {
+  grid-area: DJGC_header;
+  display: flex;
+  border-bottom: 1px #c82327 solid;
+  padding-bottom: 0.5em;
+}
+
+.DJGC_logo img {
+  height: 100px;
+}
+
+.DJGC_header .DJGC_navegacao {
+  font-size: 12pt;
+  width: 100%;
+  text-align: right;
+}
+
+.DJGC_menu ul li {
+  list-style-type: none;
+  margin-left: 0.5em;
+  display: inline;
+}
+
+.DJGC_menu ul li a {
+  text-decoration: none;
+  color: #a2161f;
+}
+
+.DJGC_menu ul li:hover, .DJGC_menu ul li a:hover {
+  background-color: #a2161f;
+  color: #fff;
+}
+
+.DJGC_pesquisa {
+  display: inline-flex;
+}
+
+.DJGC_navegacao input {
+  padding: 10px;
+  border: 1px #000 solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.DJGC_navegacao .DJGC_pesquisaBtn {
+  background: url(/imagens/lupa.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 21px;
+  margin: 0.5em;
+}
+
+.DJGC_conteudo {
+  grid-area: DJGC_conteudo;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.DJGC_conteudo img {
+  max-width: 100%;
+}
+
+.DJGC_boxContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DJGC_box {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #c82327;
+  border-top: 6px solid #c82327;
+  text-align: center;
+  margin: 10px 5px 0 0;
+}
+
+DJGC_box img {
+  max-width: 100%;
+}
+
+.DJGC_footer {
+  grid-area: DJGC_footer;
+  border-top: 1px solid #c82327;
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .DJGC_boxContainer {
+    display: block;
+  }
+  .DJGC_boxContainer.DJGC_boxMargin {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .DJGC_header {
+    display: flex;
+    text-align: left;
+  }
+  .DJGC_logo {
+    width: 100%;
+    flex: 1;
+  }
+  .DJGC_logo img {
+    height: 60px;
+  }
+  .DJGC_menu {
+    flex: 5;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .DJGC_header {
+    display: block;
+    text-align: center;
+  }
+
+  .DJGC_conteudo {
+    width: 100%;
+  }
+  .DJGC_navegacao ul {
+    display: grid;
+    text-align: center;
+    padding: 0;
+  }
+
+  .DJGC_navegacao li {
+    border-top: 1px solid #c82327;
+    padding: 0.5em;
+  }
+  .DJGC_navegacao li:last-child {
+    border-bottom: 1px solid #c82327;
+  }
+
+  .DJGC_pesquisa {
+    width: 80%;
+    display: flex;
+    padding: 0 1em;
+    margin: 0 auto;
+  }
+
+  .DJGC_pesquisa input {
+    flex: 5;
+  }
+
+  .DJGC_pesquisaBtn {
+    flex: 1;
+  }
+}
